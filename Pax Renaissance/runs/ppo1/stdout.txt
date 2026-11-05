@@ -1,0 +1,36 @@
+resumed from iteration 66
+start: iterations 67..999, args {"run": "runs/ppo1", "resume": true, "iters": 1000, "num_games": 128, "steps": 8192, "epochs": 3, "minibatch": 1024, "lr": 0.0003, "clip": 0.2, "vf_coef": 0.5, "ent_coef": 0.01, "gamma": 1.0, "lam": 0.95, "max_grad": 0.5, "league_prob": 0.2, "league_size": 10, "snapshot_every": 10, "eval_every": 10, "eval_games": 100, "eval_opponents": ["random", "greedy"], "hidden": 512, "threads": 3, "seed": 1}
+it   67  dec  8231  games   87  len 106.3  pg -0.005  vf 0.088  ent 1.20  kl +0.0097  clip 0.12  vs-league 0.77  [19s+20s]    ends hol11 imp8 glo1 ren3 pat64
+it   68  dec  8296  games   79  len 125.7  pg -0.005  vf 0.071  ent 1.20  kl +0.0126  clip 0.16  vs-league 0.91  [13s+19s]    ends hol6 imp4 glo1 ren3 pat65
+it   69  dec  8463  games   79  len 122.6  pg -0.011  vf 0.066  ent 1.18  kl +0.0198  clip 0.19  vs-league 0.89  [9s+20s]  random=100%  greedy=40%  ends hol2 imp5 ren1 pat71
+it   70  dec  8427  games   74  len 126.2  pg -0.003  vf 0.088  ent 1.19  kl +0.0151  clip 0.18  vs-league 0.83  [11s+19s]    ends hol7 imp3 ren4 pat60
+it   71  dec  8233  games   75  len 122.7  pg +0.003  vf 0.095  ent 1.16  kl +0.0191  clip 0.20  vs-league 0.91  [9s+17s]    ends hol7 glo3 ren1 pat64
+it   72  dec  8283  games   76  len 118.9  pg -0.001  vf 0.069  ent 1.19  kl +0.0214  clip 0.18  vs-league 0.92  [9s+17s]    ends hol6 imp5 ren2 pat63
+it   73  dec  8365  games   76  len 122.4  pg -0.005  vf 0.078  ent 1.19  kl +0.0185  clip 0.18  vs-league 0.60  [10s+17s]    ends hol3 imp4 ren1 pat68
+it   74  dec  8253  games   73  len 125.5  pg -0.017  vf 0.080  ent 1.22  kl +0.0173  clip 0.16  vs-league 0.82  [9s+17s]    ends hol3 imp6 glo1 pat63
+it   75  dec  8476  games   73  len 127.1  pg -0.005  vf 0.074  ent 1.22  kl +0.0192  clip 0.18  vs-league 0.80  [8s+17s]    ends hol5 imp3 glo1 ren1 pat63
+it   76  dec  8270  games   77  len 123.4  pg -0.009  vf 0.094  ent 1.19  kl +0.0151  clip 0.17  vs-league 0.75  [9s+17s]    ends hol4 imp4 glo2 ren2 pat65
+it   77  dec  8427  games   75  len 124.8  pg -0.010  vf 0.059  ent 1.17  kl +0.0170  clip 0.17  vs-league 0.71  [10s+17s]    ends hol4 imp4 glo2 ren1 pat64
+it   78  dec  8208  games   74  len 125.0  pg -0.021  vf 0.078  ent 1.19  kl +0.0189  clip 0.20  vs-league 0.69  [8s+17s]    ends hol5 imp1 glo2 ren3 pat63
+it   79  dec  8264  games   79  len 117.8  pg -0.002  vf 0.077  ent 1.18  kl +0.0203  clip 0.20  vs-league 0.89  [10s+17s]  random=100%  greedy=32%  ends hol8 imp3 glo2 ren3 pat63
+it   80  dec  8316  games   76  len 120.1  pg +0.005  vf 0.094  ent 1.17  kl +0.0215  clip 0.20  vs-league 0.92  [9s+17s]    ends hol6 imp1 glo1 ren2 pat66
+it   81  dec  8296  games   73  len 123.8  pg +0.004  vf 0.076  ent 1.20  kl +0.0151  clip 0.18  vs-league 0.83  [8s+17s]    ends hol6 imp2 ren2 pat63
+it   82  dec  8565  games   76  len 122.9  pg -0.005  vf 0.067  ent 1.22  kl +0.0194  clip 0.18  vs-league 0.69  [11s+20s]    ends hol3 imp1 glo2 ren5 pat65
+it   83  dec  8586  games   80  len 125.1  pg -0.009  vf 0.066  ent 1.21  kl +0.0137  clip 0.16  vs-league 0.83  [8s+17s]    ends hol3 imp1 glo3 ren3 pat70
+it   84  dec  8300  games   83  len 118.5  pg -0.010  vf 0.089  ent 1.22  kl +0.0172  clip 0.16  vs-league 0.89  [11s+17s]    ends hol7 imp4 ren2 pat70
+it   85  dec  8220  games   69  len 127.3  pg +0.004  vf 0.074  ent 1.20  kl +0.0176  clip 0.19  vs-league 0.94  [9s+19s]    ends hol7 imp6 glo2 pat54
+it   86  dec  8306  games   81  len 117.1  pg -0.017  vf 0.102  ent 1.25  kl +0.0170  clip 0.20  vs-league 0.71  [12s+23s]    ends hol3 imp4 glo1 ren5 pat68
+it   87  dec  8281  games   73  len 120.1  pg -0.009  vf 0.081  ent 1.23  kl +0.0180  clip 0.17  vs-league 0.71  [10s+23s]    ends hol3 imp1 glo4 ren2 pat63
+it   88  dec  8259  games   81  len 116.1  pg -0.008  vf 0.083  ent 1.24  kl +0.0197  clip 0.17  vs-league 0.90  [12s+17s]    ends hol5 imp6 glo1 ren1 pat68
+it   89  dec  8204  games   76  len 117.2  pg -0.033  vf 0.083  ent 1.19  kl +0.0229  clip 0.20  vs-league 0.82  [9s+17s]  random=100%  greedy=38%  ends hol6 imp2 glo4 ren1 pat63
+it   90  dec  8258  games   78  len 121.0  pg -0.021  vf 0.089  ent 1.16  kl +0.0148  clip 0.19  vs-league 0.94  [9s+17s]    ends hol3 imp5 glo1 pat69
+it   91  dec  8518  games   82  len 119.9  pg -0.007  vf 0.072  ent 1.19  kl +0.0193  clip 0.18  vs-league 0.68  [11s+18s]    ends hol4 imp2 glo3 ren4 pat69
+it   92  dec  8257  games   78  len 122.2  pg -0.026  vf 0.063  ent 1.19  kl +0.0186  clip 0.18  vs-league 1.00  [8s+17s]    ends hol4 ren1 pat73
+it   93  dec  8478  games   80  len 118.6  pg -0.005  vf 0.099  ent 1.23  kl +0.0179  clip 0.18  vs-league 0.70  [10s+20s]    ends hol5 imp3 glo1 ren3 pat68
+it   94  dec  8265  games   81  len 114.7  pg -0.002  vf 0.094  ent 1.20  kl +0.0211  clip 0.19  vs-league 0.85  [10s+21s]    ends hol8 imp4 glo6 pat63
+it   95  dec  8266  games   86  len 113.3  pg +0.004  vf 0.102  ent 1.19  kl +0.0178  clip 0.18  vs-league 0.72  [11s+21s]    ends hol6 imp8 glo2 ren2 pat68
+it   96  dec  8227  games   77  len 118.5  pg -0.005  vf 0.094  ent 1.19  kl +0.0149  clip 0.17  vs-league 0.75  [10s+23s]    ends hol2 imp1 glo2 pat72
+it   97  dec  8303  games   78  len 118.0  pg -0.009  vf 0.093  ent 1.19  kl +0.0198  clip 0.19  vs-league 0.79  [13s+27s]    ends hol3 imp4 glo3 ren1 pat67
+it   98  dec  8200  games   78  len 117.5  pg -0.012  vf 0.101  ent 1.22  kl +0.0142  clip 0.18  vs-league 0.82  [12s+24s]    ends hol6 imp1 glo1 ren2 pat68
+it   99  dec  8252  games   82  len 116.6  pg -0.018  vf 0.088  ent 1.16  kl +0.0195  clip 0.21  vs-league 0.92  [12s+22s]  random=100%  greedy=40%  ends hol2 imp5 ren6 pat69
+it  100  dec  8364  games   84  len 113.8  pg -0.014  vf 0.102  ent 1.18  kl +0.0197  clip 0.18  vs-league 0.85  [10s+20s]    ends hol7 imp8 glo2 ren2 pat65

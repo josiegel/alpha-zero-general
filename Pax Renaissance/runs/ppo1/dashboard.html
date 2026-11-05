@@ -1,0 +1,551 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pax Bot Training</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&display=swap">
+<!-- Training dashboard for one run folder. Put this file next to the run's log.jsonl.
+     Served over http (npm start, then http://localhost:8080/runs/<run>/dashboard.html) it reads
+     log.jsonl itself; opened from disk it asks for the file once (Chrome/Edge keep re-reading it).
+     Charts need d3 from cdnjs, so the page needs an internet connection. -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<style>
+  /* Layout: one column of cards; four headline tiles, one large chart, a grid of small charts. */
+  :root {
+    --bg: #f5f6f4; --panel: #ffffff; --line: #dfe2dc; --fg: #1d211c; --muted: #5d6459;
+    --grid: #eceee9; --axis: #b9bfb3; --ref: #8a9184;
+    --gold: #a86f00;   /* florin gold: the greedy-bot line */
+    --teal: #1f6f78;   /* random-play line and single series */
+    --ok: #2e7d32; --bad: #b3261e; --warn: #9a6700;
+    /* how games end */
+    --v-holy: #7b4fa8; --v-imperial: #b3261e; --v-globalization: #1f6f78; --v-renaissance: #3d7d2a; --v-patron: #a86f00; --v-unfinished: #9aa093;
+    --display: "EB Garamond", Garamond, "Times New Roman", serif;
+    --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --radius: 8px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #141713; --panel: #1c201b; --line: #30362e; --fg: #e6e9e2; --muted: #9ba393;
+      --grid: #272c25; --axis: #4a5246; --ref: #7d8677;
+      --gold: #e0a43a; --teal: #5cb8c2; --ok: #7cc47f; --bad: #f08a80; --warn: #e0b04a;
+      --v-holy: #b48ee0; --v-imperial: #f08a80; --v-globalization: #5cb8c2; --v-renaissance: #8fcf72; --v-patron: #e0a43a; --v-unfinished: #6d7568;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #141713; --panel: #1c201b; --line: #30362e; --fg: #e6e9e2; --muted: #9ba393;
+    --grid: #272c25; --axis: #4a5246; --ref: #7d8677;
+    --gold: #e0a43a; --teal: #5cb8c2; --ok: #7cc47f; --bad: #f08a80; --warn: #e0b04a;
+    --v-holy: #b48ee0; --v-imperial: #f08a80; --v-globalization: #5cb8c2; --v-renaissance: #8fcf72; --v-patron: #e0a43a; --v-unfinished: #6d7568;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--fg); font: 14px/1.45 var(--sans); }
+  .wrap { max-width: 1200px; margin-inline: auto; padding-block: 28px 40px;
+    padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+    display: grid; gap: 24px; }
+  header { display: grid; gap: 6px; }
+  .top { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 16px; }
+  h1 { margin: 0; font: 500 2.1rem/1.1 var(--display); text-wrap: balance; }
+  .lede { margin: 0; color: var(--muted); max-width: 65ch; }
+  .lede b { color: var(--fg); font-weight: 600; }
+  .status { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; }
+  .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--axis); flex: none; }
+  .status[data-state="live"] .dot { background: var(--ok); }
+  .status[data-state="stale"] .dot { background: var(--warn); }
+  .status[data-state="error"] .dot { background: var(--bad); }
+  .connect { display: grid; gap: 10px; background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px; }
+  .connect p { margin: 0; max-width: 70ch; }
+  .connect code, footer code { font-size: .95em; }
+  button { font: inherit; color: var(--fg); background: var(--bg); border: 1px solid var(--axis); border-radius: 6px; padding: 6px 12px; cursor: pointer; justify-self: start; }
+  button:hover { border-color: var(--fg); }
+  button:focus-visible { outline: 2px solid var(--teal); outline-offset: 2px; }
+  .tiles { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr)); }
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px; display: grid; gap: 6px; align-content: start; min-width: 0; }
+  .label { margin: 0; font-size: 12px; color: var(--muted); letter-spacing: .02em; }
+  .big { margin: 0; font: 400 2.2rem/1.05 var(--display); font-variant-numeric: tabular-nums; }
+  .sub { margin: 0; font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; }
+  .up { color: var(--ok); } .down { color: var(--bad); }
+  h2 { margin: 0; font-size: 1.05rem; font-weight: 600; }
+  h3 { margin: 0; font-size: .95rem; font-weight: 600; }
+  .note { margin: 0; font-size: 12px; color: var(--muted); max-width: 65ch; }
+  .grid { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr)); }
+  .section { display: grid; gap: 12px; }
+  .chart { position: relative; min-height: 200px; }
+  .chart.tall { min-height: 280px; }
+  .chart svg { display: block; overflow: visible; }
+  .chart .tick-l, .chart .axis text { fill: var(--muted); font: 11px var(--sans); }
+  .chart .axis path, .chart .axis line { stroke: var(--axis); }
+  .chart .end { font: 12px var(--sans); font-variant-numeric: tabular-nums; }
+  .empty { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; color: var(--muted); font-size: 12px; text-align: center; padding: 0 12px; }
+  .tip { position: absolute; top: 0; left: 0; pointer-events: none; background: var(--panel); border: 1px solid var(--line); border-radius: 6px;
+    box-shadow: 0 4px 14px rgb(0 0 0 / .12); padding: 6px 9px; font-size: 12px; white-space: nowrap; display: grid; gap: 2px; z-index: 2; }
+  .tip-head { color: var(--muted); }
+  .tip-row { display: flex; align-items: center; gap: 6px; font-variant-numeric: tabular-nums; }
+  .sw { width: 8px; height: 8px; border-radius: 2px; flex: none; }
+  .legend { display: flex; flex-wrap: wrap; gap: 4px 14px; margin: 0; padding: 0; list-style: none; font-size: 12px; color: var(--muted); }
+  .legend li { display: inline-flex; align-items: center; gap: 6px; }
+  .seg { display: inline-flex; border: 1px solid var(--axis); border-radius: 6px; overflow: hidden; justify-self: start; }
+  .seg button { border: 0; border-radius: 0; padding: 4px 10px; background: transparent; color: var(--muted); }
+  .seg button[aria-pressed="true"] { background: var(--grid); color: var(--fg); font-weight: 600; }
+  .ends-table { display: grid; grid-template-columns: max-content 1fr; gap: 8px 12px; align-items: center; font-size: 12px; }
+  .ends-name { color: var(--fg); }
+  .ends-bars { display: grid; gap: 3px; min-width: 0; }
+  .ends-bar { display: flex; align-items: center; gap: 6px; font-variant-numeric: tabular-nums; color: var(--muted); min-width: 0; }
+  .ends-bar i { display: block; height: 10px; border-radius: 2px; min-width: 1px; flex: none; }
+  footer { font-size: 12px; color: var(--muted); max-width: 75ch; }
+  footer p { margin: 0 0 4px; }
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="top">
+      <h1>Pax Bot Training</h1>
+      <span class="status" id="status" data-state="idle"><span class="dot"></span><span id="status-text">Not reading the log yet</span></span>
+    </div>
+    <p class="lede" id="lede">Waiting for the first evaluation (every 10 iterations).</p>
+  </header>
+
+  <section class="connect" id="connect" hidden>
+    <p><b>This page couldn't read <code>log.jsonl</code> by itself.</b> Browsers block that for pages opened straight from disk.</p>
+    <p>Either choose the log file below (Chrome and Edge then keep re-reading it every 30 seconds), or run <code>npm start</code> in the project folder and open <code id="serve-url">http://localhost:8080/runs/ppo1/dashboard.html</code>.</p>
+    <button id="pick" type="button">Choose log.jsonl</button>
+    <input id="pick-input" type="file" accept=".jsonl,.json,.txt" hidden>
+  </section>
+
+  <section class="tiles" aria-label="Latest results">
+    <div class="card">
+      <p class="label">Against the greedy bot</p>
+      <p class="big" id="t-greedy">—</p>
+      <p class="sub" id="t-greedy-ci">95% range —</p>
+      <p class="sub" id="t-greedy-delta" hidden></p>
+      <p class="sub" id="t-greedy-best" hidden></p>
+    </div>
+    <div class="card">
+      <p class="label">Against random play</p>
+      <p class="big" id="t-random">—</p>
+      <p class="sub" id="t-random-ci">95% range —</p>
+      <p class="sub" id="t-random-delta" hidden></p>
+    </div>
+    <div class="card">
+      <p class="label">Against its own past versions</p>
+      <p class="big" id="t-league">—</p>
+      <p class="sub" id="t-league-sub">Training games against frozen snapshots. Above 50% means it beats older versions.</p>
+    </div>
+    <div class="card">
+      <p class="label">Training so far</p>
+      <p class="big" id="t-iters">—</p>
+      <p class="sub" id="t-totals">—</p>
+    </div>
+  </section>
+
+  <section class="card section" aria-labelledby="h-eval">
+    <h2 id="h-eval">Score against the baseline bots</h2>
+    <p class="note">Every 10 iterations the bot plays 100 games against each baseline, always picking its top-rated move. A win counts 1 and a draw ½. Shaded bands are 95% ranges; the dashed line is 50%.</p>
+    <div class="chart tall" id="c-eval"></div>
+  </section>
+
+  <section class="section" aria-labelledby="h-ends">
+    <h2 id="h-ends">How games end</h2>
+    <ul class="legend" aria-label="End types">
+      <li><span class="sw" style="background: var(--v-holy)"></span>Holy</li>
+      <li><span class="sw" style="background: var(--v-imperial)"></span>Imperial</li>
+      <li><span class="sw" style="background: var(--v-globalization)"></span>Globalization</li>
+      <li><span class="sw" style="background: var(--v-renaissance)"></span>Renaissance</li>
+      <li><span class="sw" style="background: var(--v-patron)"></span>Patron (decks exhausted)</li>
+    </ul>
+    <div class="grid">
+      <div class="card">
+        <h3>Training games</h3>
+        <p class="note">Share of each iteration's finished self-play games by how they ended. The first run only recorded this from iteration 67.</p>
+        <div class="chart" id="c-ends"></div>
+      </div>
+      <div class="card">
+        <h3>Evaluation games</h3>
+        <p class="note" id="ends-eval-note">How the bot's wins and losses ended in the latest evaluation.</p>
+        <div class="seg" role="group" aria-label="Opponent">
+          <button type="button" id="ends-greedy" aria-pressed="true">Against greedy</button>
+          <button type="button" id="ends-random" aria-pressed="false">Against random</button>
+        </div>
+        <div id="ends-eval" style="position: relative; min-height: 180px"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="h-health">
+    <h2 id="h-health">Training health</h2>
+    <div class="grid">
+      <div class="card"><h3>Score in training games</h3><p class="note">Against frozen snapshots of earlier versions, and against the greedy bot when the run trains against it. These games sample moves, so scores run lower than in evaluation.</p><div class="chart" id="c-league"></div></div>
+      <div class="card"><h3>Game length</h3><p class="note">Average decisions per finished game, both players together.</p><div class="chart" id="c-len"></div></div>
+      <div class="card"><h3>Policy entropy</h3><p class="note">How spread out the bot's move choices are. It should fall slowly; a crash toward 0 means it stopped exploring.</p><div class="chart" id="c-ent"></div></div>
+      <div class="card"><h3>Value loss</h3><p class="note">Error of the bot's win prediction (mean squared; results are +1 or −1). Lower means it judges positions better.</p><div class="chart" id="c-vf"></div></div>
+      <div class="card"><h3>Policy change per update</h3><p class="note">Approximate KL divergence between the policy before and after each update. Steady values around 0.01 are healthy.</p><div class="chart" id="c-kl"></div></div>
+      <div class="card"><h3>Seconds per iteration</h3><p class="note">Playing the games plus training on them, not counting evaluation.</p><div class="chart" id="c-secs"></div></div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Reads <code>log.jsonl</code> in this folder, written by <code>train/ppo.py</code>, and re-reads it every 30 seconds. The status dot turns amber when no new iteration has arrived for 5 minutes, which usually means training stopped.</p>
+  </footer>
+</div>
+
+<script>
+(() => {
+  const POLL_MS = 30000, STALE_MS = 5 * 60 * 1000;
+  const pct = d3.format('.0%'), int = d3.format(',');
+  const compact = (v) => (v >= 10000 ? new Intl.NumberFormat('en', { notation: 'compact', maximumFractionDigits: 1 }).format(v) : int(v));
+  const pts = (v) => `${v >= 0 ? '+' : '−'}${Math.abs(Math.round(v * 100))} pts`;
+  const css = (name) => getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+  const $ = (id) => document.getElementById(id);
+
+  let rows = [];            // parsed log, one entry per iteration
+  let lastCount = -1, lastChange = Date.now(), lastRead = null, fileHandle = null, mode = null;
+
+  // ---------------- reading the log ----------------
+  function parse(text) {
+    const byIter = new Map();
+    for (const line of text.split('\n')) {
+      if (!line.trim()) continue;
+      try { const r = JSON.parse(line); byIter.set(r.iter, r); } catch { /* a line still being written */ }
+    }
+    return [...byIter.values()].sort((a, b) => a.iter - b.iter);
+  }
+
+  async function readOnce() {
+    let text;
+    if (mode === 'handle') text = await (await fileHandle.getFile()).text();
+    else {
+      const res = await fetch('log.jsonl', { cache: 'no-store' });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      text = await res.text();
+    }
+    rows = parse(text);
+    lastRead = new Date();
+    if (rows.length !== lastCount) { lastCount = rows.length; lastChange = Date.now(); }
+    render();
+  }
+
+  async function poll() {
+    try {
+      await readOnce();
+      if (mode !== 'handle') { mode = 'fetch'; $('connect').hidden = true; }
+      setStatus();
+    }
+    catch (e) {
+      if (mode !== 'handle') { mode = null; $('connect').hidden = false; setStatus('error', 'Log not found from here'); }
+      else setStatus('error', `Couldn't re-read the log (${e.message})`);
+    }
+  }
+
+  function setStatus(state, text) {
+    if (!state) {
+      const stale = Date.now() - lastChange > STALE_MS;
+      state = stale ? 'stale' : 'live';
+      const t = d3.timeFormat('%H:%M:%S')(lastRead);
+      const mins = Math.round((Date.now() - lastChange) / 60000);
+      text = stale ? `No new iteration for ${mins} min · read ${t}` : `Live · read ${t}`;
+    }
+    $('status').dataset.state = state; $('status-text').textContent = text;
+  }
+
+  async function start() {
+    if (location.protocol !== 'file:') {
+      await poll();
+      setInterval(poll, POLL_MS); // keeps retrying if the log isn't there yet
+      if (mode === 'fetch') return;
+    }
+    $('connect').hidden = false;
+    const parts = location.pathname.split('/');
+    const run = parts.length > 1 ? parts[parts.length - 2] : 'ppo1';
+    $('serve-url').textContent = `http://localhost:8080/runs/${run}/dashboard.html`;
+    setStatus('idle', 'Choose the log file to start');
+  }
+
+  $('pick').addEventListener('click', async () => {
+    if (window.showOpenFilePicker) {
+      try {
+        [fileHandle] = await window.showOpenFilePicker({ types: [{ description: 'Training log', accept: { 'application/x-ndjson': ['.jsonl'] } }] });
+        mode = 'handle'; $('connect').hidden = true;
+        await poll(); setInterval(poll, POLL_MS);
+      } catch { /* picker closed */ }
+    } else $('pick-input').click();
+  });
+  $('pick-input').addEventListener('change', async (ev) => {
+    const f = ev.target.files[0]; if (!f) return;
+    rows = parse(await f.text()); lastRead = new Date(); lastCount = rows.length; lastChange = Date.now();
+    $('connect').hidden = true; render();
+    setStatus('idle', `Loaded once at ${d3.timeFormat('%H:%M:%S')(lastRead)} · this browser can't re-read it; choose it again to refresh`);
+  });
+
+  // ---------------- headline ----------------
+  function render() {
+    const evals = rows.filter((r) => r.eval_random != null || r.eval_greedy != null)
+      .map((r) => ({ x: r.iter + 1, greedy: r.eval_greedy ?? null, greedy_lo: r.eval_greedy_ci?.[0] ?? null, greedy_hi: r.eval_greedy_ci?.[1] ?? null,
+        random: r.eval_random ?? null, random_lo: r.eval_random_ci?.[0] ?? null, random_hi: r.eval_random_ci?.[1] ?? null }));
+    const a = evals.at(-1), b = evals.length > 1 ? evals.at(-2) : null;
+
+    const lede = $('lede');
+    if (a) {
+      lede.replaceChildren('At iteration ', bold(a.x), ', the bot scored ', bold(fmtOr(a.greedy, pct)), ' against the greedy bot and ',
+        bold(fmtOr(a.random, pct)), ' against random play. A score of 50% means evenly matched.');
+    } else lede.textContent = rows.length ? `Iteration ${rows.length} done. The first evaluation comes at iteration 10.` : 'Waiting for the first iteration.';
+
+    for (const k of ['greedy', 'random']) {
+      $(`t-${k}`).textContent = a ? fmtOr(a[k], pct) : '—';
+      $(`t-${k}-ci`).textContent = a && a[`${k}_lo`] != null ? `95% range ${pct(a[`${k}_lo`])} to ${pct(a[`${k}_hi`])}` : '95% range —';
+      const d = $(`t-${k}-delta`);
+      if (a && b && a[k] != null && b[k] != null) {
+        const ch = a[k] - b[k];
+        d.textContent = `${pts(ch)} since iteration ${b.x}`; d.className = 'sub ' + (ch > 0 ? 'up' : ch < 0 ? 'down' : ''); d.hidden = false;
+      } else d.hidden = true;
+    }
+    const bestRec = [...rows].reverse().find((r) => r.best_score != null);
+    const tb = $('t-greedy-best');
+    if (bestRec) { tb.textContent = `Best so far ${pct(bestRec.best_score)} at iteration ${bestRec.best_iter}`; tb.hidden = false; } else tb.hidden = true;
+    const lg = [...rows].reverse().find((r) => r.league_score != null);
+    $('t-league').textContent = lg ? pct(lg.league_score) : '—';
+    $('t-league-sub').textContent = lg ? `Training games at iteration ${lg.iter + 1}. Above 50% means it beats older versions.` : 'Training games against frozen snapshots. Above 50% means it beats older versions.';
+    const lastIt = rows.length ? rows.at(-1).iter + 1 : 0, firstIt = rows.length ? rows[0].iter + 1 : 0;
+    $('t-iters').textContent = rows.length ? `${int(lastIt)} iterations` : '—';
+    const games = d3.sum(rows, (r) => r.games), dec = d3.sum(rows, (r) => r.decisions);
+    $('t-totals').textContent = rows.length
+      ? `${firstIt > 1 ? `This run started at iteration ${firstIt}: ` : ''}${compact(games)} self-play games, ${compact(dec)} training decisions` : '—';
+
+    // ---------------- charts ----------------
+    const it = (f) => rows.map((r) => ({ x: r.iter + 1, v: f(r) }));
+    const one = (fmt, extra = {}) => ({ fmt, series: [{ key: 'v', color: css('--teal') }], ...extra });
+    const markers = rows.flatMap((r) => [
+      ...(r.new_best ? [{ x: r.iter + 1, label: 'best' }] : []),
+      ...(r.rollback_to != null ? [{ x: r.iter + 1, label: `rollback to ${r.rollback_to}` }] : []),
+    ]);
+    lineChart($('c-eval'), { rows: evals, y: [0, 1], ref: 0.5, fmt: pct, dots: true, height: 280, markers, empty: 'The first evaluation comes at iteration 10.',
+      series: [
+        { key: 'greedy', lo: 'greedy_lo', hi: 'greedy_hi', label: 'Greedy', color: css('--gold') },
+        { key: 'random', lo: 'random_lo', hi: 'random_hi', label: 'Random', color: css('--teal') },
+      ] });
+    const trainRows = rows.map((r) => ({ x: r.iter + 1, league: r.league_score ?? null, greedy: r.greedy_train_score ?? null }));
+    const trainSeries = [{ key: 'league', label: 'Past versions', color: css('--teal') }];
+    if (trainRows.some((r) => r.greedy != null)) trainSeries.push({ key: 'greedy', label: 'Greedy', color: css('--gold') });
+    lineChart($('c-league'), { rows: trainRows, y: [0, 1], ref: 0.5, fmt: pct, series: trainSeries });
+    lineChart($('c-len'), { rows: it((r) => r.game_len), ...one(d3.format('.0f')) });
+    lineChart($('c-ent'), { rows: it((r) => r.ent), ...one(d3.format('.2f'), { zero: true }) });
+    lineChart($('c-vf'), { rows: it((r) => r.vf), ...one(d3.format('.2f'), { zero: true }) });
+    lineChart($('c-kl'), { rows: it((r) => r.kl), ...one(d3.format('.3f'), { zero: true }) });
+    lineChart($('c-secs'), { rows: it((r) => r.t_collect + r.t_update), ...one((v) => `${d3.format('.0f')(v)} s`, { zero: true }) });
+    endsChart($('c-ends'));
+    endsEval($('ends-eval'));
+  }
+
+  // ---------------- how games end ----------------
+  const END_TYPES = ['holy', 'imperial', 'globalization', 'renaissance', 'patron', 'unfinished'];
+  const END_NAMES = { holy: 'Holy', imperial: 'Imperial', globalization: 'Globalization', renaissance: 'Renaissance', patron: 'Patron', unfinished: 'Unfinished' };
+  let endsOpp = 'greedy';
+
+  function emptyMsg(el, text) { const e = document.createElement('div'); e.className = 'empty'; e.textContent = text; el.appendChild(e); }
+
+  // 100% stacked bars: share of each iteration's training games by end type
+  function endsChart(el) {
+    el.replaceChildren();
+    const data = rows.filter((r) => r.ends).map((r) => {
+      const total = d3.sum(END_TYPES, (t) => r.ends[t] || 0);
+      const o = { x: r.iter + 1, total };
+      END_TYPES.forEach((t) => { o[t] = total ? (r.ends[t] || 0) / total : 0; o[t + '_n'] = r.ends[t] || 0; });
+      return o;
+    }).filter((o) => o.total > 0);
+    if (!data.length) { emptyMsg(el, 'Appears after the first iteration with this logging.'); return; }
+    const types = END_TYPES.filter((t) => t !== 'unfinished' || data.some((d) => d.unfinished > 0));
+    const W = Math.max(260, el.clientWidth || 0), H = 200, B = H - 26;
+    const svg = d3.select(el).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`);
+    const y = d3.scaleLinear([0, 1], [B, 10]);
+    const probe = svg.append('text').attr('class', 'tick-l').text('100%');
+    const L = Math.ceil(probe.node().getComputedTextLength()) + 10; probe.remove();
+    const R = W - 4;
+    const x = d3.scaleBand(data.map((d) => d.x), [L, R]).padding(data.length > 80 ? 0 : 0.15);
+    [0, 0.25, 0.5, 0.75, 1].forEach((t) => {
+      svg.append('line').attr('x1', L).attr('x2', R).attr('y1', y(t)).attr('y2', y(t)).attr('stroke', css('--grid'));
+      svg.append('text').attr('class', 'tick-l').attr('x', L - 8).attr('y', y(t)).attr('dy', '0.32em').attr('text-anchor', 'end').text(pct(t));
+    });
+    const stack = d3.stack().keys(types)(data);
+    svg.append('g').selectAll('g').data(stack).join('g').attr('fill', (s) => css('--v-' + s.key))
+      .selectAll('rect').data((s) => s).join('rect')
+      .attr('x', (d) => x(d.data.x)).attr('width', Math.max(1, x.bandwidth()))
+      .attr('y', (d) => y(d[1])).attr('height', (d) => Math.max(0, y(d[0]) - y(d[1])));
+    const step = Math.max(1, Math.ceil(data.length / Math.max(2, Math.floor((R - L) / 60))));
+    const xAxis = d3.axisBottom(x).tickValues(data.map((d) => d.x).filter((_, i) => i % step === 0)).tickSizeOuter(0);
+    svg.append('g').attr('class', 'axis').attr('transform', `translate(0,${B})`).call(xAxis).attr('font-size', null).attr('font-family', null);
+
+    const tip = document.createElement('div'); tip.className = 'tip'; tip.hidden = true; el.appendChild(tip);
+    svg.append('rect').attr('x', L).attr('y', 0).attr('width', R - L).attr('height', B).attr('fill', 'transparent')
+      .on('pointermove', (ev) => {
+        const [mx] = d3.pointer(ev);
+        const i = Math.max(0, Math.min(data.length - 1, Math.floor((mx - L) / x.step())));
+        const d = data[i];
+        tip.replaceChildren();
+        const head = document.createElement('div'); head.className = 'tip-head'; head.textContent = `Iteration ${d.x} · ${d.total} games`; tip.appendChild(head);
+        [...types].reverse().forEach((t) => {
+          if (!d[t + '_n']) return;
+          const row = document.createElement('div'); row.className = 'tip-row';
+          const sw = document.createElement('span'); sw.className = 'sw'; sw.style.background = css('--v-' + t); row.appendChild(sw);
+          const s = document.createElement('span'); s.textContent = `${END_NAMES[t]} ${pct(d[t])} (${d[t + '_n']})`; row.appendChild(s);
+          tip.appendChild(row);
+        });
+        tip.hidden = false;
+        const tw = tip.offsetWidth, px = (x(d.x) + x.bandwidth() / 2) / W * el.clientWidth;
+        tip.style.transform = `translate(${px + 12 + tw > el.clientWidth ? px - tw - 12 : px + 12}px, 8px)`;
+      })
+      .on('pointerleave', () => { tip.hidden = true; });
+  }
+
+  // latest evaluation: for each end type, the bot's wins and its opponent's wins
+  function endsEval(el) {
+    el.replaceChildren();
+    const last = [...rows].reverse().find((r) => r[`eval_${endsOpp}_ends`]);
+    const oppName = endsOpp === 'greedy' ? 'Greedy' : 'Random';
+    if (!last) {
+      $('ends-eval-note').textContent = 'How the bot\'s wins and losses ended in the latest evaluation.';
+      emptyMsg(el, 'Appears after the next evaluation (every 10 iterations).'); return;
+    }
+    const e = last[`eval_${endsOpp}_ends`];
+    const games = d3.sum(['win', 'loss', 'draw'], (k) => d3.sum(Object.values(e[k] || {})));
+    $('ends-eval-note').textContent = `How the ${games} games against ${endsOpp === 'greedy' ? 'the greedy bot' : 'random play'} ended at iteration ${last.iter + 1}. Solid bars are the bot's wins, faded bars its opponent's.`;
+    const types = END_TYPES.filter((t) => ['win', 'loss', 'draw'].some((k) => (e[k] || {})[t]));
+    const max = d3.max(types, (t) => Math.max((e.win || {})[t] || 0, (e.loss || {})[t] || 0)) || 1;
+    const table = document.createElement('div'); table.className = 'ends-table';
+    const barW = Math.max(60, (el.clientWidth || 300) - 190);
+    for (const t of types) {
+      const name = document.createElement('span'); name.className = 'ends-name'; name.textContent = END_NAMES[t];
+      const bars = document.createElement('div'); bars.className = 'ends-bars';
+      const add = (n, who, faded) => {
+        const r = document.createElement('div'); r.className = 'ends-bar';
+        const i = document.createElement('i'); i.style.width = `${(n / max) * barW}px`; i.style.background = css('--v-' + t); if (faded) i.style.opacity = '.35';
+        const s = document.createElement('span'); s.textContent = `${n} ${who}`;
+        r.append(i, s); bars.appendChild(r);
+      };
+      add((e.win || {})[t] || 0, `won by the bot`, false);
+      add((e.loss || {})[t] || 0, `won by ${oppName}`, true);
+      const dr = (e.draw || {})[t] || 0; if (dr) add(dr, 'tied', true);
+      table.append(name, bars);
+    }
+    el.appendChild(table);
+  }
+
+  for (const opp of ['greedy', 'random']) {
+    $(`ends-${opp}`).addEventListener('click', () => {
+      endsOpp = opp;
+      for (const o of ['greedy', 'random']) $(`ends-${o}`).setAttribute('aria-pressed', String(o === opp));
+      endsEval($('ends-eval'));
+    });
+  }
+  const bold = (t) => { const b = document.createElement('b'); b.textContent = String(t); return b; };
+  const fmtOr = (v, f) => (v == null ? '—' : f(v));
+
+  // ---------------- line chart ----------------
+  function lineChart(el, o) {
+    el.replaceChildren();
+    const data = o.rows.filter((r) => r.x != null && o.series.some((s) => r[s.key] != null));
+    if (!data.length) {
+      const e = document.createElement('div'); e.className = 'empty'; e.textContent = o.empty || 'No data yet.'; el.appendChild(e); return;
+    }
+    const W = Math.max(260, el.clientWidth || 0), H = o.height || 200, B = H - 26;
+    const fmt = o.fmt;
+    const svg = d3.select(el).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`);
+    const xs = data.map((r) => r.x);
+
+    let yDom = o.y;
+    if (!yDom) {
+      const vals = []; data.forEach((r) => o.series.forEach((s) => { if (r[s.key] != null) vals.push(r[s.key]); }));
+      yDom = d3.extent(vals);
+      if (o.zero) yDom = [Math.min(0, yDom[0]), yDom[1]];
+      if (yDom[0] === yDom[1]) yDom = [yDom[0] - 1, yDom[1] + 1];
+    }
+    const y = d3.scaleLinear(yDom, [B, 10]); if (!o.y) y.nice(4);
+    const ticks = y.ticks(4);
+
+    const probe = svg.append('g');
+    let left = 0;
+    ticks.forEach((t) => { left = Math.max(left, probe.append('text').attr('class', 'tick-l').text(fmt(t)).node().getComputedTextLength()); });
+    const ends = o.series.map((s) => {
+      const r = [...data].reverse().find((q) => q[s.key] != null); if (!r) return null;
+      const text = (s.label ? s.label + ' ' : '') + fmt(r[s.key]);
+      return { s, r, text, w: probe.append('text').attr('class', 'end').text(text).node().getComputedTextLength() };
+    }).filter(Boolean);
+    probe.remove();
+    const L = Math.ceil(left) + 10, R = W - (d3.max(ends, (e) => e.w) || 0) - 14;
+
+    let xDom = d3.extent(xs); if (xDom[0] === xDom[1]) xDom = [Math.max(0, xDom[0] - 10), xDom[0]];
+    const x = d3.scaleLinear(xDom, [L, R]);
+
+    const g = svg.append('g');
+    ticks.forEach((t) => {
+      g.append('line').attr('x1', L).attr('x2', R).attr('y1', y(t)).attr('y2', y(t)).attr('stroke', css('--grid'));
+      g.append('text').attr('class', 'tick-l').attr('x', L - 8).attr('y', y(t)).attr('dy', '0.32em').attr('text-anchor', 'end').text(fmt(t));
+    });
+    if (o.ref != null) g.append('line').attr('x1', L).attr('x2', R).attr('y1', y(o.ref)).attr('y2', y(o.ref)).attr('stroke', css('--ref')).attr('stroke-dasharray', '4 4');
+    // event markers (new best, rollback): a faint vertical rule with a small label at the top
+    let lastLabelX = -Infinity;
+    for (const m of o.markers || []) {
+      if (m.x < xDom[0] || m.x > xDom[1]) continue;
+      const mx = x(m.x), roll = m.label.startsWith('rollback');
+      g.append('line').attr('x1', mx).attr('x2', mx).attr('y1', 10).attr('y2', B).attr('stroke', roll ? css('--bad') : css('--axis')).attr('stroke-dasharray', '2 3');
+      if (mx - lastLabelX > 70) {
+        g.append('text').attr('class', 'tick-l').attr('x', mx + 3).attr('y', 18).attr('fill', roll ? css('--bad') : css('--muted')).text(m.label);
+        lastLabelX = mx;
+      }
+    }
+    const xAxis = d3.axisBottom(x).ticks(Math.min(6, Math.max(2, Math.floor((R - L) / 70)))).tickFormat(d3.format('d')).tickSizeOuter(0);
+    if (xDom[1] - xDom[0] < 6) xAxis.tickValues([...new Set(xs)]);
+    svg.append('g').attr('class', 'axis').attr('transform', `translate(0,${B})`).call(xAxis).attr('font-size', null).attr('font-family', null);
+
+    o.series.forEach((s) => {
+      if (s.lo) svg.append('path').datum(data.filter((r) => r[s.lo] != null && r[s.hi] != null))
+        .attr('fill', s.color).attr('fill-opacity', 0.15).attr('d', d3.area().x((r) => x(r.x)).y0((r) => y(r[s.lo])).y1((r) => y(r[s.hi])));
+      const p = data.filter((r) => r[s.key] != null);
+      svg.append('path').datum(p).attr('fill', 'none').attr('stroke', s.color).attr('stroke-width', 2).attr('stroke-linecap', 'round').attr('stroke-linejoin', 'round')
+        .attr('d', d3.line().x((r) => x(r.x)).y((r) => y(r[s.key])));
+      if (o.dots || p.length === 1) svg.append('g').selectAll('circle').data(p).join('circle').attr('cx', (r) => x(r.x)).attr('cy', (r) => y(r[s.key])).attr('r', 3).attr('fill', s.color);
+    });
+
+    const placed = ends.map((e) => ({ ...e, y: y(e.r[e.s.key]) })).sort((a, b) => a.y - b.y);
+    for (let i = 1; i < placed.length; i++) if (placed[i].y - placed[i - 1].y < 14) placed[i].y = placed[i - 1].y + 14;
+    placed.forEach((e) => svg.append('text').attr('class', 'end').attr('x', x(e.r.x) + 8).attr('y', e.y).attr('dy', '0.32em')
+      .attr('fill', o.series.length > 1 ? e.s.color : css('--fg')).text(e.text));
+
+    const tip = document.createElement('div'); tip.className = 'tip'; tip.hidden = true; el.appendChild(tip);
+    const hover = svg.append('g');
+    svg.append('rect').attr('x', L).attr('y', 0).attr('width', Math.max(1, R - L)).attr('height', B).attr('fill', 'transparent')
+      .on('pointermove', (ev) => {
+        const [mx] = d3.pointer(ev);
+        const r = data[d3.bisectCenter(xs, x.invert(mx))];
+        hover.selectAll('*').remove();
+        hover.append('line').attr('x1', x(r.x)).attr('x2', x(r.x)).attr('y1', 10).attr('y2', B).attr('stroke', css('--axis'));
+        o.series.forEach((s) => { if (r[s.key] != null) hover.append('circle').attr('cx', x(r.x)).attr('cy', y(r[s.key])).attr('r', 4).attr('fill', s.color); });
+        tip.replaceChildren();
+        const head = document.createElement('div'); head.className = 'tip-head'; head.textContent = `Iteration ${r.x}`; tip.appendChild(head);
+        o.series.forEach((s) => {
+          if (r[s.key] == null) return;
+          const row = document.createElement('div'); row.className = 'tip-row';
+          if (o.series.length > 1) { const sw = document.createElement('span'); sw.className = 'sw'; sw.style.background = s.color; row.appendChild(sw); }
+          const t = document.createElement('span');
+          t.textContent = (s.label ? s.label + ' ' : '') + fmt(r[s.key]) + (s.lo && r[s.lo] != null ? ` (${fmt(r[s.lo])}–${fmt(r[s.hi])})` : '');
+          row.appendChild(t); tip.appendChild(row);
+        });
+        tip.hidden = false;
+        const tw = tip.offsetWidth, px = x(r.x) / W * el.clientWidth;
+        tip.style.transform = `translate(${px + 12 + tw > el.clientWidth ? px - tw - 12 : px + 12}px, 8px)`;
+      })
+      .on('pointerleave', () => { tip.hidden = true; hover.selectAll('*').remove(); });
+  }
+
+  // redraw on resize and theme change
+  let rt; addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(render, 150); });
+  matchMedia('(prefers-color-scheme: dark)').addEventListener('change', render);
+
+  start();
+})();
+</script>
+</body>
+</html>

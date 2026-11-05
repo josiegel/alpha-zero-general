@@ -1,0 +1,339 @@
+[
+ {
+  "guid": "98eea1",
+  "empire": "England",
+  "side": "W",
+  "king": {
+   "file": "a",
+   "name": "King Edward IV, House of York",
+   "prestige": [],
+   "ops": [
+    {
+     "type": "campaign"
+    }
+   ],
+   "ability": null
+  },
+  "republic": {
+   "file": "b",
+   "name": "English Parliament",
+   "prestige": [
+    "law"
+   ],
+   "ops": [
+    {
+     "type": "vote",
+     "market": "W"
+    },
+    {
+     "type": "commerce",
+     "market": "W"
+    }
+   ],
+   "ability": null
+  },
+  "notes": ""
+ },
+ {
+  "guid": "bd1101",
+  "empire": "France",
+  "side": "W",
+  "king": {
+   "file": "a",
+   "name": "Louis XI the Spider, House of Valois",
+   "prestige": [],
+   "ops": [
+    {
+     "type": "campaign"
+    }
+   ],
+   "ability": null
+  },
+  "republic": {
+   "file": "b",
+   "name": "States-General of Burgundy",
+   "prestige": [],
+   "ops": [
+    {
+     "type": "commerce",
+     "market": "W"
+    }
+   ],
+   "ability": null
+  },
+  "notes": ""
+ },
+ {
+  "guid": "35c8ff",
+  "empire": "Aragon",
+  "side": "W",
+  "king": {
+   "file": "a",
+   "name": "John the Faithless, King of Aragon",
+   "prestige": [],
+   "ops": [
+    {
+     "type": "campaign"
+    }
+   ],
+   "ability": null
+  },
+  "republic": {
+   "file": "b",
+   "name": "Golden Ambrosian Republic",
+   "prestige": [
+    "law"
+   ],
+   "ops": [
+    {
+     "type": "vote",
+     "market": "W"
+    },
+    {
+     "type": "commerce",
+     "market": "W"
+    }
+   ],
+   "ability": null
+  },
+  "notes": ""
+ },
+ {
+  "guid": "787cc2",
+  "empire": "Portugal",
+  "side": "W",
+  "king": {
+   "file": "a",
+   "name": "Henry the Navigator",
+   "prestige": [
+    "discovery"
+   ],
+   "ops": [
+    {
+     "type": "campaign"
+    }
+   ],
+   "ability": null
+  },
+  "republic": {
+   "file": "b",
+   "name": "Cortes Generales of Castile",
+   "prestige": [
+    "discovery"
+   ],
+   "ops": [
+    {
+     "type": "commerce",
+     "market": "W"
+    }
+   ],
+   "ability": null
+  },
+  "notes": ""
+ },
+ {
+  "guid": "6d3fd2",
+  "empire": "Holy Roman Empire",
+  "side": "W",
+  "king": {
+   "file": "a",
+   "name": "Frederick III, House of Habsburg",
+   "prestige": [],
+   "ops": [
+    {
+     "type": "campaign"
+    }
+   ],
+   "ability": null
+  },
+  "republic": {
+   "file": "b",
+   "name": "Reichstag Imperial Diet",
+   "prestige": [
+    "law"
+   ],
+   "ops": [
+    {
+     "type": "vote",
+     "market": "W"
+    },
+    {
+     "type": "commerce",
+     "market": "W"
+    }
+   ],
+   "ability": null
+  },
+  "notes": ""
+ },
+ {
+  "guid": "e283dd",
+  "empire": "Byzantium",
+  "side": "E",
+  "king": {
+   "file": "a",
+   "name": "David Comnenus, Basileus of Trebizond",
+   "prestige": [],
+   "ops": [
+    {
+     "type": "campaign"
+    }
+   ],
+   "ability": null
+  },
+  "republic": {
+   "file": "b",
+   "name": "Confederation of White Sheep Turkomen",
+   "prestige": [],
+   "ops": [
+    {
+     "type": "commerce",
+     "market": "E"
+    }
+   ],
+   "ability": null
+  },
+  "notes": ""
+ },
+ {
+  "guid": "a58f2c",
+  "empire": "Mamluk",
+  "side": "E",
+  "king": {
+   "file": "a",
+   "name": "Qa'it Bay of the Burji Dynasty",
+   "prestige": [
+    "patron"
+   ],
+   "ops": [
+    {
+     "type": "campaign"
+    }
+   ],
+   "ability": null
+  },
+  "republic": {
+   "file": "b",
+   "name": "Karaman Beylik",
+   "prestige": [
+    "islamic"
+   ],
+   "ops": [
+    {
+     "type": "commerce",
+     "market": "E"
+    }
+   ],
+   "ability": null
+  },
+  "notes": ""
+ },
+ {
+  "guid": "4e475a",
+  "empire": "Ottoman",
+  "side": "E",
+  "king": {
+   "file": "a",
+   "name": "Sultan Mehmed II the Conqueror",
+   "prestige": [
+    "islamic"
+   ],
+   "ops": [
+    {
+     "type": "campaign"
+    }
+   ],
+   "ability": null
+  },
+  "republic": {
+   "file": "b",
+   "name": "Ottoman Millet System",
+   "prestige": [
+    "islamic"
+   ],
+   "ops": [
+    {
+     "type": "commerce",
+     "market": "E"
+    }
+   ],
+   "ability": null
+  },
+  "notes": ""
+ },
+ {
+  "guid": "ef80c7",
+  "empire": "Hungary",
+  "side": "E",
+  "king": {
+   "file": "a",
+   "name": "Mátyás Corvinus, King of Hungary",
+   "prestige": [
+    "patron"
+   ],
+   "ops": [
+    {
+     "type": "campaign"
+    }
+   ],
+   "ability": null
+  },
+  "republic": {
+   "file": "b",
+   "name": "Polish-Lithuanian Sejm",
+   "prestige": [
+    "law"
+   ],
+   "ops": [
+    {
+     "type": "vote",
+     "market": "E"
+    },
+    {
+     "type": "commerce",
+     "market": "E"
+    }
+   ],
+   "ability": null
+  },
+  "notes": ""
+ },
+ {
+  "guid": "e48ecf",
+  "empire": "Papal States",
+  "side": "W",
+  "king": {
+   "file": "a",
+   "name": "Pope Julius II",
+   "prestige": [
+    "patron",
+    "catholic"
+   ],
+   "ops": [
+    {
+     "type": "campaign"
+    }
+   ],
+   "ability": null
+  },
+  "republic": {
+   "file": "b",
+   "name": "Florentine Signoria",
+   "prestige": [
+    "law"
+   ],
+   "ops": [
+    {
+     "type": "vote",
+     "market": "W"
+    },
+    {
+     "type": "commerce",
+     "market": "W"
+    }
+   ],
+   "ability": null
+  },
+  "notes": "King prestige top-to-bottom: patron (bust) then catholic (crucifix)."
+ }
+]

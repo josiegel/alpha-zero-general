@@ -1,0 +1,5310 @@
+[
+{
+"sheet": 527,
+"index": 0,
+"id": "PREN058",
+"name": "The Grim",
+"side": "E",
+"location": "Ottoman",
+"prestige": [
+"islamic"
+],
+"ops": [
+{
+"type": "behead"
+},
+{
+"type": "siege"
+},
+{
+"type": "inquisitor",
+"religion": "islamic"
+}
+],
+"oneShot": {
+"type": "jihad"
+},
+"agents": [
+{
+"type": "bishop",
+"color": "islamic"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": ""
+},
+{
+"sheet": 527,
+"index": 1,
+"id": "PREN059",
+"name": "Safavids",
+"side": "E",
+"location": "Byzantium",
+"prestige": [
+"islamic"
+],
+"ops": [
+{
+"type": "behead"
+},
+{
+"type": "inquisitor",
+"religion": "islamic"
+}
+],
+"oneShot": {
+"type": "jihad"
+},
+"agents": [
+{
+"type": "bishop",
+"color": "islamic"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": ""
+},
+{
+"sheet": 527,
+"index": 2,
+"id": "PREN060",
+"name": "Dervishes",
+"side": "E",
+"location": "The East",
+"prestige": [
+"islamic"
+],
+"ops": [
+{
+"type": "tax"
+},
+{
+"type": "inquisitor",
+"religion": "islamic"
+}
+],
+"oneShot": {
+"type": "apostasy",
+"religions": [
+"reformist",
+"islamic"
+]
+},
+"agents": [
+{
+"type": "bishop",
+"color": "islamic"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": ""
+},
+{
+"sheet": 527,
+"index": 3,
+"id": "PREN061",
+"name": "Qizilbāsh",
+"side": "E",
+"location": "The East",
+"prestige": [
+"islamic"
+],
+"ops": [
+{
+"type": "tax"
+},
+{
+"type": "siege"
+},
+{
+"type": "inquisitor",
+"religion": "islamic"
+}
+],
+"oneShot": {
+"type": "jihad"
+},
+"agents": [
+{
+"type": "bishop",
+"color": "islamic"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": ""
+},
+{
+"sheet": 527,
+"index": 4,
+"id": "PREN062",
+"name": "Barbarossa Brothers",
+"side": "E",
+"location": "Papal States",
+"prestige": [],
+"ops": [
+{
+"type": "repress",
+"targets": [
+"pawn"
+]
+},
+{
+"type": "corsair",
+"religion": "islamic"
+}
+],
+"oneShot": {
+"type": "apostasy",
+"religions": [
+"reformist",
+"islamic"
+]
+},
+"agents": [
+{
+"type": "pirate",
+"color": "islamic"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": "Pirate ship agent has green/teal sails; color recorded as islamic."
+},
+{
+"sheet": 527,
+"index": 5,
+"id": "PREN063",
+"name": "Ottoman Navy",
+"side": "E",
+"location": "Ottoman",
+"prestige": [],
+"ops": [
+{
+"type": "repress",
+"targets": [
+"pawn"
+]
+},
+{
+"type": "corsair",
+"religion": "islamic"
+}
+],
+"oneShot": {
+"type": "apostasy",
+"religions": [
+"reformist",
+"islamic"
+]
+},
+"agents": [
+{
+"type": "pirate",
+"color": "islamic"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": "Pirate ship agent has green/teal sails; color recorded as islamic."
+},
+{
+"sheet": 527,
+"index": 6,
+"id": "PREN064",
+"name": "Jewish Pirates",
+"side": "E",
+"location": "Aragon",
+"prestige": [],
+"ops": [
+{
+"type": "repress",
+"targets": [
+"pawn"
+]
+},
+{
+"type": "corsair",
+"religion": "islamic"
+}
+],
+"oneShot": {
+"type": "apostasy",
+"religions": [
+"reformist",
+"islamic"
+]
+},
+"agents": [
+{
+"type": "pirate",
+"color": "islamic"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": "Pirate ship agent has green/teal sails; color recorded as islamic."
+},
+{
+"sheet": 527,
+"index": 7,
+"id": "PREN065",
+"name": "Mamluk Slave Soldiers",
+"side": "E",
+"location": "Mamluk",
+"prestige": [],
+"ops": [
+{
+"type": "tax"
+},
+{
+"type": "siege"
+}
+],
+"oneShot": {
+"type": "jihad"
+},
+"agents": [
+{
+"type": "knight",
+"color": "islamic"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": ""
+},
+{
+"sheet": 527,
+"index": 8,
+"id": "PREN066",
+"name": "Black Army",
+"side": "E",
+"location": "Hungary",
+"prestige": [],
+"ops": [
+{
+"type": "tax"
+},
+{
+"type": "siege"
+},
+{
+"type": "inquisitor",
+"religion": "reformist"
+}
+],
+"oneShot": {
+"type": "reformation"
+},
+"agents": [
+{
+"type": "knight",
+"color": "reformist"
+},
+{
+"type": "knight",
+"color": "reformist"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": ""
+},
+{
+"sheet": 527,
+"index": 9,
+"id": "PREN067",
+"name": "Janissaries",
+"side": "E",
+"location": "The East",
+"prestige": [],
+"ops": [
+{
+"type": "tax"
+},
+{
+"type": "siege"
+},
+{
+"type": "inquisitor",
+"religion": "islamic"
+}
+],
+"oneShot": {
+"type": "conspiracy"
+},
+"agents": [
+{
+"type": "knight",
+"color": "islamic"
+},
+{
+"type": "knight",
+"color": "islamic"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": ""
+},
+{
+"sheet": 527,
+"index": 10,
+"id": "PREN068",
+"name": "Black Sheep Tribe",
+"side": "E",
+"location": "Byzantium",
+"prestige": [],
+"ops": [
+{
+"type": "tax"
+},
+{
+"type": "siege"
+}
+],
+"oneShot": {
+"type": "conspiracy"
+},
+"agents": [
+{
+"type": "knight",
+"color": "islamic"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": ""
+},
+{
+"sheet": 527,
+"index": 11,
+"id": "PREN069",
+"name": "Bashi-bazouk",
+"side": "E",
+"location": "The East",
+"prestige": [],
+"ops": [
+{
+"type": "tax"
+}
+],
+"oneShot": {
+"type": "reformation"
+},
+"agents": [
+{
+"type": "knight",
+"color": "reformist"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": ""
+},
+{
+"sheet": 527,
+"index": 12,
+"id": "PREN070",
+"name": "Zupy Krakowskie Company",
+"side": "E",
+"location": "Hungary",
+"prestige": [],
+"ops": [
+{
+"type": "tax"
+},
+{
+"type": "repress",
+"targets": [
+"rook"
+]
+},
+{
+"type": "commerce",
+"market": "E"
+}
+],
+"oneShot": {
+"type": "peasant_revolt"
+},
+"agents": [
+{
+"type": "knight",
+"color": "catholic"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": ""
+},
+{
+"sheet": 527,
+"index": 13,
+"id": "PREN071",
+"name": "The Handsome",
+"side": "E",
+"location": "Hungary",
+"prestige": [
+"islamic"
+],
+"ops": [
+{
+"type": "siege"
+},
+{
+"type": "inquisitor",
+"religion": "islamic"
+}
+],
+"oneShot": {
+"type": "jihad"
+},
+"agents": [
+{
+"type": "knight",
+"color": "islamic"
+},
+{
+"type": "knight",
+"color": "islamic"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": ""
+},
+{
+"sheet": 527,
+"index": 14,
+"id": "PREN072",
+"name": "Bosnian & Serbian Silver",
+"side": "E",
+"location": "Ottoman",
+"prestige": [],
+"ops": [
+{
+"type": "tax"
+},
+{
+"type": "commerce",
+"market": "E"
+}
+],
+"oneShot": {
+"type": "peasant_revolt"
+},
+"agents": [
+{
+"type": "pawn"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": ""
+},
+{
+"sheet": 527,
+"index": 15,
+"id": "PREN073",
+"name": "The Crim Horde",
+"side": "E",
+"location": "Byzantium",
+"prestige": [],
+"ops": [
+{
+"type": "repress",
+"targets": [
+"pawn"
+]
+},
+{
+"type": "commerce",
+"market": "E"
+}
+],
+"oneShot": {
+"type": "conspiracy"
+},
+"agents": [
+{
+"type": "knight",
+"color": "islamic"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": ""
+},
+{
+"sheet": 527,
+"index": 16,
+"id": "PREN074",
+"name": "The Kremlin",
+"side": "E",
+"location": "Holy Roman Empire",
+"prestige": [],
+"ops": [
+{
+"type": "commerce",
+"market": "E"
+}
+],
+"oneShot": {
+"type": "trade_shift",
+"emporium": "Novgorod",
+"requires": null
+},
+"agents": [
+{
+"type": "pawn"
+}
+],
+"suitors": null,
+"ability": [
+{
+"name": "SYNCRETISM",
+"text": "Your cards are immune to silencing by Bishops.",
+"allPlayers": false
+}
+],
+"notes": ""
+},
+{
+"sheet": 527,
+"index": 17,
+"id": "PREN075",
+"name": "Elzbieta of Bohemia",
+"side": "E",
+"location": null,
+"prestige": [],
+"ops": [],
+"oneShot": {
+"type": "coronation"
+},
+"agents": [],
+"suitors": [
+"Hungary",
+"Portugal",
+"Holy Roman Empire"
+],
+"ability": [],
+"notes": ""
+},
+{
+"sheet": 527,
+"index": 18,
+"id": "PREN076",
+"name": "Sophia Palaiologina",
+"side": "E",
+"location": null,
+"prestige": [
+"reformist"
+],
+"ops": [
+{
+"type": "repress",
+"targets": [
+"pawn"
+]
+},
+{
+"type": "inquisitor",
+"religion": "reformist"
+}
+],
+"oneShot": {
+"type": "coronation"
+},
+"agents": [],
+"suitors": [
+"Hungary",
+"Byzantium",
+"Holy Roman Empire"
+],
+"ability": [],
+"notes": ""
+},
+{
+"sheet": 527,
+"index": 19,
+"id": "PREN077",
+"name": "Hürrem Sultan Roxelana",
+"side": "E",
+"location": null,
+"prestige": [],
+"ops": [
+{
+"type": "repress",
+"targets": [
+"pawn"
+]
+},
+{
+"type": "behead"
+}
+],
+"oneShot": {
+"type": "coronation"
+},
+"agents": [],
+"suitors": [
+"Byzantium",
+"Ottoman",
+"Mamluk"
+],
+"ability": [],
+"notes": ""
+},
+{
+"sheet": 527,
+"index": 20,
+"id": "PREN078",
+"name": "Sitt-î Hatun of Dulkadir",
+"side": "E",
+"location": null,
+"prestige": [
+"islamic"
+],
+"ops": [],
+"oneShot": {
+"type": "coronation"
+},
+"agents": [],
+"suitors": [
+"Mamluk",
+"Ottoman",
+"Hungary"
+],
+"ability": [],
+"notes": ""
+},
+{
+"sheet": 527,
+"index": 21,
+"id": "PREN079",
+"name": "Carlotta Lusignan of Cyprus",
+"side": "E",
+"location": null,
+"prestige": [],
+"ops": [
+{
+"type": "siege"
+},
+{
+"type": "commerce",
+"market": "E"
+}
+],
+"oneShot": {
+"type": "coronation"
+},
+"agents": [],
+"suitors": [
+"Byzantium",
+"Ottoman",
+"Mamluk"
+],
+"ability": [],
+"notes": ""
+},
+{
+"sheet": 527,
+"index": 22,
+"id": "PREN080",
+"name": "Greek Klephts",
+"side": "E",
+"location": "Ottoman",
+"prestige": [],
+"ops": [
+{
+"type": "tax"
+},
+{
+"type": "siege"
+}
+],
+"oneShot": {
+"type": "conspiracy"
+},
+"agents": [
+{
+"type": "rook",
+"color": "reformist"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": ""
+},
+{
+"sheet": 527,
+"index": 23,
+"id": "PREN081",
+"name": "Crimean Goths",
+"side": "E",
+"location": "Byzantium",
+"prestige": [
+"law"
+],
+"ops": [
+{
+"type": "vote",
+"market": "E"
+},
+{
+"type": "siege"
+}
+],
+"oneShot": {
+"type": "peasant_revolt"
+},
+"agents": [
+{
+"type": "rook",
+"color": "reformist"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": "Prestige icon shows Lady Justice with scales; recorded as law."
+},
+{
+"sheet": 528,
+"index": 0,
+"id": "PREN110X",
+"name": "Transylvanian Plot",
+"side": "E",
+"location": "Hungary",
+"prestige": [],
+"ops": [
+{
+"type": "siege"
+},
+{
+"type": "inquisitor",
+"religion": "catholic"
+}
+],
+"oneShot": {
+"type": "conspiracy"
+},
+"agents": [
+{
+"type": "knight",
+"color": "islamic"
+},
+{
+"type": "knight",
+"color": "reformist"
+}
+],
+"suitors": null,
+"ability": [
+{
+"name": "GRITTI SPIES",
+"text": "May do east & west ops in one action.",
+"allPlayers": false
+}
+],
+"notes": ""
+},
+{
+"sheet": 528,
+"index": 1,
+"id": "PREN111X",
+"name": "Glinski's Rebellion",
+"side": "E",
+"location": "Hungary",
+"prestige": [
+"reformist"
+],
+"ops": [
+{
+"type": "repress",
+"targets": [
+"rook",
+"knight"
+]
+},
+{
+"type": "siege"
+},
+{
+"type": "commerce",
+"market": "E"
+}
+],
+"oneShot": {
+"type": "peasant_revolt"
+},
+"agents": [
+{
+"type": "pawn"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": ""
+},
+{
+"sheet": 528,
+"index": 2,
+"id": "PREN112X",
+"name": "Phocoean Alum",
+"side": "E",
+"location": "Ottoman",
+"prestige": [],
+"ops": [
+{
+"type": "repress",
+"targets": [
+"pawn",
+"rook"
+]
+},
+{
+"type": "commerce",
+"market": "E"
+}
+],
+"oneShot": null,
+"agents": [
+{
+"type": "pawn"
+},
+{
+"type": "pawn"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": "No scroll text/bomb; no one-shot."
+},
+{
+"sheet": 528,
+"index": 3,
+"id": "PREN113X",
+"name": "Dalmatian Merchant Marine",
+"side": "E",
+"location": "Ottoman",
+"prestige": [],
+"ops": [
+{
+"type": "commerce",
+"market": "E"
+}
+],
+"oneShot": null,
+"agents": [
+{
+"type": "pawn"
+}
+],
+"suitors": null,
+"ability": [
+{
+"name": "RAGUSAN MARITIME IMMUNITY",
+"text": "Your Concessions cannot be killed by Pirates.",
+"allPlayers": false
+}
+],
+"notes": "No one-shot scroll."
+},
+{
+"sheet": 528,
+"index": 4,
+"id": "PREN114X",
+"name": "Counts of Celji",
+"side": "E",
+"location": "Holy Roman Empire",
+"prestige": [],
+"ops": [
+{
+"type": "repress",
+"targets": [
+"pawn",
+"knight"
+]
+}
+],
+"oneShot": {
+"type": "peasant_revolt"
+},
+"agents": [
+{
+"type": "rook",
+"color": "catholic"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": ""
+},
+{
+"sheet": 528,
+"index": 5,
+"id": "PREN115X",
+"name": "Şahkulu Shi'ite Revolt",
+"side": "E",
+"location": "Ottoman",
+"prestige": [
+"islamic"
+],
+"ops": [
+{
+"type": "behead"
+},
+{
+"type": "inquisitor",
+"religion": "islamic"
+}
+],
+"oneShot": {
+"type": "peasant_revolt"
+},
+"agents": [
+{
+"type": "bishop",
+"color": "islamic"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": ""
+},
+{
+"sheet": 528,
+"index": 6,
+"id": "PREN116X",
+"name": "Çelebi Tax Revolts",
+"side": "E",
+"location": "Ottoman",
+"prestige": [],
+"ops": [
+{
+"type": "repress",
+"targets": [
+"pawn"
+]
+},
+{
+"type": "siege"
+},
+{
+"type": "inquisitor",
+"religion": "islamic"
+}
+],
+"oneShot": {
+"type": "peasant_revolt"
+},
+"agents": [
+{
+"type": "knight",
+"color": "islamic"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": ""
+},
+{
+"sheet": 528,
+"index": 7,
+"id": "PREN117X",
+"name": "Despina Khatun",
+"side": "E",
+"location": null,
+"prestige": [
+"reformist"
+],
+"ops": [
+{
+"type": "siege"
+},
+{
+"type": "inquisitor",
+"religion": "reformist"
+}
+],
+"oneShot": {
+"type": "coronation"
+},
+"agents": [],
+"suitors": [
+"Byzantium",
+"Ottoman",
+"Mamluk"
+],
+"ability": [],
+"notes": "Queen; no agents shown."
+},
+{
+"sheet": 528,
+"index": 8,
+"id": "PREN118X",
+"name": "Grand Mufti",
+"side": "E",
+"location": "The East",
+"prestige": [
+"islamic"
+],
+"ops": [
+{
+"type": "behead"
+}
+],
+"oneShot": {
+"type": "jihad"
+},
+"agents": [
+{
+"type": "bishop",
+"color": "islamic"
+}
+],
+"suitors": null,
+"ability": [
+{
+"name": "GENOCIDE",
+"text": "The card's Op can only be used on any east card with a green or red Bishop Token.",
+"allPlayers": false
+}
+],
+"notes": ""
+},
+{
+"sheet": 528,
+"index": 9,
+"id": "PREN119X",
+"name": "Grand Hetman",
+"side": "E",
+"location": "Hungary",
+"prestige": [
+"reformist"
+],
+"ops": [
+{
+"type": "tax"
+},
+{
+"type": "repress",
+"targets": [
+"pawn",
+"rook"
+]
+},
+{
+"type": "siege"
+}
+],
+"oneShot": {
+"type": "conspiracy"
+},
+"agents": [
+{
+"type": "rook",
+"color": "reformist"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": ""
+},
+{
+"sheet": 528,
+"index": 10,
+"id": "PREN120X",
+"name": "Agents of Dukagjini",
+"side": "E",
+"location": "Ottoman",
+"prestige": [
+"law"
+],
+"ops": [
+{
+"type": "repress",
+"targets": [
+"pawn",
+"rook"
+]
+},
+{
+"type": "siege"
+},
+{
+"type": "inquisitor",
+"religion": "reformist"
+}
+],
+"oneShot": {
+"type": "conspiracy"
+},
+"agents": [
+{
+"type": "rook",
+"color": "reformist"
+},
+{
+"type": "rook",
+"color": "reformist"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": ""
+},
+{
+"sheet": 528,
+"index": 11,
+"id": "PREN121X",
+"name": "Nomads of Tlemcen",
+"side": "E",
+"location": "Aragon",
+"prestige": [],
+"ops": [
+{
+"type": "commerce",
+"market": "E"
+}
+],
+"oneShot": {
+"type": "trade_shift",
+"emporium": "Timbuktu",
+"requires": null
+},
+"agents": [
+{
+"type": "rook",
+"color": "islamic"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": "East card (black banner) located in Aragon."
+},
+{
+"sheet": 528,
+"index": 12,
+"id": "PREN122X",
+"name": "The Last Sigh",
+"side": "E",
+"location": "Portugal",
+"prestige": [],
+"ops": [
+{
+"type": "tax"
+},
+{
+"type": "siege"
+}
+],
+"oneShot": {
+"type": "trade_shift",
+"emporium": "Timbuktu",
+"requires": null
+},
+"agents": [
+{
+"type": "rook",
+"color": "islamic"
+}
+],
+"suitors": null,
+"ability": [
+{
+"name": "LEO AFRICANUS",
+"text": "May do east & west ops in one action.",
+"allPlayers": false
+}
+],
+"notes": "East card (black banner) located in Portugal."
+},
+{
+"sheet": 528,
+"index": 13,
+"id": "PREN123X",
+"name": "Nothing New",
+"side": "E",
+"location": "Hungary",
+"prestige": [
+"law"
+],
+"ops": [
+{
+"type": "repress",
+"targets": [
+"pawn",
+"knight"
+]
+},
+{
+"type": "vote",
+"market": "E"
+},
+{
+"type": "siege"
+}
+],
+"oneShot": {
+"type": "conspiracy"
+},
+"agents": [
+{
+"type": "rook",
+"color": "catholic"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": ""
+},
+{
+"sheet": 528,
+"index": 14,
+"id": "PREN124X",
+"name": "The Last Byzantine",
+"side": "E",
+"location": "Byzantium",
+"prestige": [
+"reformist"
+],
+"ops": [
+{
+"type": "behead"
+},
+{
+"type": "repress",
+"targets": [
+"pawn",
+"rook"
+]
+},
+{
+"type": "inquisitor",
+"religion": "reformist"
+}
+],
+"oneShot": {
+"type": "conspiracy"
+},
+"agents": [
+{
+"type": "rook",
+"color": "islamic"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": ""
+},
+{
+"sheet": 528,
+"index": 15,
+"id": "PREN125X",
+"name": "Beylerbey of Egypt",
+"side": "E",
+"location": "Mamluk",
+"prestige": [
+"law"
+],
+"ops": [
+{
+"type": "behead"
+},
+{
+"type": "siege"
+}
+],
+"oneShot": {
+"type": "conspiracy"
+},
+"agents": [
+{
+"type": "rook",
+"color": "islamic"
+},
+{
+"type": "rook",
+"color": "islamic"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": ""
+},
+{
+"sheet": 528,
+"index": 16,
+"id": "PREN126X",
+"name": "Lizard Union",
+"side": "E",
+"location": "Holy Roman Empire",
+"prestige": [
+"law"
+],
+"ops": [
+{
+"type": "repress",
+"targets": [
+"knight"
+]
+},
+{
+"type": "siege"
+},
+{
+"type": "inquisitor",
+"religion": "reformist"
+}
+],
+"oneShot": {
+"type": "conspiracy"
+},
+"agents": [
+{
+"type": "rook",
+"color": "reformist"
+},
+{
+"type": "rook",
+"color": "reformist"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": ""
+},
+{
+"sheet": 528,
+"index": 17,
+"id": "PREN127X",
+"name": "Red Sea Fleet",
+"side": "E",
+"location": "Mamluk",
+"prestige": [],
+"ops": [
+{
+"type": "repress",
+"targets": [
+"rook"
+]
+},
+{
+"type": "tax"
+},
+{
+"type": "commerce",
+"market": "E"
+}
+],
+"oneShot": {
+"type": "trade_shift",
+"emporium": "Red Sea",
+"requires": null
+},
+"agents": [
+{
+"type": "pawn"
+}
+],
+"suitors": null,
+"ability": [
+{
+"name": "",
+"text": "Declaring globalization victory costs 2 actions (all players).",
+"allPlayers": true
+}
+],
+"notes": "Ability has no bold name; red text."
+},
+{
+"sheet": 528,
+"index": 18,
+"id": "PREN163X",
+"name": "Jizya Tax Revolt",
+"side": "E",
+"location": "The East",
+"prestige": [],
+"ops": [
+{
+"type": "siege"
+}
+],
+"oneShot": {
+"type": "conspiracy"
+},
+"agents": [
+{
+"type": "knight",
+"color": "reformist"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": ""
+},
+{
+"sheet": 528,
+"index": 19,
+"id": "PREN164X",
+"name": "Circassian Mamluks",
+"side": "E",
+"location": "Mamluk",
+"prestige": [],
+"ops": [
+{
+"type": "tax"
+}
+],
+"oneShot": {
+"type": "jihad"
+},
+"agents": [
+{
+"type": "knight",
+"color": "islamic"
+}
+],
+"suitors": null,
+"ability": [
+{
+"name": "MAMLUK GOLDEN AGE",
+"text": "Your [patron prestige icon] counts as green Bishops towards your Holy victory.",
+"allPlayers": false
+}
+],
+"notes": "Card has a SECOND ability: SLAVE SOLDIERS: Each Repressed Token in Mamluk counts as a Knight in your East campaign. (allPlayers=false). Icon in MAMLUK GOLDEN AGE is a bust in a diamond = patron prestige."
+},
+{
+"sheet": 528,
+"index": 20,
+"id": "PREN165X",
+"name": "Transylvanian Saxons",
+"side": "E",
+"location": "Hungary",
+"prestige": [],
+"ops": [
+{
+"type": "vote",
+"market": "E"
+},
+{
+"type": "tax"
+}
+],
+"oneShot": {
+"type": "conspiracy"
+},
+"agents": [
+{
+"type": "rook",
+"color": "reformist"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": ""
+},
+{
+"sheet": 528,
+"index": 21,
+"id": "PREN166X",
+"name": "Bank of St. George",
+"side": "E",
+"location": "Byzantium",
+"prestige": [],
+"ops": [
+{
+"type": "commerce",
+"market": "W"
+}
+],
+"oneShot": {
+"type": "conspiracy"
+},
+"agents": [
+{
+"type": "pawn"
+}
+],
+"suitors": null,
+"ability": [
+{
+"name": "JEWISH BANKERS",
+"text": "Each of your [patron prestige icon] reduce the cost to run vote ops by 1.",
+"allPlayers": false
+}
+],
+"notes": "Commerce badge is a W compass on an East card. Ability icon is a bust in diamond = patron prestige."
+},
+{
+"sheet": 528,
+"index": 22,
+"id": "PREN167X",
+"name": "Twelver ghulat",
+"side": "E",
+"location": "Mamluk",
+"prestige": [
+"islamic"
+],
+"ops": [
+{
+"type": "inquisitor",
+"religion": "islamic"
+}
+],
+"oneShot": {
+"type": "apostasy",
+"religions": [
+"reformist",
+"islamic"
+]
+},
+"agents": [
+{
+"type": "bishop",
+"color": "islamic"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": ""
+},
+{
+"sheet": 528,
+"index": 23,
+"id": "PREN168X",
+"name": "Zionist State",
+"side": "E",
+"location": "Mamluk",
+"prestige": [
+"reformist"
+],
+"ops": [
+{
+"type": "inquisitor",
+"religion": "reformist"
+},
+{
+"type": "commerce",
+"market": "E"
+}
+],
+"oneShot": {
+"type": "reformation"
+},
+"agents": [
+{
+"type": "pawn"
+}
+],
+"suitors": null,
+"ability": [
+{
+"name": "SŰLEYMAN PATRONAGE",
+"text": "Green Pirates count both as red Bishops and red units when calculating religious supremacy.",
+"allPlayers": false
+}
+],
+"notes": "Ability name printed as 'SŰLEYMAN' (sic)."
+},
+{
+"sheet": 529,
+"index": 0,
+"id": "PREN082",
+"name": "Damascus Coffee",
+"side": "E",
+"location": "Mamluk",
+"prestige": [],
+"ops": [
+{
+"type": "siege"
+},
+{
+"type": "commerce",
+"market": "E"
+}
+],
+"oneShot": {
+"type": "conspiracy"
+},
+"agents": [
+{
+"type": "rook",
+"color": "islamic"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": ""
+},
+{
+"sheet": 529,
+"index": 1,
+"id": "PREN083",
+"name": "Pospolite Ruszenie",
+"side": "E",
+"location": "Hungary",
+"prestige": [
+"law"
+],
+"ops": [
+{
+"type": "vote",
+"market": "E"
+},
+{
+"type": "siege"
+}
+],
+"oneShot": {
+"type": "conspiracy"
+},
+"agents": [
+{
+"type": "rook",
+"color": "catholic"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": "Prestige icon is Lady Justice with scales (law)."
+},
+{
+"sheet": 529,
+"index": 2,
+"id": "PREN084",
+"name": "The Timar System",
+"side": "E",
+"location": "The East",
+"prestige": [],
+"ops": [
+{
+"type": "tax"
+},
+{
+"type": "siege"
+},
+{
+"type": "inquisitor",
+"religion": "islamic"
+}
+],
+"oneShot": null,
+"agents": [
+{
+"type": "rook",
+"color": "islamic"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": ""
+},
+{
+"sheet": 529,
+"index": 3,
+"id": "PREN085",
+"name": "Vlad the Impaler",
+"side": "E",
+"location": "Hungary",
+"prestige": [],
+"ops": [
+{
+"type": "behead"
+},
+{
+"type": "siege"
+},
+{
+"type": "inquisitor",
+"religion": "catholic"
+}
+],
+"oneShot": {
+"type": "conspiracy"
+},
+"agents": [
+{
+"type": "rook",
+"color": "catholic"
+},
+{
+"type": "rook",
+"color": "catholic"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": ""
+},
+{
+"sheet": 529,
+"index": 4,
+"id": "PREN086",
+"name": "Saint Stefan cel Mare",
+"side": "E",
+"location": "Hungary",
+"prestige": [
+"reformist"
+],
+"ops": [
+{
+"type": "siege"
+},
+{
+"type": "inquisitor",
+"religion": "reformist"
+}
+],
+"oneShot": {
+"type": "conspiracy"
+},
+"agents": [
+{
+"type": "rook",
+"color": "reformist"
+},
+{
+"type": "rook",
+"color": "reformist"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": ""
+},
+{
+"sheet": 529,
+"index": 5,
+"id": "PREN087",
+"name": "Soninke Wangara",
+"side": "E",
+"location": "Aragon",
+"prestige": [],
+"ops": [
+{
+"type": "commerce",
+"market": "E"
+}
+],
+"oneShot": {
+"type": "trade_shift",
+"emporium": "Timbuktu",
+"requires": null
+},
+"agents": [
+{
+"type": "rook",
+"color": "islamic"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": "East (black, left) banner despite Aragon location."
+},
+{
+"sheet": 529,
+"index": 6,
+"id": "PREN088",
+"name": "Cem Anti-Hostage",
+"side": "E",
+"location": "Ottoman",
+"prestige": [],
+"ops": [
+{
+"type": "behead"
+},
+{
+"type": "siege"
+}
+],
+"oneShot": {
+"type": "conspiracy"
+},
+"agents": [
+{
+"type": "rook",
+"color": "islamic"
+},
+{
+"type": "rook",
+"color": "islamic"
+}
+],
+"suitors": null,
+"ability": [
+{
+"name": "RANSOM",
+"text": "Sell this card for 4 instead of 2 Florins.",
+"allPlayers": false
+}
+],
+"notes": ""
+},
+{
+"sheet": 529,
+"index": 7,
+"id": "PREN089",
+"name": "Grande of Spain",
+"side": "E",
+"location": "Byzantium",
+"prestige": [],
+"ops": [
+{
+"type": "tax"
+},
+{
+"type": "repress",
+"targets": [
+"knight"
+]
+}
+],
+"oneShot": {
+"type": "conspiracy"
+},
+"agents": [
+{
+"type": "rook",
+"color": "catholic"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": ""
+},
+{
+"sheet": 529,
+"index": 8,
+"id": "PREN090",
+"name": "Duke of Athens",
+"side": "E",
+"location": "Ottoman",
+"prestige": [],
+"ops": [
+{
+"type": "siege"
+}
+],
+"oneShot": {
+"type": "conspiracy"
+},
+"agents": [
+{
+"type": "rook",
+"color": "reformist"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": ""
+},
+{
+"sheet": 529,
+"index": 9,
+"id": "PREN093X",
+"name": "Funj Nomads",
+"side": "E",
+"location": "Mamluk",
+"prestige": [],
+"ops": [
+{
+"type": "repress",
+"targets": [
+"pawn"
+]
+},
+{
+"type": "siege"
+},
+{
+"type": "commerce",
+"market": "E"
+}
+],
+"oneShot": {
+"type": "peasant_revolt"
+},
+"agents": [
+{
+"type": "knight",
+"color": "islamic"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": ""
+},
+{
+"sheet": 529,
+"index": 10,
+"id": "PREN094X",
+"name": "Zaporozhian Host",
+"side": "E",
+"location": "Byzantium",
+"prestige": [
+"reformist"
+],
+"ops": [
+{
+"type": "tax"
+},
+{
+"type": "siege"
+}
+],
+"oneShot": {
+"type": "reformation"
+},
+"agents": [
+{
+"type": "knight",
+"color": "reformist"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": "Bomb icon on the scroll is red-coloured rather than black; treated as one-shot."
+},
+{
+"sheet": 529,
+"index": 11,
+"id": "PREN095X",
+"name": "Elizabeth Báthory",
+"side": "E",
+"location": null,
+"prestige": [],
+"ops": [
+{
+"type": "repress",
+"targets": [
+"pawn"
+]
+}
+],
+"oneShot": {
+"type": "coronation"
+},
+"agents": [],
+"suitors": [
+"Byzantium",
+"Hungary",
+"Holy Roman Empire"
+],
+"ability": [
+{
+"name": "POPULAR REPRISALS",
+"text": "As an action, Discard this card to launch a peasant revolt in her Empire.",
+"allPlayers": false
+}
+],
+"notes": "Queen; dark (East-style) banner on left."
+},
+{
+"sheet": 529,
+"index": 12,
+"id": "PREN098X",
+"name": "Unity of the Brethren",
+"side": "E",
+"location": "Holy Roman Empire",
+"prestige": [
+"reformist"
+],
+"ops": [
+{
+"type": "repress",
+"targets": [
+"knight"
+]
+},
+{
+"type": "inquisitor",
+"religion": "reformist"
+}
+],
+"oneShot": {
+"type": "apostasy",
+"religions": [
+"reformist",
+"catholic"
+]
+},
+"agents": [
+{
+"type": "bishop",
+"color": "reformist"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": ""
+},
+{
+"sheet": 529,
+"index": 13,
+"id": "PREN099X",
+"name": "Papal Legate to Persia",
+"side": "E",
+"location": "The East",
+"prestige": [
+"reformist"
+],
+"ops": [
+{
+"type": "inquisitor",
+"religion": "catholic"
+},
+{
+"type": "inquisitor",
+"religion": "reformist"
+}
+],
+"oneShot": {
+"type": "apostasy",
+"religions": [
+"islamic",
+"catholic"
+]
+},
+"agents": [
+{
+"type": "bishop",
+"color": "reformist"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": ""
+},
+{
+"sheet": 529,
+"index": 14,
+"id": "PREN100X",
+"name": "Unified Christendom",
+"side": "E",
+"location": "The East",
+"prestige": [
+"patron"
+],
+"ops": [
+{
+"type": "inquisitor",
+"religion": "catholic"
+},
+{
+"type": "inquisitor",
+"religion": "reformist"
+}
+],
+"oneShot": {
+"type": "apostasy",
+"religions": [
+"reformist",
+"islamic"
+]
+},
+"agents": [
+{
+"type": "bishop",
+"color": "reformist"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": "Patron prestige shown as marble bust (David)."
+},
+{
+"sheet": 529,
+"index": 15,
+"id": "PREN101X",
+"name": "Civil Engineer",
+"side": "E",
+"location": "The East",
+"prestige": [
+"patron"
+],
+"ops": [],
+"oneShot": null,
+"agents": [],
+"suitors": null,
+"ability": [
+{
+"name": "FORTIFICATIONS",
+"text": "You may do \"activate eastern ops\" without expending an action.",
+"allPlayers": false
+}
+],
+"notes": "Vitruvian man badge at top-right of title box (possibly marks a special card category). Prestige is marble bust (patron)."
+},
+{
+"sheet": 529,
+"index": 16,
+"id": "PREN102X",
+"name": "Sahn-i Seman Medrese",
+"side": "E",
+"location": "Ottoman",
+"prestige": [
+"discovery"
+],
+"ops": [],
+"oneShot": null,
+"agents": [],
+"suitors": null,
+"ability": [
+{
+"name": "ASTRONOMICAL NAVIGATION",
+"text": "Your [patron prestige icon] count as Concessions in a globalization victory.",
+"allPlayers": false
+}
+],
+"notes": "Ability text contains an inline patron (bust) prestige icon. Vitruvian man badge at top-right of title box. Prestige is a ship (discovery)."
+},
+{
+"sheet": 529,
+"index": 17,
+"id": "PREN103X",
+"name": "Academia",
+"side": "E",
+"location": "Hungary",
+"prestige": [
+"discovery"
+],
+"ops": [
+{
+"type": "vote",
+"market": "E"
+}
+],
+"oneShot": null,
+"agents": [],
+"suitors": null,
+"ability": [
+{
+"name": "SECULAR UNIVERSITY",
+"text": "This card counts as a Republic for a Renaissance victory.",
+"allPlayers": false
+}
+],
+"notes": "Vitruvian man badge at top-right of title box."
+},
+{
+"sheet": 529,
+"index": 18,
+"id": "PREN104X",
+"name": "Theft of the Holy Crown",
+"side": "E",
+"location": null,
+"prestige": [
+"catholic"
+],
+"ops": [],
+"oneShot": {
+"type": "coronation"
+},
+"agents": [],
+"suitors": [
+"Hungary"
+],
+"ability": [
+{
+"name": "RANSOM",
+"text": "Sell this card for 4 instead of 2 Florins.",
+"allPlayers": false
+}
+],
+"notes": "Queen; dark banner on left."
+},
+{
+"sheet": 529,
+"index": 19,
+"id": "PREN105X",
+"name": "Franco-Ottoman Navy",
+"side": "E",
+"location": "Aragon",
+"prestige": [
+"discovery"
+],
+"ops": [
+{
+"type": "siege"
+},
+{
+"type": "corsair",
+"religion": "islamic"
+},
+{
+"type": "corsair",
+"religion": "catholic"
+}
+],
+"oneShot": {
+"type": "trade_shift",
+"emporium": "Novgorod",
+"requires": null
+},
+"agents": [
+{
+"type": "pirate",
+"color": "catholic"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": "Pirate ship has gold/olive sails (catholic)."
+},
+{
+"sheet": 529,
+"index": 20,
+"id": "PREN106X",
+"name": "Prussian League Navy",
+"side": "E",
+"location": "Holy Roman Empire",
+"prestige": [],
+"ops": [
+{
+"type": "repress",
+"targets": [
+"pawn"
+]
+},
+{
+"type": "corsair",
+"religion": "catholic"
+},
+{
+"type": "commerce",
+"market": "E"
+}
+],
+"oneShot": null,
+"agents": [
+{
+"type": "pirate",
+"color": "catholic"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": "Pirate ship has gold/olive sails (catholic)."
+},
+{
+"sheet": 529,
+"index": 21,
+"id": "PREN107X",
+"name": "Tersâne-i Âmire",
+"side": "E",
+"location": "Ottoman",
+"prestige": [],
+"ops": [
+{
+"type": "repress",
+"targets": [
+"pawn"
+]
+},
+{
+"type": "corsair",
+"religion": "islamic"
+}
+],
+"oneShot": {
+"type": "trade_shift",
+"emporium": "Red Sea",
+"requires": null
+},
+"agents": [
+{
+"type": "pirate",
+"color": "islamic"
+}
+],
+"suitors": null,
+"ability": [
+{
+"name": "IMPERIAL ARSENAL",
+"text": "Your Concessions cannot be killed by Pirates.",
+"allPlayers": false
+}
+],
+"notes": "Pirate ship has teal/green sails (islamic)."
+},
+{
+"sheet": 529,
+"index": 22,
+"id": "PREN108X",
+"name": "Isfendiyarid dynasty",
+"side": "E",
+"location": "Byzantium",
+"prestige": [],
+"ops": [
+{
+"type": "repress",
+"targets": [
+"pawn"
+]
+},
+{
+"type": "corsair",
+"religion": "islamic"
+}
+],
+"oneShot": null,
+"agents": [
+{
+"type": "pirate",
+"color": "islamic"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": "Pirate ship has teal/green sails (islamic)."
+},
+{
+"sheet": 529,
+"index": 23,
+"id": "PREN109X",
+"name": "Brotherhood of St. Mark",
+"side": "E",
+"location": "Holy Roman Empire",
+"prestige": [],
+"ops": [
+{
+"type": "behead"
+}
+],
+"oneShot": null,
+"agents": [
+{
+"type": "knight",
+"color": "catholic"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": ""
+},
+{
+"sheet": 531,
+"index": 0,
+"id": "PREN143X",
+"name": "Wolf of Rimini",
+"side": "W",
+"location": "Papal States",
+"prestige": [],
+"ops": [
+{
+"type": "siege"
+},
+{
+"type": "commerce",
+"market": "W"
+}
+],
+"oneShot": {
+"type": "conspiracy"
+},
+"agents": [
+{
+"type": "knight",
+"color": "catholic"
+},
+{
+"type": "knight",
+"color": "catholic"
+}
+],
+"suitors": null,
+"ability": [
+{
+"name": "CONDOTTIERE",
+"text": "Venice can hold 2 gold Knights instead of 1.",
+"allPlayers": false
+}
+],
+"notes": ""
+},
+{
+"sheet": 531,
+"index": 1,
+"id": "PREN144X",
+"name": "Mons Meg",
+"side": "W",
+"location": "England",
+"prestige": [],
+"ops": [
+{
+"type": "siege"
+}
+],
+"oneShot": {
+"type": "conspiracy"
+},
+"agents": [
+{
+"type": "knight",
+"color": "reformist"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": ""
+},
+{
+"sheet": 531,
+"index": 2,
+"id": "PREN145X",
+"name": "Kappeler Milchsuppe",
+"side": "W",
+"location": "Holy Roman Empire",
+"prestige": [],
+"ops": [
+{
+"type": "vote",
+"market": "W"
+}
+],
+"oneShot": null,
+"agents": [
+{
+"type": "knight",
+"color": "catholic"
+}
+],
+"suitors": null,
+"ability": [
+{
+"name": null,
+"text": "Declaring Imperial Victory costs 2 actions (all players).",
+"allPlayers": true
+}
+],
+"notes": "Ability has no name; red text."
+},
+{
+"sheet": 531,
+"index": 3,
+"id": "PREN146X",
+"name": "Bank of Strozzi",
+"side": "W",
+"location": "Papal States",
+"prestige": [],
+"ops": [
+{
+"type": "vote",
+"market": "W"
+},
+{
+"type": "commerce",
+"market": "W"
+}
+],
+"oneShot": {
+"type": "peasant_revolt"
+},
+"agents": [
+{
+"type": "pawn"
+}
+],
+"suitors": null,
+"ability": [
+{
+"name": "DOUBLE ENTRY ACCOUNTING",
+"text": "Your Hand size is unlimited.",
+"allPlayers": false
+}
+],
+"notes": ""
+},
+{
+"sheet": 531,
+"index": 4,
+"id": "PREN147X",
+"name": "William Caxton",
+"side": "W",
+"location": "England",
+"prestige": [
+"law"
+],
+"ops": [
+{
+"type": "commerce",
+"market": "W"
+}
+],
+"oneShot": null,
+"agents": [
+{
+"type": "pawn"
+}
+],
+"suitors": null,
+"ability": [
+{
+"name": "PRINTING PRESS",
+"text": "Your Hand Size is unlimited.",
+"allPlayers": false
+}
+],
+"notes": ""
+},
+{
+"sheet": 531,
+"index": 5,
+"id": "PREN148X",
+"name": "Tolfa Alum",
+"side": "W",
+"location": "Papal States",
+"prestige": [],
+"ops": [
+{
+"type": "vote",
+"market": "W"
+},
+{
+"type": "commerce",
+"market": "W"
+}
+],
+"oneShot": null,
+"agents": [
+{
+"type": "pawn"
+},
+{
+"type": "pawn"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": ""
+},
+{
+"sheet": 531,
+"index": 6,
+"id": "PREN149X",
+"name": "Cornish Tin",
+"side": "W",
+"location": "England",
+"prestige": [
+"law"
+],
+"ops": [
+{
+"type": "vote",
+"market": "W"
+},
+{
+"type": "commerce",
+"market": "W"
+}
+],
+"oneShot": {
+"type": "peasant_revolt"
+},
+"agents": [
+{
+"type": "pawn"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": ""
+},
+{
+"sheet": 531,
+"index": 7,
+"id": "PREN150X",
+"name": "Catalan Pactists",
+"side": "W",
+"location": "Aragon",
+"prestige": [
+"law"
+],
+"ops": [
+{
+"type": "vote",
+"market": "W"
+}
+],
+"oneShot": {
+"type": "peasant_revolt"
+},
+"agents": [
+{
+"type": "pawn"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": ""
+},
+{
+"sheet": 531,
+"index": 8,
+"id": "PREN151X",
+"name": "Catherine of Navarre",
+"side": "W",
+"location": null,
+"prestige": [],
+"ops": [
+{
+"type": "siege"
+}
+],
+"oneShot": {
+"type": "coronation"
+},
+"agents": [],
+"suitors": [
+"Portugal",
+"France",
+"Aragon"
+],
+"ability": [
+{
+"name": "BUFFER STATE",
+"text": "Portugal and France are not adjacent for all players.",
+"allPlayers": false
+}
+],
+"notes": "Ability text is black (not red) but says 'for all players'; allPlayers left false per colour rule."
+},
+{
+"sheet": 531,
+"index": 9,
+"id": "PREN152X",
+"name": "Margaret of Austria",
+"side": "W",
+"location": null,
+"prestige": [],
+"ops": [
+{
+"type": "vote",
+"market": "W"
+}
+],
+"oneShot": {
+"type": "coronation"
+},
+"agents": [],
+"suitors": [
+"England",
+"Portugal",
+"Aragon",
+"France"
+],
+"ability": [],
+"notes": ""
+},
+{
+"sheet": 531,
+"index": 10,
+"id": "PREN153X",
+"name": "The Mary Rose",
+"side": "W",
+"location": "England",
+"prestige": [
+"discovery"
+],
+"ops": [
+{
+"type": "repress",
+"targets": [
+"rook",
+"knight"
+]
+},
+{
+"type": "tax"
+},
+{
+"type": "corsair",
+"religion": "reformist"
+}
+],
+"oneShot": null,
+"agents": [
+{
+"type": "pirate",
+"color": "reformist"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": "Agent is a red pirate ship."
+},
+{
+"sheet": 531,
+"index": 11,
+"id": "PREN154X",
+"name": "European Union",
+"side": "W",
+"location": "Holy Roman Empire",
+"prestige": [],
+"ops": [
+{
+"type": "repress",
+"targets": [
+"rook"
+]
+}
+],
+"oneShot": {
+"type": "trade_shift",
+"emporium": "Novgorod",
+"requires": null
+},
+"agents": [
+{
+"type": "rook",
+"color": "reformist"
+}
+],
+"suitors": null,
+"ability": [
+{
+"name": null,
+"text": "Declaring Imperial Victory costs 2 actions (all players).",
+"allPlayers": true
+}
+],
+"notes": "Ability has no name; red text."
+},
+{
+"sheet": 531,
+"index": 12,
+"id": "PREN155X",
+"name": "Epicurean Swerve",
+"side": "W",
+"location": "The West",
+"prestige": [
+"patron"
+],
+"ops": [],
+"oneShot": null,
+"agents": [],
+"suitors": null,
+"ability": [
+{
+"name": null,
+"text": "Declaring Holy Victory costs 2 actions (all players).",
+"allPlayers": true
+},
+{
+"name": "On the Nature of Things",
+"text": "This counts as a Republic for your Renaissance victory.",
+"allPlayers": false
+},
+{
+"name": "RELIGION AS DELUSIONAL",
+"text": "You are immune to apostasy.",
+"allPlayers": false
+}
+],
+"notes": "THREE abilities, so ability is an array: unnamed red Holy Victory text, plus 'On the Nature of Things' and 'RELIGION AS DELUSIONAL'. Prestige icon is a classical (David) bust, taken as patron. A Vitruvian-man medallion appears beside the title (not in the banner), possibly a Republic/Renaissance marker. No ops, no one-shot, no agents."
+},
+{
+"sheet": 531,
+"index": 13,
+"id": "PREN156X",
+"name": "Humanism",
+"side": "W",
+"location": "France",
+"prestige": [
+"patron"
+],
+"ops": [],
+"oneShot": null,
+"agents": [
+{
+"type": "bishop",
+"color": "catholic"
+}
+],
+"suitors": null,
+"ability": [
+{
+"name": null,
+"text": "Declaring Holy Victory costs 2 actions (all players).",
+"allPlayers": true
+},
+{
+"name": "COLLEGIUM TRINIGUE",
+"text": "Your cards are immune to silencing by Bishops.",
+"allPlayers": false
+}
+],
+"notes": "TWO abilities, so ability is an array: an unnamed red Holy Victory text and COLLEGIUM TRINIGUE (spelled that way on the card). Prestige is a bust, taken as patron. No ops."
+},
+{
+"sheet": 531,
+"index": 14,
+"id": "PREN157X",
+"name": "Council of Trent",
+"side": "W",
+"location": "The West",
+"prestige": [
+"catholic"
+],
+"ops": [
+{
+"type": "inquisitor",
+"religion": "catholic"
+}
+],
+"oneShot": {
+"type": "crusade"
+},
+"agents": [
+{
+"type": "bishop",
+"color": "catholic"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": ""
+},
+{
+"sheet": 531,
+"index": 15,
+"id": "PREN158X",
+"name": "Order of Preachers",
+"side": "W",
+"location": "The West",
+"prestige": [
+"catholic"
+],
+"ops": [
+{
+"type": "inquisitor",
+"religion": "catholic"
+}
+],
+"oneShot": {
+"type": "crusade"
+},
+"agents": [
+{
+"type": "bishop",
+"color": "catholic"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": ""
+},
+{
+"sheet": 531,
+"index": 16,
+"id": "PREN159X",
+"name": "Consent of the Governed",
+"side": "W",
+"location": "The West",
+"prestige": [
+"law"
+],
+"ops": [],
+"oneShot": {
+"type": "peasant_revolt"
+},
+"agents": [],
+"suitors": null,
+"ability": [
+{
+"name": "GERMAN HUMANISM",
+"text": "Your [patron] counts as [law] for Renaissance victory.",
+"allPlayers": false
+}
+],
+"notes": "Ability text has inline prestige icons: a bust (patron) and Lady Justice (law). A Vitruvian-man medallion appears beside the title. No ops, no agents."
+},
+{
+"sheet": 531,
+"index": 17,
+"id": "PREN160X",
+"name": "Jacques Lefèvre d'Étaples",
+"side": "W",
+"location": "France",
+"prestige": [
+"reformist"
+],
+"ops": [
+{
+"type": "inquisitor",
+"religion": "reformist"
+}
+],
+"oneShot": {
+"type": "reformation"
+},
+"agents": [
+{
+"type": "bishop",
+"color": "reformist"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": ""
+},
+{
+"sheet": 531,
+"index": 18,
+"id": "PREN161X",
+"name": "Enclosure",
+"side": "W",
+"location": "England",
+"prestige": [
+"law"
+],
+"ops": [
+{
+"type": "commerce",
+"market": "W"
+}
+],
+"oneShot": {
+"type": "peasant_revolt"
+},
+"agents": [
+{
+"type": "pawn"
+}
+],
+"suitors": null,
+"ability": [
+{
+"name": "ENDING SUBSISTENCE FARMING",
+"text": "If you sell this card, may emancipate any or all repressed Tokens in The West.",
+"allPlayers": false
+}
+],
+"notes": ""
+},
+{
+"sheet": 531,
+"index": 19,
+"id": "PREN162X",
+"name": "Catherine de' Medici",
+"side": "W",
+"location": null,
+"prestige": [],
+"ops": [
+{
+"type": "repress",
+"targets": [
+"rook"
+]
+}
+],
+"oneShot": {
+"type": "coronation"
+},
+"agents": [],
+"suitors": [
+"France",
+"Aragon",
+"Holy Roman Empire"
+],
+"ability": [],
+"notes": ""
+},
+{
+"sheet": 532,
+"index": 0,
+"id": "PREN025",
+"name": "Teutonic Knights",
+"side": "W",
+"location": "Holy Roman Empire",
+"prestige": [],
+"ops": [
+{
+"type": "repress",
+"targets": [
+"pawn",
+"rook"
+]
+},
+{
+"type": "siege"
+}
+],
+"oneShot": {
+"type": "conspiracy"
+},
+"agents": [
+{
+"type": "knight",
+"color": "catholic"
+},
+{
+"type": "knight",
+"color": "catholic"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": ""
+},
+{
+"sheet": 532,
+"index": 1,
+"id": "PREN026",
+"name": "Cromwell",
+"side": "W",
+"location": "England",
+"prestige": [
+"reformist"
+],
+"ops": [
+{
+"type": "tax"
+},
+{
+"type": "inquisitor",
+"religion": "reformist"
+}
+],
+"oneShot": {
+"type": "reformation"
+},
+"agents": [
+{
+"type": "knight",
+"color": "reformist"
+},
+{
+"type": "knight",
+"color": "reformist"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": ""
+},
+{
+"sheet": 532,
+"index": 2,
+"id": "PREN027",
+"name": "Swabian League",
+"side": "W",
+"location": "Holy Roman Empire",
+"prestige": [],
+"ops": [
+{
+"type": "repress",
+"targets": [
+"pawn",
+"rook"
+]
+},
+{
+"type": "siege"
+}
+],
+"oneShot": {
+"type": "apostasy",
+"religions": [
+"reformist",
+"catholic"
+]
+},
+"agents": [
+{
+"type": "knight",
+"color": "catholic"
+},
+{
+"type": "knight",
+"color": "catholic"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": "Apostasy shows red cross-heart (reformist) left, gold crucifix (catholic) right."
+},
+{
+"sheet": 532,
+"index": 3,
+"id": "PREN028",
+"name": "The Bold",
+"side": "W",
+"location": "France",
+"prestige": [],
+"ops": [
+{
+"type": "tax"
+},
+{
+"type": "siege"
+},
+{
+"type": "inquisitor",
+"religion": "catholic"
+}
+],
+"oneShot": {
+"type": "conspiracy"
+},
+"agents": [
+{
+"type": "knight",
+"color": "catholic"
+},
+{
+"type": "knight",
+"color": "catholic"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": ""
+},
+{
+"sheet": 532,
+"index": 4,
+"id": "PREN029",
+"name": "Holy Land Crusade",
+"side": "W",
+"location": "Mamluk",
+"prestige": [
+"catholic"
+],
+"ops": [
+{
+"type": "tax"
+},
+{
+"type": "siege"
+}
+],
+"oneShot": {
+"type": "crusade"
+},
+"agents": [
+{
+"type": "knight",
+"color": "catholic"
+},
+{
+"type": "knight",
+"color": "catholic"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": "West card (white banner) with Mamluk location. Knights and bomb are olive/khaki-gold; read as catholic."
+},
+{
+"sheet": 532,
+"index": 5,
+"id": "PREN030",
+"name": "Santa Hermandad",
+"side": "W",
+"location": "The West",
+"prestige": [],
+"ops": [
+{
+"type": "tax"
+},
+{
+"type": "inquisitor",
+"religion": "catholic"
+}
+],
+"oneShot": {
+"type": "apostasy",
+"religions": [
+"reformist",
+"catholic"
+]
+},
+"agents": [
+{
+"type": "knight",
+"color": "catholic"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": "Apostasy shows red cross-heart (reformist) left, gold crucifix (catholic) right."
+},
+{
+"sheet": 532,
+"index": 6,
+"id": "PREN031",
+"name": "Swiss Risläufer",
+"side": "W",
+"location": "The West",
+"prestige": [],
+"ops": [
+{
+"type": "siege"
+}
+],
+"oneShot": null,
+"agents": [
+{
+"type": "knight",
+"color": "catholic"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": "No one-shot scroll."
+},
+{
+"sheet": 532,
+"index": 7,
+"id": "PREN032",
+"name": "Duke of Milan",
+"side": "W",
+"location": "Aragon",
+"prestige": [
+"patron"
+],
+"ops": [
+{
+"type": "tax"
+},
+{
+"type": "siege"
+}
+],
+"oneShot": {
+"type": "conspiracy"
+},
+"agents": [
+{
+"type": "knight",
+"color": "catholic"
+},
+{
+"type": "knight",
+"color": "catholic"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": "Prestige icon is a classical marble bust (David); read as patron."
+},
+{
+"sheet": 532,
+"index": 8,
+"id": "PREN033",
+"name": "Schwarzer Haufen",
+"side": "W",
+"location": "The West",
+"prestige": [],
+"ops": [
+{
+"type": "tax"
+},
+{
+"type": "siege"
+}
+],
+"oneShot": {
+"type": "peasant_revolt"
+},
+"agents": [
+{
+"type": "knight",
+"color": "islamic"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": "Knight is dark teal/green; recorded as islamic (green). Verify - unusual teal shade."
+},
+{
+"sheet": 532,
+"index": 9,
+"id": "PREN034",
+"name": "Merchants of the Staple",
+"side": "W",
+"location": "England",
+"prestige": [],
+"ops": [
+{
+"type": "commerce",
+"market": "W"
+}
+],
+"oneShot": {
+"type": "peasant_revolt"
+},
+"agents": [
+{
+"type": "pawn"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": ""
+},
+{
+"sheet": 532,
+"index": 10,
+"id": "PREN035",
+"name": "Communeros Guilds",
+"side": "W",
+"location": "Portugal",
+"prestige": [],
+"ops": [
+{
+"type": "commerce",
+"market": "W"
+}
+],
+"oneShot": {
+"type": "peasant_revolt"
+},
+"agents": [
+{
+"type": "pawn"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": ""
+},
+{
+"sheet": 532,
+"index": 11,
+"id": "PREN036",
+"name": "Flanders Guild",
+"side": "W",
+"location": "France",
+"prestige": [
+"law"
+],
+"ops": [
+{
+"type": "vote",
+"market": "W"
+},
+{
+"type": "siege"
+},
+{
+"type": "commerce",
+"market": "W"
+}
+],
+"oneShot": {
+"type": "peasant_revolt"
+},
+"agents": [
+{
+"type": "pawn"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": "Prestige is Lady Justice with scales; read as law."
+},
+{
+"sheet": 532,
+"index": 12,
+"id": "PREN037",
+"name": "The Hidden",
+"side": "W",
+"location": "Aragon",
+"prestige": [
+"law"
+],
+"ops": [
+{
+"type": "vote",
+"market": "W"
+},
+{
+"type": "commerce",
+"market": "W"
+},
+{
+"type": "inquisitor",
+"religion": "reformist"
+}
+],
+"oneShot": {
+"type": "peasant_revolt"
+},
+"agents": [
+{
+"type": "pawn"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": ""
+},
+{
+"sheet": 532,
+"index": 13,
+"id": "PREN038",
+"name": "Bundschuh Revolt",
+"side": "W",
+"location": "Holy Roman Empire",
+"prestige": [],
+"ops": [
+{
+"type": "commerce",
+"market": "W"
+}
+],
+"oneShot": {
+"type": "peasant_revolt"
+},
+"agents": [
+{
+"type": "pawn"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": ""
+},
+{
+"sheet": 532,
+"index": 14,
+"id": "PREN039",
+"name": "Florentine Wool",
+"side": "W",
+"location": "Papal States",
+"prestige": [],
+"ops": [
+{
+"type": "commerce",
+"market": "W"
+}
+],
+"oneShot": {
+"type": "peasant_revolt"
+},
+"agents": [
+{
+"type": "pawn"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": ""
+},
+{
+"sheet": 532,
+"index": 15,
+"id": "PREN040",
+"name": "Sindicat Remença",
+"side": "W",
+"location": "Aragon",
+"prestige": [
+"law"
+],
+"ops": [
+{
+"type": "vote",
+"market": "W"
+},
+{
+"type": "commerce",
+"market": "W"
+}
+],
+"oneShot": {
+"type": "peasant_revolt"
+},
+"agents": [
+{
+"type": "pawn"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": ""
+},
+{
+"sheet": 532,
+"index": 16,
+"id": "PREN041",
+"name": "Peasant Republic of Dithmarschen",
+"side": "W",
+"location": "The West",
+"prestige": [
+"law"
+],
+"ops": [
+{
+"type": "vote",
+"market": "W"
+},
+{
+"type": "commerce",
+"market": "W"
+}
+],
+"oneShot": {
+"type": "peasant_revolt"
+},
+"agents": [
+{
+"type": "pawn"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": ""
+},
+{
+"sheet": 532,
+"index": 17,
+"id": "PREN042",
+"name": "Höchstetter Bank",
+"side": "W",
+"location": "Holy Roman Empire",
+"prestige": [],
+"ops": [
+{
+"type": "commerce",
+"market": "W"
+}
+],
+"oneShot": null,
+"agents": [
+{
+"type": "pawn"
+}
+],
+"suitors": null,
+"ability": [
+{
+"name": "STADTWECHSEL (LETTERS OF CREDIT)",
+"text": "Your Hand size is unlimited.",
+"allPlayers": false
+}
+],
+"notes": "No one-shot scroll."
+},
+{
+"sheet": 532,
+"index": 18,
+"id": "PREN043",
+"name": "Gutenberg",
+"side": "W",
+"location": "Holy Roman Empire",
+"prestige": [
+"law"
+],
+"ops": [
+{
+"type": "commerce",
+"market": "W"
+}
+],
+"oneShot": null,
+"agents": [
+{
+"type": "pawn"
+}
+],
+"suitors": null,
+"ability": [
+{
+"name": "Printing Press",
+"text": "Your Hand size is unlimited.",
+"allPlayers": false
+}
+],
+"notes": "No one-shot scroll. Ability name printed in mixed case 'Printing Press:' (not caps)."
+},
+{
+"sheet": 532,
+"index": 19,
+"id": "PREN044",
+"name": "Isabella of Castille",
+"side": "W",
+"location": null,
+"prestige": [
+"catholic"
+],
+"ops": [
+{
+"type": "repress",
+"targets": [
+"pawn",
+"rook"
+]
+},
+{
+"type": "behead"
+}
+],
+"oneShot": {
+"type": "coronation"
+},
+"agents": [],
+"suitors": [
+"Portugal",
+"Aragon",
+"France",
+"Holy Roman Empire"
+],
+"ability": [],
+"notes": ""
+},
+{
+"sheet": 532,
+"index": 20,
+"id": "PREN045",
+"name": "Anne of Brittany",
+"side": "W",
+"location": null,
+"prestige": [],
+"ops": [
+{
+"type": "siege"
+}
+],
+"oneShot": {
+"type": "coronation"
+},
+"agents": [],
+"suitors": [
+"France",
+"England",
+"Aragon",
+"Holy Roman Empire"
+],
+"ability": [],
+"notes": ""
+},
+{
+"sheet": 532,
+"index": 21,
+"id": "PREN046",
+"name": "Joanna the Mad",
+"side": "W",
+"location": null,
+"prestige": [
+"catholic"
+],
+"ops": [
+{
+"type": "siege"
+}
+],
+"oneShot": {
+"type": "coronation"
+},
+"agents": [],
+"suitors": [
+"Portugal",
+"Aragon",
+"Holy Roman Empire"
+],
+"ability": [],
+"notes": ""
+},
+{
+"sheet": 532,
+"index": 22,
+"id": "PREN047",
+"name": "Margaret of Anjou",
+"side": "W",
+"location": null,
+"prestige": [],
+"ops": [
+{
+"type": "repress",
+"targets": [
+"rook"
+]
+},
+{
+"type": "siege"
+}
+],
+"oneShot": {
+"type": "coronation"
+},
+"agents": [],
+"suitors": [
+"England",
+"France",
+"Aragon"
+],
+"ability": [],
+"notes": ""
+},
+{
+"sheet": 532,
+"index": 23,
+"id": "PREN048",
+"name": "Mary the Rich",
+"side": "W",
+"location": null,
+"prestige": [
+"law"
+],
+"ops": [],
+"oneShot": {
+"type": "coronation"
+},
+"agents": [],
+"suitors": [
+"France",
+"England",
+"Portugal",
+"Holy Roman Empire"
+],
+"ability": [],
+"notes": "No ops on banner; only law prestige."
+},
+{
+"sheet": 533,
+"index": 0,
+"id": "PREN049",
+"name": "Order of Santiago",
+"side": "W",
+"location": "Portugal",
+"prestige": [
+"catholic"
+],
+"ops": [
+{
+"type": "tax"
+},
+{
+"type": "siege"
+}
+],
+"oneShot": {
+"type": "conspiracy"
+},
+"agents": [
+{
+"type": "rook",
+"color": "catholic"
+},
+{
+"type": "rook",
+"color": "catholic"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": ""
+},
+{
+"sheet": 533,
+"index": 1,
+"id": "PREN050",
+"name": "La Serenissima",
+"side": "W",
+"location": "Papal States",
+"prestige": [
+"law"
+],
+"ops": [
+{
+"type": "vote",
+"market": "W"
+},
+{
+"type": "corsair",
+"religion": "catholic"
+},
+{
+"type": "inquisitor",
+"religion": "catholic"
+}
+],
+"oneShot": {
+"type": "conspiracy"
+},
+"agents": [
+{
+"type": "rook",
+"color": "catholic"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": ""
+},
+{
+"sheet": 533,
+"index": 2,
+"id": "PREN051",
+"name": "Kingmaker",
+"side": "W",
+"location": "England",
+"prestige": [],
+"ops": [
+{
+"type": "repress",
+"targets": [
+"rook"
+]
+},
+{
+"type": "siege"
+}
+],
+"oneShot": {
+"type": "conspiracy"
+},
+"agents": [
+{
+"type": "rook",
+"color": "reformist"
+},
+{
+"type": "rook",
+"color": "catholic"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": ""
+},
+{
+"sheet": 533,
+"index": 3,
+"id": "PREN052",
+"name": "Luther",
+"side": "W",
+"location": "Holy Roman Empire",
+"prestige": [
+"reformist"
+],
+"ops": [
+{
+"type": "tax"
+},
+{
+"type": "siege"
+}
+],
+"oneShot": {
+"type": "reformation"
+},
+"agents": [
+{
+"type": "rook",
+"color": "reformist"
+},
+{
+"type": "rook",
+"color": "reformist"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": ""
+},
+{
+"sheet": 533,
+"index": 4,
+"id": "PREN053",
+"name": "Friese Freedom",
+"side": "W",
+"location": "France",
+"prestige": [
+"law"
+],
+"ops": [
+{
+"type": "vote",
+"market": "W"
+},
+{
+"type": "siege"
+}
+],
+"oneShot": {
+"type": "conspiracy"
+},
+"agents": [
+{
+"type": "rook",
+"color": "catholic"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": ""
+},
+{
+"sheet": 533,
+"index": 5,
+"id": "PREN054",
+"name": "Maréchaussée",
+"side": "W",
+"location": "The West",
+"prestige": [],
+"ops": [
+{
+"type": "tax"
+}
+],
+"oneShot": {
+"type": "apostasy",
+"religions": [
+"reformist",
+"catholic"
+]
+},
+"agents": [
+{
+"type": "rook",
+"color": "catholic"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": ""
+},
+{
+"sheet": 533,
+"index": 6,
+"id": "PREN055",
+"name": "Duchy of Ferrara",
+"side": "W",
+"location": "Papal States",
+"prestige": [
+"patron"
+],
+"ops": [
+{
+"type": "siege"
+},
+{
+"type": "commerce",
+"market": "W"
+}
+],
+"oneShot": {
+"type": "conspiracy"
+},
+"agents": [
+{
+"type": "rook",
+"color": "catholic"
+}
+],
+"suitors": null,
+"ability": [
+{
+"name": "Condottiere",
+"text": "Venice can hold 2 gold Knights instead of 1.",
+"allPlayers": false
+}
+],
+"notes": ""
+},
+{
+"sheet": 533,
+"index": 7,
+"id": "PREN096X",
+"name": "Amerigo Vespucci",
+"side": "W",
+"location": "Aragon",
+"prestige": [
+"discovery"
+],
+"ops": [
+{
+"type": "tax"
+},
+{
+"type": "repress",
+"targets": [
+"pawn"
+]
+}
+],
+"oneShot": {
+"type": "trade_shift",
+"emporium": "Spice Islands",
+"requires": "discovery"
+},
+"agents": [
+{
+"type": "pawn"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": "Scroll reads 'TRADE SHIFT: SPICE ISLAND'."
+},
+{
+"sheet": 533,
+"index": 8,
+"id": "PREN097X",
+"name": "Podestà of Venice",
+"side": "W",
+"location": "Mamluk",
+"prestige": [],
+"ops": [],
+"oneShot": null,
+"agents": [
+{
+"type": "pawn"
+}
+],
+"suitors": null,
+"ability": [
+{
+"name": "COMMANDER OF THE VENICE GALLEYS",
+"text": "You may perform one trade fair in a turn without expending an action.",
+"allPlayers": false
+}
+],
+"notes": "Mamluk card printed with white (West-side) banner on right; no ops, no one-shot."
+},
+{
+"sheet": 533,
+"index": 9,
+"id": "PREN128X",
+"name": "Man for all Seasons",
+"side": "W",
+"location": "England",
+"prestige": [
+"catholic"
+],
+"ops": [
+{
+"type": "behead"
+},
+{
+"type": "inquisitor",
+"religion": "catholic"
+}
+],
+"oneShot": {
+"type": "crusade"
+},
+"agents": [
+{
+"type": "bishop",
+"color": "catholic"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": ""
+},
+{
+"sheet": 533,
+"index": 10,
+"id": "PREN129X",
+"name": "Oratory of Divine Love",
+"side": "W",
+"location": "Papal States",
+"prestige": [
+"catholic"
+],
+"ops": [
+{
+"type": "inquisitor",
+"religion": "catholic"
+}
+],
+"oneShot": {
+"type": "apostasy",
+"religions": [
+"reformist",
+"catholic"
+]
+},
+"agents": [
+{
+"type": "bishop",
+"color": "catholic"
+},
+{
+"type": "bishop",
+"color": "catholic"
+}
+],
+"suitors": null,
+"ability": [
+{
+"name": "COUNTER-REFORMATION",
+"text": "As an action, may perform an apostasy between any 2 religions.",
+"allPlayers": false
+}
+],
+"notes": ""
+},
+{
+"sheet": 533,
+"index": 11,
+"id": "PREN130X",
+"name": "Cryptography",
+"side": "W",
+"location": "Papal States",
+"prestige": [
+"patron"
+],
+"ops": [],
+"oneShot": null,
+"agents": [],
+"suitors": null,
+"ability": [
+{
+"name": "MEDICI CIPHERS BROKEN",
+"text": "If you sell this card, may do an additional purple Op from an opponent's Tableau, exactly as if his card was in your Tableau.",
+"allPlayers": false
+}
+],
+"notes": "Vitruvian-man roundel beside the title (not in banner)."
+},
+{
+"sheet": 533,
+"index": 12,
+"id": "PREN131X",
+"name": "Michelangelo",
+"side": "W",
+"location": "The West",
+"prestige": [
+"patron"
+],
+"ops": [],
+"oneShot": null,
+"agents": [],
+"suitors": null,
+"ability": [
+{
+"name": "PATRON'S RENOWN",
+"text": "Your Concessions count 2x during trade fairs and votes.",
+"allPlayers": false
+}
+],
+"notes": "Vitruvian-man roundel beside the title (not in banner)."
+},
+{
+"sheet": 533,
+"index": 13,
+"id": "PREN132X",
+"name": "Artistic Geometry",
+"side": "W",
+"location": "Holy Roman Empire",
+"prestige": [
+"patron"
+],
+"ops": [],
+"oneShot": null,
+"agents": [],
+"suitors": null,
+"ability": [
+{
+"name": "GERMAN RENAISSANCE",
+"text": "Your [patron prestige] counts as [law prestige] for Renaissance victory.",
+"allPlayers": false
+}
+],
+"notes": "Vitruvian-man roundel beside the title (not in banner). Ability text uses inline icons: patron (bust) and law (scales lady)."
+},
+{
+"sheet": 533,
+"index": 14,
+"id": "PREN133X",
+"name": "Romantic Realism",
+"side": "W",
+"location": "Papal States",
+"prestige": [],
+"ops": [],
+"oneShot": null,
+"agents": [],
+"suitors": null,
+"ability": [
+{
+"name": "REPUBLICAN IDEALS",
+"text": "Your [patron prestige] counts as [law prestige] for Renaissance victory.",
+"allPlayers": false
+}
+],
+"notes": "Vitruvian-man roundel beside the title (not in banner). Ability text uses inline icons: patron (bust) and law (scales lady)."
+},
+{
+"sheet": 533,
+"index": 15,
+"id": "PREN134X",
+"name": "Mining Engineer",
+"side": "W",
+"location": "The West",
+"prestige": [
+"catholic"
+],
+"ops": [],
+"oneShot": null,
+"agents": [],
+"suitors": null,
+"ability": [
+{
+"name": "Fortifications",
+"text": "You may do “activate western ops” without expending an action.",
+"allPlayers": false
+}
+],
+"notes": "Vitruvian-man roundel beside the title (not in banner)."
+},
+{
+"sheet": 533,
+"index": 16,
+"id": "PREN135X",
+"name": "Machiavellianism",
+"side": "W",
+"location": "The West",
+"prestige": [],
+"ops": [],
+"oneShot": null,
+"agents": [],
+"suitors": null,
+"ability": [
+{
+"name": "PRAGMATIC TREACHERY",
+"text": "If you sell a card additionally may perform its civil war, crusade, or apostasy One-shot (including adding its Agents).",
+"allPlayers": false
+}
+],
+"notes": "Vitruvian-man roundel beside the title (not in banner)."
+},
+{
+"sheet": 533,
+"index": 17,
+"id": "PREN136X",
+"name": "Hermeticism",
+"side": "W",
+"location": "The West",
+"prestige": [],
+"ops": [],
+"oneShot": null,
+"agents": [],
+"suitors": null,
+"ability": [
+{
+"name": "",
+"text": "DECLARING HOLY VICTORY COSTS 2 ACTIONS (ALL PLAYERS).",
+"allPlayers": true
+},
+{
+"name": "Syncretism",
+"text": "Your cards are immune to silencing by Bishops.",
+"allPlayers": false
+}
+],
+"notes": "Vitruvian-man roundel beside the title (not in banner). TWO ability boxes: ability is an array. First (red, unnamed) is all-players."
+},
+{
+"sheet": 533,
+"index": 18,
+"id": "PREN137X",
+"name": "Faith vs. Reason",
+"side": "W",
+"location": "The West",
+"prestige": [],
+"ops": [],
+"oneShot": null,
+"agents": [],
+"suitors": null,
+"ability": [
+{
+"name": "",
+"text": "Declaring Holy Victory costs 2 actions (all players).",
+"allPlayers": true
+},
+{
+"name": "Cartography",
+"text": "Your [patron prestige] count as Concessions in a globalization victory.",
+"allPlayers": false
+}
+],
+"notes": "Vitruvian-man roundel beside the title (not in banner). TWO ability boxes: ability is an array. First (red, unnamed) is all-players. Cartography text uses inline patron (bust) icon."
+},
+{
+"sheet": 533,
+"index": 19,
+"id": "PREN138X",
+"name": "Reichskrone",
+"side": "W",
+"location": null,
+"prestige": [
+"catholic"
+],
+"ops": [
+{
+"type": "vote",
+"market": "W"
+}
+],
+"oneShot": {
+"type": "coronation"
+},
+"agents": [],
+"suitors": [
+"Holy Roman Empire"
+],
+"ability": [
+{
+"name": "RANSOM",
+"text": "Sell this card for 4 instead of 2 Florins.",
+"allPlayers": false
+}
+],
+"notes": "Queen card."
+},
+{
+"sheet": 533,
+"index": 20,
+"id": "PREN139X",
+"name": "French Pirates",
+"side": "W",
+"location": "France",
+"prestige": [
+"discovery"
+],
+"ops": [
+{
+"type": "repress",
+"targets": [
+"pawn"
+]
+},
+{
+"type": "corsair",
+"religion": "catholic"
+}
+],
+"oneShot": null,
+"agents": [
+{
+"type": "pirate",
+"color": "catholic"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": "Gold-sailed pirate ship."
+},
+{
+"sheet": 533,
+"index": 21,
+"id": "PREN140X",
+"name": "Venetian Navy",
+"side": "W",
+"location": "Papal States",
+"prestige": [],
+"ops": [
+{
+"type": "corsair",
+"religion": "catholic"
+},
+{
+"type": "inquisitor",
+"religion": "catholic"
+}
+],
+"oneShot": null,
+"agents": [
+{
+"type": "pirate",
+"color": "catholic"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": "Gold-sailed pirate ship."
+},
+{
+"sheet": 533,
+"index": 22,
+"id": "PREN141X",
+"name": "Welser Klein-Venedig",
+"side": "W",
+"location": "Portugal",
+"prestige": [
+"discovery"
+],
+"ops": [
+{
+"type": "commerce",
+"market": "W"
+}
+],
+"oneShot": {
+"type": "trade_shift",
+"emporium": "Spice Islands",
+"requires": "discovery"
+},
+"agents": [
+{
+"type": "pawn"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": "Scroll reads 'TRADE SHIFT: SPICE ISLAND'."
+},
+{
+"sheet": 533,
+"index": 23,
+"id": "PREN142X",
+"name": "Kalmar Union",
+"side": "W",
+"location": "France",
+"prestige": [
+"discovery"
+],
+"ops": [
+{
+"type": "repress",
+"targets": [
+"pawn"
+]
+},
+{
+"type": "corsair",
+"religion": "reformist"
+}
+],
+"oneShot": null,
+"agents": [
+{
+"type": "pirate",
+"color": "reformist"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": "Red-sailed pirate ship."
+},
+{
+"sheet": 534,
+"index": 0,
+"id": "PREN001",
+"name": "Inquisition Pope",
+"side": "W",
+"location": "The West",
+"prestige": [
+"catholic"
+],
+"ops": [
+{
+"type": "behead"
+},
+{
+"type": "inquisitor",
+"religion": "catholic"
+}
+],
+"oneShot": {
+"type": "crusade"
+},
+"agents": [
+{
+"type": "bishop",
+"color": "catholic"
+}
+],
+"suitors": null,
+"ability": [
+{
+"name": "HOLOCAUST",
+"text": "This card's behead Op can only be used on any west card with a red or gold Bishop Token.",
+"allPlayers": false
+}
+],
+"notes": ""
+},
+{
+"sheet": 534,
+"index": 1,
+"id": "PREN002",
+"name": "Papal Elephant",
+"side": "W",
+"location": "The West",
+"prestige": [],
+"ops": [
+{
+"type": "tax"
+},
+{
+"type": "inquisitor",
+"religion": "catholic"
+}
+],
+"oneShot": {
+"type": "apostasy",
+"religions": [
+"reformist",
+"catholic"
+]
+},
+"agents": [
+{
+"type": "bishop",
+"color": "catholic"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": ""
+},
+{
+"sheet": 534,
+"index": 2,
+"id": "PREN003",
+"name": "Grand Inquisitor",
+"side": "W",
+"location": "Portugal",
+"prestige": [
+"catholic"
+],
+"ops": [
+{
+"type": "behead"
+},
+{
+"type": "tax"
+},
+{
+"type": "inquisitor",
+"religion": "catholic"
+}
+],
+"oneShot": {
+"type": "crusade"
+},
+"agents": [
+{
+"type": "bishop",
+"color": "catholic"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": ""
+},
+{
+"sheet": 534,
+"index": 3,
+"id": "PREN004",
+"name": "Antipope",
+"side": "W",
+"location": "France",
+"prestige": [
+"reformist"
+],
+"ops": [
+{
+"type": "inquisitor",
+"religion": "reformist"
+}
+],
+"oneShot": {
+"type": "reformation"
+},
+"agents": [
+{
+"type": "bishop",
+"color": "reformist"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": ""
+},
+{
+"sheet": 534,
+"index": 4,
+"id": "PREN005",
+"name": "Reformed Theology",
+"side": "W",
+"location": "The West",
+"prestige": [
+"reformist"
+],
+"ops": [
+{
+"type": "inquisitor",
+"religion": "reformist"
+}
+],
+"oneShot": {
+"type": "reformation"
+},
+"agents": [
+{
+"type": "bishop",
+"color": "reformist"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": ""
+},
+{
+"sheet": 534,
+"index": 5,
+"id": "PREN006",
+"name": "Star Chamber",
+"side": "W",
+"location": "England",
+"prestige": [
+"reformist"
+],
+"ops": [
+{
+"type": "behead"
+},
+{
+"type": "inquisitor",
+"religion": "reformist"
+}
+],
+"oneShot": {
+"type": "reformation"
+},
+"agents": [
+{
+"type": "bishop",
+"color": "reformist"
+}
+],
+"suitors": null,
+"ability": [
+{
+"name": "HENRY VIII",
+"text": "Your coronation One-shot can claim Kings who are married or in an opponent's Tableau.",
+"allPlayers": false
+}
+],
+"notes": ""
+},
+{
+"sheet": 534,
+"index": 6,
+"id": "PREN007",
+"name": "Peter's Pence",
+"side": "W",
+"location": "The West",
+"prestige": [
+"catholic"
+],
+"ops": [
+{
+"type": "tax"
+},
+{
+"type": "inquisitor",
+"religion": "catholic"
+}
+],
+"oneShot": {
+"type": "apostasy",
+"religions": [
+"reformist",
+"catholic"
+]
+},
+"agents": [
+{
+"type": "bishop",
+"color": "catholic"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": ""
+},
+{
+"sheet": 534,
+"index": 7,
+"id": "PREN008",
+"name": "Jesuits",
+"side": "W",
+"location": "Aragon",
+"prestige": [
+"catholic"
+],
+"ops": [
+{
+"type": "inquisitor",
+"religion": "catholic"
+}
+],
+"oneShot": {
+"type": "crusade"
+},
+"agents": [
+{
+"type": "bishop",
+"color": "catholic"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": ""
+},
+{
+"sheet": 534,
+"index": 8,
+"id": "PREN009",
+"name": "House of Borgia",
+"side": "W",
+"location": "The West",
+"prestige": [
+"patron"
+],
+"ops": [
+{
+"type": "siege"
+},
+{
+"type": "inquisitor",
+"religion": "catholic"
+}
+],
+"oneShot": {
+"type": "conspiracy"
+},
+"agents": [
+{
+"type": "bishop",
+"color": "catholic"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": "Prestige icon is a classical bust (David) - read as patron."
+},
+{
+"sheet": 534,
+"index": 9,
+"id": "PREN010",
+"name": "Bonfire of the Vanities",
+"side": "W",
+"location": "Papal States",
+"prestige": [
+"law"
+],
+"ops": [
+{
+"type": "tax"
+},
+{
+"type": "vote",
+"market": "W"
+},
+{
+"type": "inquisitor",
+"religion": "catholic"
+}
+],
+"oneShot": {
+"type": "peasant_revolt"
+},
+"agents": [
+{
+"type": "bishop",
+"color": "reformist"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": "Prestige icon is Lady Justice with scales - read as law."
+},
+{
+"sheet": 534,
+"index": 10,
+"id": "PREN011",
+"name": "Anabaptist Reformation",
+"side": "W",
+"location": "The West",
+"prestige": [
+"reformist"
+],
+"ops": [
+{
+"type": "inquisitor",
+"religion": "reformist"
+}
+],
+"oneShot": {
+"type": "reformation"
+},
+"agents": [
+{
+"type": "bishop",
+"color": "reformist"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": ""
+},
+{
+"sheet": 534,
+"index": 11,
+"id": "PREN012",
+"name": "Knights Hospitaller",
+"side": "W",
+"location": "Ottoman",
+"prestige": [
+"catholic"
+],
+"ops": [
+{
+"type": "repress",
+"targets": [
+"pawn"
+]
+},
+{
+"type": "corsair",
+"religion": "catholic"
+}
+],
+"oneShot": {
+"type": "apostasy",
+"religions": [
+"islamic",
+"catholic"
+]
+},
+"agents": [
+{
+"type": "pirate",
+"color": "catholic"
+}
+],
+"suitors": null,
+"ability": [
+{
+"name": "KNIGHTS OF RHODES",
+"text": "In crusades, you may count ruling class gold Rooks as Knights.",
+"allPlayers": false
+}
+],
+"notes": "Ottoman location but white (West) banner. Pirate ship has gold sails -> color catholic."
+},
+{
+"sheet": 534,
+"index": 12,
+"id": "PREN013",
+"name": "Genoese Fleet",
+"side": "W",
+"location": "Aragon",
+"prestige": [],
+"ops": [
+{
+"type": "repress",
+"targets": [
+"pawn"
+]
+},
+{
+"type": "corsair",
+"religion": "catholic"
+}
+],
+"oneShot": null,
+"agents": [
+{
+"type": "pirate",
+"color": "catholic"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": "No one-shot scroll. Pirate ship has gold sails -> color catholic."
+},
+{
+"sheet": 534,
+"index": 13,
+"id": "PREN014",
+"name": "India Armada",
+"side": "W",
+"location": "Portugal",
+"prestige": [
+"discovery"
+],
+"ops": [],
+"oneShot": {
+"type": "trade_shift",
+"emporium": "Spice Islands",
+"requires": "discovery"
+},
+"agents": [
+{
+"type": "pawn"
+}
+],
+"suitors": null,
+"ability": [
+{
+"name": "CAPE OF GOOD HOPE",
+"text": "Your Concessions count 2x in Spice Island trade fairs.",
+"allPlayers": false
+}
+],
+"notes": "No ops. Scroll reads 'TRADE SHIFT: SPICE ISLAND' with REQUIRED: discovery (ship) prestige."
+},
+{
+"sheet": 534,
+"index": 14,
+"id": "PREN015",
+"name": "Hanseatic League",
+"side": "W",
+"location": "France",
+"prestige": [],
+"ops": [
+{
+"type": "repress",
+"targets": [
+"pawn"
+]
+},
+{
+"type": "corsair",
+"religion": "catholic"
+},
+{
+"type": "commerce",
+"market": "W"
+}
+],
+"oneShot": {
+"type": "trade_shift",
+"emporium": "Novgorod",
+"requires": null
+},
+"agents": [
+{
+"type": "pawn"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": ""
+},
+{
+"sheet": 534,
+"index": 15,
+"id": "PREN016",
+"name": "The Company of Merchant Adventurers",
+"side": "W",
+"location": "England",
+"prestige": [
+"discovery"
+],
+"ops": [],
+"oneShot": {
+"type": "trade_shift",
+"emporium": "Spice Islands",
+"requires": "discovery"
+},
+"agents": [
+{
+"type": "pawn"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": "No ops. Trade shift REQUIRED: discovery prestige."
+},
+{
+"sheet": 534,
+"index": 16,
+"id": "PREN017",
+"name": "Scottish Privateers",
+"side": "W",
+"location": "England",
+"prestige": [],
+"ops": [
+{
+"type": "repress",
+"targets": [
+"pawn"
+]
+},
+{
+"type": "corsair",
+"religion": "reformist"
+}
+],
+"oneShot": null,
+"agents": [
+{
+"type": "pirate",
+"color": "reformist"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": "No one-shot scroll. Pirate ship has red sails -> color reformist."
+},
+{
+"sheet": 534,
+"index": 17,
+"id": "PREN018",
+"name": "Almeida Armada",
+"side": "W",
+"location": "Portugal",
+"prestige": [
+"discovery"
+],
+"ops": [
+{
+"type": "repress",
+"targets": [
+"pawn"
+]
+},
+{
+"type": "corsair",
+"religion": "catholic"
+}
+],
+"oneShot": {
+"type": "trade_shift",
+"emporium": "Spice Islands",
+"requires": "discovery"
+},
+"agents": [
+{
+"type": "pawn"
+}
+],
+"suitors": null,
+"ability": [
+{
+"name": "CAPE OF GOOD HOPE",
+"text": "Your Concessions count 2x in Spice Island trade fairs.",
+"allPlayers": false
+}
+],
+"notes": ""
+},
+{
+"sheet": 534,
+"index": 18,
+"id": "PREN019",
+"name": "Gold Coast Monopoly",
+"side": "W",
+"location": "Portugal",
+"prestige": [],
+"ops": [
+{
+"type": "corsair",
+"religion": "catholic"
+},
+{
+"type": "commerce",
+"market": "W"
+}
+],
+"oneShot": {
+"type": "trade_shift",
+"emporium": "Spice Islands",
+"requires": "discovery"
+},
+"agents": [
+{
+"type": "pawn"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": ""
+},
+{
+"sheet": 534,
+"index": 19,
+"id": "PREN020",
+"name": "Arumer Zwarte Hoop",
+"side": "W",
+"location": "France",
+"prestige": [],
+"ops": [
+{
+"type": "repress",
+"targets": [
+"pawn",
+"rook",
+"knight"
+]
+},
+{
+"type": "corsair",
+"religion": "islamic"
+}
+],
+"oneShot": {
+"type": "peasant_revolt"
+},
+"agents": [
+{
+"type": "pirate",
+"color": "islamic"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": "Pirate ship has green sails -> color islamic."
+},
+{
+"sheet": 534,
+"index": 20,
+"id": "PREN021",
+"name": "Conquistadors",
+"side": "W",
+"location": "Portugal",
+"prestige": [
+"discovery"
+],
+"ops": [
+{
+"type": "tax"
+},
+{
+"type": "siege"
+}
+],
+"oneShot": {
+"type": "trade_shift",
+"emporium": "Spice Islands",
+"requires": "discovery"
+},
+"agents": [
+{
+"type": "knight",
+"color": "catholic"
+},
+{
+"type": "knight",
+"color": "catholic"
+}
+],
+"suitors": null,
+"ability": [
+{
+"name": "AZTEC GOLD",
+"text": "Sell card for 4 Florins instead of 2 Florins.",
+"allPlayers": false
+}
+],
+"notes": ""
+},
+{
+"sheet": 534,
+"index": 21,
+"id": "PREN022",
+"name": "The Last Knight",
+"side": "W",
+"location": "Holy Roman Empire",
+"prestige": [],
+"ops": [
+{
+"type": "tax"
+},
+{
+"type": "siege"
+}
+],
+"oneShot": {
+"type": "conspiracy"
+},
+"agents": [
+{
+"type": "knight",
+"color": "reformist"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": ""
+},
+{
+"sheet": 534,
+"index": 22,
+"id": "PREN023",
+"name": "Spanish Tercio",
+"side": "W",
+"location": "The West",
+"prestige": [],
+"ops": [
+{
+"type": "siege"
+}
+],
+"oneShot": null,
+"agents": [
+{
+"type": "knight",
+"color": "catholic"
+}
+],
+"suitors": null,
+"ability": [],
+"notes": "No one-shot scroll."
+},
+{
+"sheet": 534,
+"index": 23,
+"id": "PREN024",
+"name": "Gonfalonier",
+"side": "W",
+"location": "Papal States",
+"prestige": [
+"patron",
+"law"
+],
+"ops": [
+{
+"type": "vote",
+"market": "W"
+},
+{
+"type": "siege"
+},
+{
+"type": "inquisitor",
+"religion": "catholic"
+}
+],
+"oneShot": null,
+"agents": [
+{
+"type": "knight",
+"color": "catholic"
+},
+{
+"type": "knight",
+"color": "catholic"
+}
+],
+"suitors": null,
+"ability": [
+{
+"name": "CONDOTTIERE",
+"text": "Venice can hold 2 gold Knights instead of 1.",
+"allPlayers": false
+}
+],
+"notes": "No one-shot scroll. Ability name printed without colon."
+}
+]

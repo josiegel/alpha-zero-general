@@ -1,0 +1,14 @@
+{
+  "name": "pax-renaissance-web",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Personal-use web implementation of Pax Renaissance 2nd Edition with rules enforcement and a bot",
+  "scripts": {
+    "start": "node server.mjs",
+    "selfplay": "node tools/selfplay.mjs 50",
+    "encode-check": "node tools/encode_check.mjs 200",
+    "arena": "node tools/arena.mjs greedy random 100",
+    "eval": "python train/eval.py --policy random --opponent random greedy"
+  }
+}

@@ -1,0 +1,197 @@
+initialised from runs/ppo1/ckpt_00060.pt (iteration 60, greedy score 0.475)
+start: iterations 60..999, args {"run": "runs/ppo2", "resume": false, "iters": 1000, "num_games": 128, "steps": 8192, "epochs": 3, "minibatch": 1024, "lr": 0.0001, "clip": 0.2, "vf_coef": 0.5, "ent_coef": 0.01, "gamma": 1.0, "lam": 0.95, "max_grad": 0.5, "init": "runs/ppo1/ckpt_00060.pt", "greedy_games": 64, "rollback_after": 2, "league_prob": 0.2, "league_size": 10, "snapshot_every": 10, "eval_every": 10, "eval_games": 200, "eval_opponents": ["random", "greedy"], "hidden": 512, "threads": 3, "seed": 2}
+it   60  dec  8207  games   32  len  92.2  pg +0.003  vf 0.184  ent 1.12  kl +0.0034  clip 0.05  vs-league 0.33  vs-greedy 0.27 (66% of data)  [57s+18s]    ends hol8 imp4 glo1 ren2 pat17
+it   61  dec  8244  games   62  len 122.1  pg -0.003  vf 0.161  ent 1.24  kl +0.0088  clip 0.08  vs-league 0.67  vs-greedy 0.24 (16% of data)  [14s+20s]    ends hol1 imp1 glo2 ren2 pat56
+it   62  dec  8266  games   41  len 141.1  pg -0.002  vf 0.125  ent 1.14  kl +0.0050  clip 0.09  vs-league 0.80  vs-greedy 0.28 (37% of data)  [27s+19s]    ends hol2 imp3 glo1 ren1 pat34
+it   63  dec  8304  games   47  len 106.9  pg -0.010  vf 0.172  ent 1.13  kl +0.0072  clip 0.09  vs-league 0.40  vs-greedy 0.36 (47% of data)  [30s+18s]    ends hol8 imp3 glo4 ren1 pat31
+it   64  dec  8445  games   60  len 127.2  pg -0.001  vf 0.120  ent 1.15  kl +0.0086  clip 0.10  vs-league 0.64  vs-greedy 0.28 (24% of data)  [18s+18s]    ends hol1 imp2 glo1 ren3 pat53
+it   65  dec  8201  games   42  len 129.4  pg -0.054  vf 0.137  ent 1.13  kl +0.0062  clip 0.07  vs-league 0.50  vs-greedy 0.30 (43% of data)  [30s+19s]    ends hol3 imp1 ren3 pat35
+it   66  dec  8302  games   50  len 116.4  pg -0.004  vf 0.133  ent 1.14  kl +0.0086  clip 0.09  vs-league 0.50  vs-greedy 0.36 (32% of data)  [22s+18s]    ends hol9 imp1 glo2 pat38
+it   67  dec  8336  games   53  len 122.7  pg -0.011  vf 0.118  ent 1.15  kl +0.0081  clip 0.09  vs-league 0.30  vs-greedy 0.39 (35% of data)  [22s+17s]    ends hol2 imp4 glo1 ren1 pat45
+it   68  dec  8395  games   50  len 123.0  pg -0.006  vf 0.130  ent 1.09  kl +0.0071  clip 0.08  vs-league 0.58  vs-greedy 0.37 (39% of data)  [27s+18s]    ends hol1 imp2 glo1 ren2 pat44
+it   69  dec  8270  games   57  len 118.0  pg -0.009  vf 0.127  ent 1.15  kl +0.0068  clip 0.08  vs-league 0.33  vs-greedy 0.36 (28% of data)  [21s+18s]  random=100%  greedy=46%  ends hol3 imp3 pat51
+it   70  dec  8235  games   44  len 119.7  pg -0.009  vf 0.101  ent 1.09  kl +0.0039  clip 0.07  vs-league 0.55  vs-greedy 0.41 (45% of data)  [24s+16s]    ends imp3 glo2 ren3 pat36
+it   71  dec  8243  games   52  len 117.1  pg -0.004  vf 0.121  ent 1.12  kl +0.0074  clip 0.07  vs-league 0.46  vs-greedy 0.35 (35% of data)  [26s+17s]    ends hol5 imp1 pat46
+it   72  dec  8458  games   52  len 124.5  pg -0.004  vf 0.109  ent 1.13  kl +0.0065  clip 0.08  vs-league 0.69  vs-greedy 0.33 (30% of data)  [18s+17s]    ends hol3 imp1 ren1 pat47
+it   73  dec  8192  games   48  len 117.0  pg -0.006  vf 0.137  ent 1.09  kl +0.0065  clip 0.08  vs-league 0.62  vs-greedy 0.29 (39% of data)  [24s+16s]    ends hol3 imp3 glo1 ren1 pat40
+it   74  dec  8423  games   54  len 117.6  pg -0.007  vf 0.134  ent 1.09  kl +0.0056  clip 0.08  vs-league 0.56  vs-greedy 0.30 (33% of data)  [24s+17s]    ends hol7 imp1 glo3 pat43
+it   75  dec  8318  games   54  len 117.2  pg -0.009  vf 0.145  ent 1.06  kl +0.0066  clip 0.07  vs-league 0.60  vs-greedy 0.27 (39% of data)  [25s+18s]    ends hol7 imp6 glo1 pat40
+it   76  dec  8284  games   52  len 116.2  pg -0.004  vf 0.131  ent 1.07  kl +0.0046  clip 0.07  vs-league 0.67  vs-greedy 0.49 (33% of data)  [21s+17s]    ends hol4 imp4 glo1 pat43
+it   77  dec  8197  games   52  len 119.1  pg +0.022  vf 0.112  ent 1.04  kl +0.0044  clip 0.07  vs-league 0.43  vs-greedy 0.42 (33% of data)  [22s+16s]    ends hol4 imp4 glo1 pat43
+it   78  dec  8336  games   52  len 113.0  pg -0.005  vf 0.123  ent 1.07  kl +0.0055  clip 0.07  vs-league 0.42  vs-greedy 0.47 (38% of data)  [24s+16s]    ends hol6 imp5 glo3 ren1 pat37
+it   79  dec  8361  games   52  len 116.8  pg -0.008  vf 0.114  ent 1.02  kl +0.0080  clip 0.08  vs-league 0.75  vs-greedy 0.34 (37% of data)  [24s+17s]  random=99%  greedy=44%  ends hol3 imp6 glo1 ren1 pat41
+it   80  dec  8269  games   55  len 114.9  pg +0.009  vf 0.129  ent 1.07  kl +0.0084  clip 0.09  vs-league 0.89  vs-greedy 0.49 (32% of data)  [24s+17s]    ends hol5 imp4 glo1 pat45
+it   81  dec  8201  games   52  len 113.9  pg +0.037  vf 0.112  ent 1.05  kl +0.0065  clip 0.07  vs-league 0.50  vs-greedy 0.42 (36% of data)  [22s+16s]    ends hol5 imp3 ren2 pat42
+it   82  dec  8356  games   53  len 113.9  pg -0.014  vf 0.136  ent 1.05  kl +0.0085  clip 0.11  vs-league 0.71  vs-greedy 0.27 (35% of data)  [22s+17s]    ends hol4 imp3 glo1 ren2 pat43
+it   83  dec  8279  games   56  len 110.0  pg -0.005  vf 0.124  ent 1.04  kl +0.0072  clip 0.08  vs-league 0.50  vs-greedy 0.36 (35% of data)  [23s+21s]    ends hol3 imp5 ren3 pat45
+it   84  dec  8232  games   50  len 114.4  pg -0.016  vf 0.124  ent 1.02  kl +0.0088  clip 0.09  vs-league 0.67  vs-greedy 0.37 (36% of data)  [23s+17s]    ends hol4 imp1 glo2 pat43
+it   85  dec  8383  games   51  len 114.8  pg -0.006  vf 0.149  ent 1.04  kl +0.0080  clip 0.09  vs-league 0.73  vs-greedy 0.38 (39% of data)  [22s+17s]    ends hol3 imp2 glo2 ren1 pat43
+it   86  dec  8420  games   58  len 114.6  pg -0.002  vf 0.136  ent 1.03  kl +0.0078  clip 0.10  vs-league 0.80  vs-greedy 0.41 (31% of data)  [24s+17s]    ends hol4 imp2 glo2 pat50
+it   87  dec  8284  games   51  len 113.9  pg -0.004  vf 0.126  ent 0.98  kl +0.0047  clip 0.08  vs-league 0.78  vs-greedy 0.35 (39% of data)  [24s+16s]    ends hol1 imp3 glo2 ren4 pat41
+it   88  dec  8313  games   60  len 107.2  pg -0.009  vf 0.147  ent 1.03  kl +0.0044  clip 0.08  vs-league 0.67  vs-greedy 0.37 (34% of data)  [23s+17s]    ends hol4 imp9 glo1 ren3 pat43
+new best: 51% against greedy at iteration 90
+it   89  dec  8440  games   47  len 117.7  pg -0.001  vf 0.134  ent 0.99  kl +0.0079  clip 0.09  vs-league 0.20  vs-greedy 0.52 (38% of data)  [22s+17s]  random=100%  greedy=51%  ends hol1 imp5 ren2 pat39
+it   90  dec  8211  games   58  len 109.3  pg +0.003  vf 0.144  ent 1.01  kl +0.0032  clip 0.08  vs-league 0.67  vs-greedy 0.37 (30% of data)  [25s+19s]    ends hol4 imp7 glo1 ren1 pat45
+it   91  dec  8216  games   49  len 113.8  pg +0.011  vf 0.124  ent 0.98  kl +0.0070  clip 0.08  vs-league 0.50  vs-greedy 0.49 (41% of data)  [26s+18s]    ends hol3 imp6 glo1 ren3 pat36
+it   92  dec  8404  games   58  len 109.6  pg -0.007  vf 0.121  ent 0.99  kl +0.0089  clip 0.10  vs-league 0.64  vs-greedy 0.35 (34% of data)  [24s+20s]    ends hol4 imp4 glo2 pat48
+it   93  dec  8279  games   55  len 112.9  pg -0.019  vf 0.118  ent 1.00  kl +0.0057  clip 0.09  vs-league 0.67  vs-greedy 0.43 (33% of data)  [23s+18s]    ends hol1 imp3 glo1 ren1 pat49
+it   94  dec  8267  games   56  len 103.0  pg -0.008  vf 0.158  ent 0.95  kl +0.0049  clip 0.09  vs-league 0.71  vs-greedy 0.50 (37% of data)  [23s+19s]    ends hol3 imp2 glo4 ren1 pat46
+it   95  dec  8252  games   55  len 110.2  pg +0.004  vf 0.150  ent 0.98  kl +0.0077  clip 0.09  vs-league 0.70  vs-greedy 0.24 (35% of data)  [28s+18s]    ends hol4 imp7 glo1 ren2 pat41
+it   96  dec  8251  games   54  len 109.1  pg +0.006  vf 0.133  ent 0.98  kl +0.0091  clip 0.09  vs-league 0.38  vs-greedy 0.39 (36% of data)  [23s+17s]    ends hol1 imp1 glo2 pat50
+it   97  dec  8393  games   52  len 115.5  pg -0.007  vf 0.127  ent 0.96  kl +0.0071  clip 0.08  vs-league 0.64  vs-greedy 0.50 (38% of data)  [23s+17s]    ends hol2 imp2 ren1 pat47
+it   98  dec  8276  games   60  len 112.0  pg -0.016  vf 0.129  ent 0.95  kl +0.0067  clip 0.09  vs-league 0.47  vs-greedy 0.35 (35% of data)  [24s+17s]    ends imp4 glo2 ren4 pat50
+new best: 52% against greedy at iteration 100
+it   99  dec  8254  games   55  len 110.7  pg -0.007  vf 0.143  ent 0.93  kl +0.0084  clip 0.09  vs-league 0.58  vs-greedy 0.41 (38% of data)  [24s+16s]  random=100%  greedy=52%  ends hol2 imp2 glo2 pat49
+it  100  dec  8598  games   59  len 108.3  pg -0.004  vf 0.145  ent 0.95  kl +0.0057  clip 0.08  vs-league 0.55  vs-greedy 0.45 (35% of data)  [25s+17s]    ends hol2 imp2 glo1 ren2 pat52
+it  101  dec  8221  games   53  len 111.8  pg -0.028  vf 0.143  ent 0.95  kl +0.0081  clip 0.08  vs-league 0.71  vs-greedy 0.50 (41% of data)  [26s+17s]    ends hol1 imp1 ren1 pat50
+it  102  dec  8433  games   62  len 109.3  pg -0.005  vf 0.150  ent 0.94  kl +0.0073  clip 0.09  vs-league 0.42  vs-greedy 0.46 (30% of data)  [22s+17s]    ends hol1 imp3 ren1 pat57
+it  103  dec  8320  games   53  len 108.3  pg -0.005  vf 0.129  ent 0.93  kl +0.0065  clip 0.08  vs-league 0.33  vs-greedy 0.54 (40% of data)  [26s+17s]    ends hol1 imp1 glo1 pat50
+it  104  dec  8221  games   62  len 108.5  pg +0.009  vf 0.127  ent 0.89  kl +0.0072  clip 0.10  vs-league 0.83  vs-greedy 0.48 (31% of data)  [21s+16s]    ends imp3 glo1 ren1 pat57
+it  105  dec  8211  games   54  len 108.6  pg -0.012  vf 0.120  ent 0.92  kl +0.0078  clip 0.10  vs-league 0.64  vs-greedy 0.55 (37% of data)  [24s+17s]    ends imp2 glo2 ren1 pat49
+it  106  dec  8294  games   56  len 106.9  pg -0.001  vf 0.131  ent 0.91  kl +0.0071  clip 0.09  vs-league 0.85  vs-greedy 0.44 (37% of data)  [23s+17s]    ends imp3 glo1 ren3 pat49
+it  107  dec  8211  games   58  len 109.9  pg +0.013  vf 0.128  ent 0.92  kl +0.0050  clip 0.09  vs-league 0.64  vs-greedy 0.48 (31% of data)  [20s+17s]    ends hol4 imp2 glo1 pat51
+it  108  dec  8277  games   54  len 106.6  pg -0.006  vf 0.137  ent 0.89  kl +0.0062  clip 0.07  vs-league 0.85  vs-greedy 0.45 (40% of data)  [27s+17s]    ends hol1 imp1 glo1 ren1 pat50
+new best: 53% against greedy at iteration 110
+it  109  dec  8273  games   57  len 107.6  pg -0.016  vf 0.114  ent 0.93  kl +0.0079  clip 0.09  vs-league 0.71  vs-greedy 0.40 (31% of data)  [19s+17s]  random=100%  greedy=53%  ends hol2 imp2 ren1 pat52
+it  110  dec  8202  games   53  len 106.4  pg +0.007  vf 0.134  ent 0.94  kl +0.0074  clip 0.10  vs-league 0.70  vs-greedy 0.53 (40% of data)  [26s+17s]    ends imp3 glo2 ren1 pat47
+it  111  dec  8405  games   60  len 104.6  pg -0.007  vf 0.125  ent 0.90  kl +0.0083  clip 0.10  vs-league 0.40  vs-greedy 0.57 (33% of data)  [25s+17s]    ends hol2 imp2 ren1 pat55
+it  112  dec  8269  games   55  len 106.4  pg -0.002  vf 0.157  ent 0.85  kl +0.0078  clip 0.11  vs-league 0.55  vs-greedy 0.41 (40% of data)  [24s+17s]    ends hol3 imp3 glo1 pat48
+it  113  dec  8465  games   61  len 105.3  pg -0.008  vf 0.146  ent 0.87  kl +0.0053  clip 0.09  vs-league 0.73  vs-greedy 0.53 (35% of data)  [23s+17s]    ends hol1 imp3 glo3 ren3 pat51
+it  114  dec  8328  games   60  len 105.3  pg -0.001  vf 0.129  ent 0.87  kl +0.0102  clip 0.09  vs-league 0.62  vs-greedy 0.47 (36% of data)  [26s+17s]    ends hol1 imp4 pat55
+it  115  dec  8313  games   61  len 103.7  pg -0.015  vf 0.169  ent 0.87  kl +0.0082  clip 0.09  vs-league 0.40  vs-greedy 0.49 (33% of data)  [23s+17s]    ends imp1 glo2 pat58
+it  116  dec  8431  games   55  len 108.7  pg -0.003  vf 0.130  ent 0.86  kl +0.0070  clip 0.09  vs-league 0.45  vs-greedy 0.43 (39% of data)  [24s+18s]    ends hol2 imp1 glo1 pat51
+it  117  dec  8214  games   62  len 104.9  pg -0.016  vf 0.118  ent 0.88  kl +0.0044  clip 0.10  vs-league 0.25  vs-greedy 0.55 (32% of data)  [23s+17s]    ends hol2 imp1 glo1 ren1 pat57
+it  118  dec  8268  games   58  len 104.0  pg -0.003  vf 0.154  ent 0.85  kl +0.0083  clip 0.09  vs-league 0.45  vs-greedy 0.45 (34% of data)  [25s+17s]    ends hol2 imp1 ren2 pat53
+new best: 58% against greedy at iteration 120
+it  119  dec  8421  games   59  len 103.2  pg -0.002  vf 0.142  ent 0.84  kl +0.0085  clip 0.09  vs-league 0.70  vs-greedy 0.60 (41% of data)  [25s+17s]  random=100%  greedy=58%  ends hol2 ren1 pat56
+it  120  dec  8209  games   60  len 104.9  pg +0.000  vf 0.154  ent 0.86  kl +0.0076  clip 0.09  vs-league 0.50  vs-greedy 0.50 (36% of data)  [27s+17s]    ends hol5 imp2 pat53
+it  121  dec  8437  games   58  len 107.4  pg -0.006  vf 0.136  ent 0.87  kl +0.0072  clip 0.10  vs-league 0.62  vs-greedy 0.56 (38% of data)  [26s+18s]    ends hol3 imp1 glo1 pat53
+it  122  dec  8227  games   61  len 105.2  pg +0.003  vf 0.148  ent 0.88  kl +0.0088  clip 0.08  vs-league 0.61  vs-greedy 0.48 (36% of data)  [30s+17s]    ends hol3 imp2 glo1 ren1 pat54
+it  123  dec  8352  games   64  len 104.2  pg -0.005  vf 0.159  ent 0.89  kl +0.0083  clip 0.10  vs-league 0.57  vs-greedy 0.53 (36% of data)  [27s+21s]    ends hol1 imp3 pat60
+it  124  dec  8223  games   60  len 103.0  pg -0.011  vf 0.155  ent 0.90  kl +0.0086  clip 0.08  vs-league 0.80  vs-greedy 0.39 (35% of data)  [28s+23s]    ends hol1 imp5 glo2 ren1 pat51
+it  125  dec  8222  games   57  len 104.7  pg -0.025  vf 0.123  ent 0.87  kl +0.0073  clip 0.09  vs-league 0.80  vs-greedy 0.55 (37% of data)  [25s+22s]    ends imp1 glo1 ren1 pat54
+it  126  dec  8369  games   61  len  99.0  pg -0.008  vf 0.181  ent 0.89  kl +0.0082  clip 0.09  vs-league 0.78  vs-greedy 0.49 (34% of data)  [28s+21s]    ends hol4 imp1 glo2 ren1 pat53
+it  127  dec  8347  games   63  len  98.6  pg -0.002  vf 0.131  ent 0.89  kl +0.0089  clip 0.09  vs-league 0.69  vs-greedy 0.59 (37% of data)  [28s+18s]    ends hol2 imp3 glo1 ren2 pat55
+it  128  dec  8421  games   60  len 101.6  pg -0.011  vf 0.137  ent 0.88  kl +0.0103  clip 0.08  vs-league 0.79  vs-greedy 0.52 (38% of data)  [27s+17s]    ends hol3 imp3 glo1 pat53
+new best: 62% against greedy at iteration 130
+it  129  dec  8393  games   60  len 103.1  pg -0.005  vf 0.128  ent 0.89  kl +0.0097  clip 0.09  vs-league 0.70  vs-greedy 0.49 (36% of data)  [28s+17s]  random=100%  greedy=62%  ends hol2 imp1 glo1 pat56
+it  130  dec  8329  games   66  len 103.6  pg -0.005  vf 0.145  ent 0.90  kl +0.0086  clip 0.09  vs-league 0.50  vs-greedy 0.52 (30% of data)  [25s+17s]    ends hol2 imp5 ren4 pat55
+it  131  dec  8281  games   59  len 101.2  pg +0.000  vf 0.139  ent 0.84  kl +0.0055  clip 0.09  vs-league 0.50  vs-greedy 0.58 (41% of data)  [28s+17s]    ends imp4 pat55
+it  132  dec  8344  games   64  len  98.4  pg -0.000  vf 0.148  ent 0.86  kl +0.0099  clip 0.09  vs-league 0.50  vs-greedy 0.49 (34% of data)  [22s+17s]    ends hol1 imp2 glo3 ren1 pat57
+it  133  dec  8262  games   55  len 105.8  pg +0.002  vf 0.145  ent 0.90  kl +0.0091  clip 0.09  vs-league 0.80  vs-greedy 0.39 (35% of data)  [25s+17s]    ends imp2 glo1 pat52
+it  134  dec  8269  games   58  len 102.6  pg +0.002  vf 0.162  ent 0.88  kl +0.0080  clip 0.10  vs-league 0.33  vs-greedy 0.48 (34% of data)  [21s+17s]    ends hol2 imp1 glo1 pat54
+it  135  dec  8398  games   55  len 102.3  pg -0.008  vf 0.134  ent 0.88  kl +0.0078  clip 0.09  vs-league 0.43  vs-greedy 0.42 (40% of data)  [28s+17s]    ends hol2 ren2 pat51
+it  136  dec  8242  games   60  len 105.9  pg -0.008  vf 0.145  ent 0.92  kl +0.0064  clip 0.08  vs-league 0.67  vs-greedy 0.52 (32% of data)  [22s+17s]    ends hol2 imp3 glo2 ren1 pat52
+it  137  dec  8307  games   57  len 106.6  pg -0.002  vf 0.154  ent 0.90  kl +0.0081  clip 0.09  vs-league 0.79  vs-greedy 0.37 (34% of data)  [22s+17s]    ends hol4 imp3 ren1 pat49
+it  138  dec  8258  games   55  len 105.3  pg -0.008  vf 0.137  ent 0.85  kl +0.0063  clip 0.08  vs-league 0.76  vs-greedy 0.48 (43% of data)  [30s+17s]    ends hol3 imp2 glo1 ren1 pat48
+it  139  dec  8367  games   60  len 108.3  pg -0.010  vf 0.140  ent 0.91  kl +0.0082  clip 0.09  vs-league 0.80  vs-greedy 0.43 (29% of data)  [24s+17s]  random=100%  greedy=55%  ends glo1 ren1 pat58
+it  140  dec  8370  games   57  len 105.6  pg -0.002  vf 0.128  ent 0.86  kl +0.0095  clip 0.10  vs-league 0.65  vs-greedy 0.48 (39% of data)  [24s+17s]    ends hol1 glo3 ren2 pat51
+it  141  dec  8312  games   55  len 101.8  pg -0.014  vf 0.152  ent 0.88  kl +0.0083  clip 0.09  vs-league 0.60  vs-greedy 0.41 (37% of data)  [27s+17s]    ends hol2 imp3 glo3 pat47
+it  142  dec  8324  games   58  len 112.2  pg -0.005  vf 0.132  ent 0.88  kl +0.0075  clip 0.09  vs-league 0.69  vs-greedy 0.47 (31% of data)  [27s+18s]    ends hol2 imp2 glo1 ren1 pat52
+it  143  dec  8246  games   57  len 105.7  pg -0.003  vf 0.170  ent 0.83  kl +0.0123  clip 0.10  vs-league 0.73  vs-greedy 0.40 (41% of data)  [28s+17s]    ends hol1 imp3 ren1 pat52
+it  144  dec  8531  games   59  len 105.7  pg -0.002  vf 0.146  ent 0.90  kl +0.0072  clip 0.09  vs-league 0.64  vs-greedy 0.43 (35% of data)  [31s+18s]    ends hol2 imp2 ren2 pat53
+it  145  dec  8412  games   60  len 110.3  pg -0.010  vf 0.143  ent 0.92  kl +0.0118  clip 0.10  vs-league 0.47  vs-greedy 0.56 (35% of data)  [27s+18s]    ends hol1 imp2 ren2 pat55
+it  146  dec  8438  games   55  len 104.2  pg -0.006  vf 0.153  ent 0.84  kl +0.0089  clip 0.10  vs-league 0.70  vs-greedy 0.48 (41% of data)  [31s+17s]    ends hol3 glo1 pat51
+it  147  dec  8201  games   62  len 111.6  pg -0.014  vf 0.128  ent 0.90  kl +0.0067  clip 0.09  vs-league 0.68  vs-greedy 0.44 (33% of data)  [25s+17s]    ends hol3 pat59
+it  148  dec  8221  games   52  len 111.5  pg -0.034  vf 0.154  ent 0.85  kl +0.0112  clip 0.10  vs-league 0.78  vs-greedy 0.43 (36% of data)  [21s+17s]    ends ren1 pat51
+it  149  dec  8500  games   56  len 105.5  pg -0.008  vf 0.136  ent 0.84  kl +0.0074  clip 0.09  vs-league 0.90  vs-greedy 0.51 (37% of data)  [27s+17s]  random=100%  greedy=58%  ends hol1 imp1 ren1 pat53
+it  150  dec  8366  games   60  len 106.7  pg -0.006  vf 0.163  ent 0.86  kl +0.0053  clip 0.08  vs-league 0.62  vs-greedy 0.42 (35% of data)  [27s+17s]    ends imp2 pat58
+it  151  dec  8344  games   56  len 106.8  pg -0.004  vf 0.150  ent 0.86  kl +0.0112  clip 0.10  vs-league 0.29  vs-greedy 0.42 (36% of data)  [26s+17s]    ends hol3 imp1 glo1 pat51
+it  152  dec  8444  games   59  len 111.7  pg -0.006  vf 0.156  ent 0.86  kl +0.0089  clip 0.08  vs-league 0.50  vs-greedy 0.51 (31% of data)  [24s+17s]    ends hol1 imp1 glo2 ren1 pat54
+it  153  dec  8271  games   55  len 109.7  pg -0.008  vf 0.133  ent 0.88  kl +0.0079  clip 0.10  vs-league 0.78  vs-greedy 0.44 (38% of data)  [30s+17s]    ends hol1 ren1 pat53
+it  154  dec  8407  games   59  len 107.4  pg +0.001  vf 0.152  ent 0.83  kl +0.0156  clip 0.11  vs-league 0.53  vs-greedy 0.44 (40% of data)  [29s+17s]    ends imp1 glo1 pat57
+it  155  dec  8393  games   65  len 108.2  pg -0.018  vf 0.130  ent 0.86  kl +0.0083  clip 0.09  vs-league 0.67  vs-greedy 0.54 (30% of data)  [25s+22s]    ends hol2 imp1 ren2 pat60
+it  156  dec  8446  games   57  len 105.2  pg -0.004  vf 0.148  ent 0.83  kl +0.0082  clip 0.09  vs-league 0.45  vs-greedy 0.46 (40% of data)  [32s+17s]    ends hol2 imp1 glo2 pat52
+it  157  dec  8276  games   57  len 113.2  pg -0.004  vf 0.149  ent 0.84  kl +0.0097  clip 0.10  vs-league 0.76  vs-greedy 0.53 (37% of data)  [28s+17s]    ends hol3 glo1 ren1 pat52
+it  158  dec  8246  games   57  len 113.4  pg -0.016  vf 0.136  ent 0.88  kl +0.0095  clip 0.11  vs-league 0.45  vs-greedy 0.50 (33% of data)  [23s+17s]    ends hol3 imp1 ren1 pat52
+it  159  dec  8268  games   52  len 109.7  pg -0.013  vf 0.153  ent 0.88  kl +0.0086  clip 0.09  vs-league 0.43  vs-greedy 0.42 (37% of data)  [27s+17s]  random=100%  greedy=48%  ends imp2 ren1 pat49
+it  160  dec  8258  games   54  len 108.7  pg -0.008  vf 0.153  ent 0.87  kl +0.0099  clip 0.09  vs-league 0.67  vs-greedy 0.53 (36% of data)  [21s+18s]    ends imp1 glo1 pat52
+it  161  dec  8222  games   55  len 109.1  pg +0.005  vf 0.156  ent 0.88  kl +0.0132  clip 0.09  vs-league 0.86  vs-greedy 0.46 (33% of data)  [25s+18s]    ends hol2 imp1 glo1 pat51
+it  162  dec  8195  games   57  len 108.7  pg -0.052  vf 0.131  ent 0.88  kl +0.0100  clip 0.07  vs-league 0.36  vs-greedy 0.41 (34% of data)  [28s+17s]    ends hol2 imp1 ren1 pat53
+it  163  dec  8398  games   56  len 108.5  pg -0.002  vf 0.149  ent 0.86  kl +0.0063  clip 0.09  vs-league 0.73  vs-greedy 0.46 (38% of data)  [29s+17s]    ends imp1 glo1 pat54
+it  164  dec  8222  games   58  len 106.2  pg -0.014  vf 0.143  ent 0.92  kl +0.0074  clip 0.09  vs-league 0.45  vs-greedy 0.38 (36% of data)  [32s+17s]    ends hol1 pat57
+it  165  dec  8379  games   53  len 113.3  pg -0.008  vf 0.142  ent 0.91  kl +0.0086  clip 0.09  vs-league 0.40  vs-greedy 0.53 (37% of data)  [27s+17s]    ends hol2 imp1 pat50
+it  166  dec  8727  games   60  len 108.8  pg -0.008  vf 0.170  ent 0.91  kl +0.0078  clip 0.08  vs-league 0.50  vs-greedy 0.55 (38% of data)  [28s+18s]    ends hol2 pat58
+it  167  dec  8214  games   58  len 110.3  pg -0.003  vf 0.167  ent 0.90  kl +0.0090  clip 0.08  vs-league 0.65  vs-greedy 0.46 (39% of data)  [32s+17s]    ends hol3 imp1 pat54
+it  168  dec  8221  games   56  len 110.4  pg -0.022  vf 0.137  ent 0.88  kl +0.0108  clip 0.11  vs-league 0.56  vs-greedy 0.46 (31% of data)  [24s+17s]    ends pat56
+rollback: 2 evaluations clearly below the best (62%); reloaded best.pt from iteration 130
+it  169  dec  8277  games   56  len 109.7  pg +0.000  vf 0.164  ent 0.88  kl +0.0095  clip 0.09  vs-league 0.50  vs-greedy 0.42 (37% of data)  [26s+17s]  random=100%  greedy=50%  ends hol2 glo1 pat53
+it  170  dec  8217  games   56  len 102.8  pg +0.016  vf 0.160  ent 0.89  kl +0.0726  clip 0.30  vs-league 0.56  vs-greedy 0.45 (37% of data)  [28s+17s]    ends hol3 imp1 pat52
+it  171  dec  8281  games   56  len 107.0  pg +0.024  vf 0.149  ent 0.94  kl +0.0249  clip 0.20  vs-league 0.38  vs-greedy 0.49 (32% of data)  [25s+17s]    ends imp2 glo2 ren1 pat51
+it  172  dec  8521  games   57  len 107.5  pg -0.003  vf 0.153  ent 0.92  kl +0.0116  clip 0.12  vs-league 0.57  vs-greedy 0.51 (39% of data)  [32s+18s]    ends hol2 imp1 glo1 ren2 pat51
+it  173  dec  8329  games   57  len 109.8  pg -0.008  vf 0.138  ent 0.94  kl +0.0109  clip 0.11  vs-league 0.44  vs-greedy 0.56 (35% of data)  [24s+17s]    ends pat57
+it  174  dec  8263  games   57  len 103.6  pg -0.027  vf 0.153  ent 0.92  kl +0.0077  clip 0.10  vs-league 0.38  vs-greedy 0.41 (37% of data)  [32s+17s]    ends hol3 imp1 glo3 ren1 pat49
+it  175  dec  8301  games   63  len 102.8  pg -0.011  vf 0.154  ent 0.91  kl +0.0071  clip 0.10  vs-league 0.47  vs-greedy 0.57 (34% of data)  [28s+17s]    ends hol3 glo3 ren3 pat54
+it  176  dec  8396  games   59  len 105.2  pg -0.007  vf 0.130  ent 0.89  kl +0.0081  clip 0.10  vs-league 0.58  vs-greedy 0.57 (37% of data)  [25s+17s]    ends hol4 imp1 glo1 pat53
+it  177  dec  8364  games   64  len 100.2  pg -0.004  vf 0.138  ent 0.92  kl +0.0058  clip 0.09  vs-league 0.60  vs-greedy 0.58 (32% of data)  [25s+18s]    ends hol1 imp1 glo2 ren1 pat59
+it  178  dec  8652  games   61  len 101.4  pg -0.009  vf 0.147  ent 0.87  kl +0.0057  clip 0.07  vs-league 0.54  vs-greedy 0.52 (38% of data)  [31s+18s]    ends imp1 ren2 pat58
+it  179  dec  8242  games   61  len 103.1  pg +0.003  vf 0.149  ent 0.88  kl +0.0090  clip 0.08  vs-league 0.40  vs-greedy 0.46 (35% of data)  [29s+17s]  random=100%  greedy=60%  ends ren2 pat59
+it  180  dec  8369  games   59  len 104.5  pg -0.006  vf 0.137  ent 0.84  kl +0.0083  clip 0.09  vs-league 0.32  vs-greedy 0.43 (39% of data)  [34s+17s]    ends ren1 pat58
+it  181  dec  8224  games   66  len  98.8  pg -0.018  vf 0.159  ent 0.88  kl +0.0067  clip 0.08  vs-league 0.60  vs-greedy 0.43 (32% of data)  [30s+17s]    ends hol4 imp1 ren1 pat60
+it  182  dec  8264  games   63  len  97.9  pg +0.000  vf 0.148  ent 0.87  kl +0.0081  clip 0.08  vs-league 0.64  vs-greedy 0.61 (39% of data)  [26s+17s]    ends hol3 imp2 glo1 ren2 pat55
+it  183  dec  8241  games   61  len 102.0  pg -0.005  vf 0.146  ent 0.87  kl +0.0081  clip 0.09  vs-league 0.64  vs-greedy 0.51 (35% of data)  [30s+17s]    ends hol3 ren2 pat56
+it  184  dec  8320  games   56  len 103.4  pg -0.009  vf 0.139  ent 0.88  kl +0.0050  clip 0.07  vs-league 0.45  vs-greedy 0.46 (38% of data)  [26s+17s]    ends hol1 glo1 pat54
+it  185  dec  8215  games   59  len 104.0  pg -0.001  vf 0.133  ent 0.88  kl +0.0060  clip 0.09  vs-league 0.86  vs-greedy 0.45 (34% of data)  [23s+17s]    ends hol2 pat57
+it  186  dec  8357  games   57  len 104.6  pg -0.002  vf 0.175  ent 0.85  kl +0.0073  clip 0.08  vs-league 0.71  vs-greedy 0.48 (36% of data)  [22s+17s]    ends hol2 imp1 glo1 ren1 pat52
+it  187  dec  8319  games   59  len 103.1  pg -0.010  vf 0.134  ent 0.89  kl +0.0062  clip 0.09  vs-league 0.50  vs-greedy 0.48 (35% of data)  [25s+17s]    ends hol4 imp2 pat53
+it  188  dec  8220  games   56  len 101.5  pg +0.011  vf 0.161  ent 0.86  kl +0.0095  clip 0.09  vs-league 0.50  vs-greedy 0.48 (34% of data)  [22s+17s]    ends hol2 imp2 glo1 pat51
+new best: 63% against greedy at iteration 190
+it  189  dec  8229  games   59  len 101.3  pg +0.012  vf 0.142  ent 0.84  kl +0.0085  clip 0.10  vs-league 0.85  vs-greedy 0.44 (36% of data)  [28s+18s]  random=100%  greedy=63%  ends hol1 imp2 pat56
+it  190  dec  8507  games   64  len 102.0  pg -0.003  vf 0.168  ent 0.87  kl +0.0077  clip 0.08  vs-league 0.55  vs-greedy 0.53 (34% of data)  [28s+18s]    ends hol3 imp2 ren1 pat58
+it  191  dec  8204  games   57  len 100.8  pg -0.020  vf 0.164  ent 0.86  kl +0.0082  clip 0.10  vs-league 0.50  vs-greedy 0.56 (36% of data)  [24s+17s]    ends hol3 glo2 pat52
+it  192  dec  8216  games   58  len 100.2  pg +0.004  vf 0.131  ent 0.86  kl +0.0069  clip 0.09  vs-league 0.62  vs-greedy 0.57 (39% of data)  [27s+18s]    ends hol2 ren1 pat55
+it  193  dec  8303  games   59  len 102.6  pg -0.008  vf 0.165  ent 0.90  kl +0.0102  clip 0.09  vs-league 0.67  vs-greedy 0.45 (32% of data)  [24s+17s]    ends hol2 ren1 pat56
+it  194  dec  8252  games   58  len 103.4  pg -0.004  vf 0.155  ent 0.87  kl +0.0098  clip 0.09  vs-league 0.54  vs-greedy 0.45 (39% of data)  [30s+17s]    ends hol3 glo1 pat54
+it  195  dec  8206  games   61  len 103.5  pg -0.037  vf 0.134  ent 0.90  kl +0.0084  clip 0.10  vs-league 0.50  vs-greedy 0.48 (30% of data)  [21s+17s]    ends hol3 imp2 ren1 pat55
+it  196  dec  8298  games   50  len 101.4  pg -0.020  vf 0.141  ent 0.86  kl +0.0094  clip 0.09  vs-league 0.56  vs-greedy 0.55 (44% of data)  [29s+17s]    ends hol1 pat49
+it  197  dec  8394  games   67  len 104.1  pg +0.002  vf 0.164  ent 0.89  kl +0.0071  clip 0.10  vs-league 0.53  vs-greedy 0.54 (29% of data)  [25s+18s]    ends hol3 imp1 ren2 pat61
+it  198  dec  8338  games   57  len 104.2  pg -0.004  vf 0.149  ent 0.87  kl +0.0089  clip 0.09  vs-league 0.55  vs-greedy 0.47 (40% of data)  [31s+17s]    ends hol1 imp2 glo1 ren1 pat52
+it  199  dec  8447  games   62  len 105.1  pg -0.005  vf 0.137  ent 0.89  kl +0.0091  clip 0.10  vs-league 0.56  vs-greedy 0.51 (35% of data)  [25s+18s]  random=100%  greedy=56%  ends hol1 pat61
+it  200  dec  8597  games   57  len 103.7  pg -0.004  vf 0.132  ent 0.89  kl +0.0096  clip 0.10  vs-league 0.71  vs-greedy 0.44 (38% of data)  [27s+18s]    ends hol3 pat54
+it  201  dec  8253  games   62  len 104.7  pg -0.001  vf 0.145  ent 0.91  kl +0.0077  clip 0.10  vs-league 0.33  vs-greedy 0.58 (33% of data)  [27s+17s]    ends hol2 pat60
+it  202  dec  8434  games   55  len 107.5  pg -0.003  vf 0.166  ent 0.88  kl +0.0088  clip 0.10  vs-league 0.50  vs-greedy 0.50 (36% of data)  [27s+17s]    ends hol6 pat49
+it  203  dec  8397  games   58  len 103.4  pg -0.006  vf 0.154  ent 0.89  kl +0.0056  clip 0.09  vs-league 0.89  vs-greedy 0.42 (36% of data)  [27s+18s]    ends hol3 imp1 glo1 ren1 pat52
+it  204  dec  8398  games   59  len 108.5  pg +0.001  vf 0.148  ent 0.88  kl +0.0095  clip 0.10  vs-league 0.50  vs-greedy 0.55 (34% of data)  [28s+17s]    ends hol4 imp1 glo1 ren2 pat51
+it  205  dec  8358  games   56  len 107.1  pg -0.007  vf 0.130  ent 0.90  kl +0.0087  clip 0.10  vs-league 0.69  vs-greedy 0.58 (40% of data)  [29s+18s]    ends hol4 pat52
+it  206  dec  8213  games   55  len 106.8  pg +0.021  vf 0.164  ent 0.95  kl +0.0027  clip 0.10  vs-league 0.50  vs-greedy 0.55 (33% of data)  [29s+17s]    ends hol3 imp1 ren1 pat50
+it  207  dec  8281  games   58  len 108.2  pg -0.004  vf 0.121  ent 0.90  kl +0.0120  clip 0.10  vs-league 0.75  vs-greedy 0.51 (35% of data)  [26s+17s]    ends hol1 imp1 glo1 ren4 pat51
+it  208  dec  8215  games   60  len 108.5  pg -0.002  vf 0.140  ent 0.93  kl +0.0073  clip 0.09  vs-league 0.50  vs-greedy 0.61 (36% of data)  [26s+17s]    ends hol2 imp1 ren2 pat55
+rollback: 2 evaluations clearly below the best (63%); reloaded best.pt from iteration 190
+it  209  dec  8240  games   54  len 107.4  pg -0.019  vf 0.161  ent 0.93  kl +0.0071  clip 0.10  vs-league 0.27  vs-greedy 0.52 (37% of data)  [28s+19s]  random=100%  greedy=54%  ends hol1 imp1 pat52
+it  210  dec  8383  games   59  len 104.9  pg +0.014  vf 0.144  ent 0.91  kl +0.0363  clip 0.23  vs-league 0.45  vs-greedy 0.56 (34% of data)  [25s+22s]    ends hol2 imp2 ren1 pat54
+it  211  dec  8228  games   55  len 107.9  pg +0.011  vf 0.140  ent 0.89  kl +0.0159  clip 0.15  vs-league 0.67  vs-greedy 0.53 (35% of data)  [28s+21s]    ends ren2 pat53
+it  212  dec  8211  games   58  len 100.9  pg +0.014  vf 0.161  ent 0.89  kl +0.0103  clip 0.10  vs-league 0.46  vs-greedy 0.65 (38% of data)  [27s+24s]    ends hol2 imp1 ren1 pat54
+it  213  dec  8438  games   56  len 106.1  pg -0.009  vf 0.148  ent 0.89  kl +0.0050  clip 0.09  vs-league 0.43  vs-greedy 0.52 (36% of data)  [28s+21s]    ends hol1 imp2 ren1 pat52
+it  214  dec  8224  games   62  len 102.6  pg +0.005  vf 0.162  ent 0.91  kl +0.0084  clip 0.07  vs-league 0.50  vs-greedy 0.53 (31% of data)  [27s+27s]    ends hol3 imp1 ren1 pat57
+it  215  dec  8261  games   60  len 103.7  pg -0.006  vf 0.156  ent 0.89  kl +0.0086  clip 0.08  vs-league 0.46  vs-greedy 0.45 (37% of data)  [41s+22s]    ends hol1 imp1 ren2 pat56
+it  216  dec  8279  games   60  len 100.2  pg -0.001  vf 0.164  ent 0.85  kl +0.0070  clip 0.08  vs-league 0.62  vs-greedy 0.37 (38% of data)  [32s+18s]    ends hol3 ren1 pat56
+it  217  dec  8293  games   64  len 102.1  pg -0.012  vf 0.159  ent 0.89  kl +0.0041  clip 0.10  vs-league 0.67  vs-greedy 0.54 (35% of data)  [24s+17s]    ends hol5 imp3 ren1 pat55
+it  218  dec  8456  games   60  len  96.8  pg +0.000  vf 0.159  ent 0.86  kl +0.0076  clip 0.09  vs-league 0.36  vs-greedy 0.56 (38% of data)  [27s+17s]    ends hol4 imp1 glo2 ren2 pat51
+it  219  dec  8833  games   61  len 104.6  pg -0.004  vf 0.160  ent 0.87  kl +0.0074  clip 0.09  vs-league 0.38  vs-greedy 0.63 (35% of data)  [25s+19s]  random=100%  greedy=56%  ends imp1 pat60
+it  220  dec  8279  games   64  len 104.6  pg -0.012  vf 0.142  ent 0.84  kl +0.0055  clip 0.08  vs-league 0.20  vs-greedy 0.55 (31% of data)  [26s+17s]    ends hol2 imp2 glo2 ren3 pat55
+it  221  dec  8230  games   59  len  99.8  pg -0.013  vf 0.156  ent 0.88  kl +0.0112  clip 0.08  vs-league 0.53  vs-greedy 0.45 (40% of data)  [31s+17s]    ends hol1 imp4 ren2 pat52
+it  222  dec  8265  games   62  len 100.2  pg -0.017  vf 0.155  ent 0.85  kl +0.0070  clip 0.10  vs-league 0.61  vs-greedy 0.47 (37% of data)  [28s+17s]    ends hol3 imp3 glo1 ren1 pat54
+it  223  dec  8252  games   54  len 103.7  pg -0.011  vf 0.155  ent 0.84  kl +0.0045  clip 0.10  vs-league 0.55  vs-greedy 0.50 (40% of data)  [29s+17s]    ends imp2 pat52
+it  224  dec  8252  games   63  len 105.1  pg -0.012  vf 0.166  ent 0.90  kl +0.0096  clip 0.11  vs-league 0.80  vs-greedy 0.52 (27% of data)  [27s+17s]    ends hol1 imp2 pat60
+it  225  dec  8200  games   57  len 103.4  pg -0.014  vf 0.133  ent 0.82  kl +0.0074  clip 0.09  vs-league 0.36  vs-greedy 0.56 (41% of data)  [31s+20s]    ends glo1 ren1 pat55
+it  226  dec  8400  games   60  len  98.7  pg -0.006  vf 0.170  ent 0.81  kl +0.0094  clip 0.09  vs-league 0.38  vs-greedy 0.42 (37% of data)  [25s+17s]    ends hol1 imp2 glo2 ren2 pat53
+it  227  dec  8205  games   60  len 104.7  pg -0.011  vf 0.147  ent 0.87  kl +0.0134  clip 0.11  vs-league 0.36  vs-greedy 0.39 (31% of data)  [27s+17s]    ends hol2 imp1 glo1 pat56
+it  228  dec  8505  games   58  len 105.9  pg -0.009  vf 0.148  ent 0.80  kl +0.0076  clip 0.09  vs-league 0.59  vs-greedy 0.45 (39% of data)  [32s+17s]    ends hol1 imp3 ren1 pat53
+it  229  dec  8252  games   58  len 107.4  pg -0.012  vf 0.143  ent 0.85  kl +0.0092  clip 0.10  vs-league 0.14  vs-greedy 0.61 (34% of data)  [25s+17s]  random=100%  greedy=57%  ends hol1 pat57
+it  230  dec  8267  games   56  len 104.7  pg -0.016  vf 0.142  ent 0.81  kl +0.0062  clip 0.09  vs-league 0.77  vs-greedy 0.41 (42% of data)  [32s+17s]    ends hol1 imp2 pat53
+it  231  dec  8574  games   66  len 107.9  pg -0.009  vf 0.178  ent 0.83  kl +0.0098  clip 0.08  vs-league 0.40  vs-greedy 0.37 (30% of data)  [26s+19s]    ends pat66
+it  232  dec  8290  games   58  len 104.5  pg +0.009  vf 0.164  ent 0.79  kl +0.0076  clip 0.08  vs-league 0.40  vs-greedy 0.49 (40% of data)  [31s+18s]    ends hol1 imp2 ren1 pat54
+it  233  dec  8255  games   59  len 104.3  pg +0.002  vf 0.139  ent 0.82  kl +0.0082  clip 0.08  vs-league 0.78  vs-greedy 0.53 (34% of data)  [31s+17s]    ends hol2 imp1 pat56
+it  234  dec  8375  games   56  len 101.8  pg -0.008  vf 0.136  ent 0.78  kl +0.0061  clip 0.08  vs-league 0.58  vs-greedy 0.52 (39% of data)  [26s+17s]    ends hol1 imp2 pat53
+it  235  dec  8329  games   58  len 108.5  pg +0.002  vf 0.134  ent 0.80  kl +0.0072  clip 0.09  vs-league 0.36  vs-greedy 0.52 (36% of data)  [28s+17s]    ends ren2 pat56
+it  236  dec  8276  games   55  len 107.0  pg -0.008  vf 0.140  ent 0.81  kl +0.0084  clip 0.09  vs-league 0.62  vs-greedy 0.53 (35% of data)  [29s+17s]    ends hol2 imp1 ren1 pat51
+it  237  dec  8216  games   59  len 108.0  pg +0.007  vf 0.132  ent 0.84  kl +0.0074  clip 0.10  vs-league 0.58  vs-greedy 0.40 (31% of data)  [26s+17s]    ends hol1 pat58
+it  238  dec  8385  games   59  len 105.6  pg -0.007  vf 0.172  ent 0.80  kl +0.0089  clip 0.09  vs-league 0.60  vs-greedy 0.54 (36% of data)  [28s+17s]    ends imp1 pat58
+it  239  dec  8261  games   60  len 100.4  pg -0.012  vf 0.159  ent 0.78  kl +0.0093  clip 0.09  vs-league 0.62  vs-greedy 0.60 (37% of data)  [25s+20s]  random=100%  greedy=58%  ends hol1 imp3 ren2 pat54
+it  240  dec  8303  games   54  len 107.3  pg -0.001  vf 0.147  ent 0.78  kl +0.0077  clip 0.10  vs-league 0.36  vs-greedy 0.55 (37% of data)  [28s+25s]    ends hol1 imp1 ren1 pat51
+it  241  dec  8321  games   56  len 106.3  pg -0.017  vf 0.152  ent 0.80  kl +0.0104  clip 0.10  vs-league 0.57  vs-greedy 0.58 (35% of data)  [42s+25s]    ends ren1 pat55
+it  242  dec  8206  games   60  len 102.1  pg -0.021  vf 0.157  ent 0.78  kl +0.0085  clip 0.10  vs-league 0.36  vs-greedy 0.60 (35% of data)  [35s+27s]    ends hol2 imp1 ren1 pat56
+it  243  dec  8334  games   59  len 100.9  pg -0.012  vf 0.153  ent 0.74  kl +0.0076  clip 0.11  vs-league 0.54  vs-greedy 0.45 (37% of data)  [52s+30s]    ends hol1 ren1 pat57
+it  244  dec  8304  games   61  len 103.9  pg +0.005  vf 0.169  ent 0.75  kl +0.0075  clip 0.10  vs-league 0.53  vs-greedy 0.47 (37% of data)  [48s+29s]    ends ren1 pat60
+it  245  dec  8391  games   62  len 107.0  pg -0.007  vf 0.153  ent 0.78  kl +0.0072  clip 0.08  vs-league 0.41  vs-greedy 0.50 (35% of data)  [42s+28s]    ends ren1 pat61
+it  246  dec  8193  games   60  len 101.6  pg -0.065  vf 0.129  ent 0.72  kl +0.0121  clip 0.08  vs-league 0.53  vs-greedy 0.44 (38% of data)  [40s+25s]    ends imp1 pat59

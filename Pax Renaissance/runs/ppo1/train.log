@@ -1,0 +1,103 @@
+2026-11-05 12:36:05  start: iterations 0..999, args {"run": "runs/ppo1", "resume": false, "iters": 1000, "num_games": 128, "steps": 8192, "epochs": 3, "minibatch": 1024, "lr": 0.0003, "clip": 0.2, "vf_coef": 0.5, "ent_coef": 0.01, "gamma": 1.0, "lam": 0.95, "max_grad": 0.5, "league_prob": 0.2, "league_size": 10, "snapshot_every": 10, "eval_every": 10, "eval_games": 100, "eval_opponents": ["random", "greedy"], "hidden": 512, "threads": 3, "seed": 1}
+2026-11-05 12:36:40  it    0  dec  8309  games  110  len  83.6  pg -0.009  vf 0.175  ent 1.90  kl +0.0011  clip 0.00  vs-league 0.48  [13s+21s]  
+2026-11-05 12:37:12  it    1  dec  8218  games  108  len  87.3  pg -0.008  vf 0.148  ent 1.89  kl +0.0056  clip 0.06  vs-league 0.65  [10s+20s]  
+2026-11-05 12:37:44  it    2  dec  8371  games  111  len  87.4  pg -0.004  vf 0.161  ent 1.88  kl +0.0041  clip 0.03  vs-league 0.42  [10s+21s]  
+2026-11-05 12:38:15  it    3  dec  8260  games  106  len  86.3  pg -0.008  vf 0.167  ent 1.88  kl +0.0066  clip 0.07  vs-league 0.50  [10s+21s]  
+2026-11-05 12:38:46  it    4  dec  8471  games  107  len  89.5  pg -0.006  vf 0.133  ent 1.87  kl +0.0060  clip 0.07  vs-league 0.45  [8s+21s]  
+2026-11-05 12:39:15  it    5  dec  8209  games  109  len  84.6  pg -0.011  vf 0.135  ent 1.86  kl +0.0063  clip 0.09  vs-league 0.73  [8s+21s]  
+2026-11-05 12:39:44  it    6  dec  8210  games  104  len  87.5  pg -0.001  vf 0.133  ent 1.86  kl +0.0061  clip 0.08  vs-league 0.65  [8s+20s]  
+2026-11-05 12:40:14  it    7  dec  8336  games  107  len  85.9  pg -0.004  vf 0.119  ent 1.86  kl +0.0103  clip 0.10  vs-league 0.71  [8s+20s]  
+2026-11-05 12:40:44  it    8  dec  8288  games  110  len  85.9  pg -0.010  vf 0.117  ent 1.82  kl +0.0065  clip 0.12  vs-league 0.73  [9s+20s]  
+2026-11-05 12:41:57  it    9  dec  8462  games  109  len  87.6  pg -0.004  vf 0.130  ent 1.82  kl +0.0061  clip 0.10  vs-league 0.76  [9s+22s]  random=96%  greedy=13%
+2026-11-05 12:42:28  it   10  dec  8624  games  114  len  85.8  pg -0.007  vf 0.111  ent 1.79  kl +0.0086  clip 0.11  vs-league 0.80  [9s+21s]  
+2026-11-05 12:42:58  it   11  dec  8290  games  112  len  87.4  pg -0.010  vf 0.119  ent 1.77  kl +0.0063  clip 0.09  vs-league 0.66  [9s+20s]  
+2026-11-05 12:43:29  it   12  dec  8474  games  106  len  89.0  pg -0.008  vf 0.102  ent 1.76  kl +0.0053  clip 0.11  vs-league 0.72  [9s+22s]  
+2026-11-05 12:43:58  it   13  dec  8326  games  109  len  86.8  pg -0.003  vf 0.104  ent 1.75  kl +0.0076  clip 0.11  vs-league 0.68  [10s+18s]  
+2026-11-05 12:44:25  it   14  dec  8531  games  109  len  86.8  pg -0.009  vf 0.113  ent 1.72  kl +0.0093  clip 0.13  vs-league 0.74  [8s+18s]  
+2026-11-05 12:44:52  it   15  dec  8266  games  114  len  86.2  pg -0.000  vf 0.109  ent 1.72  kl +0.0084  clip 0.10  vs-league 0.75  [9s+18s]  
+2026-11-05 12:45:19  it   16  dec  8255  games  106  len  90.5  pg -0.012  vf 0.103  ent 1.69  kl +0.0076  clip 0.14  vs-league 0.82  [8s+18s]  
+2026-11-05 12:45:46  it   17  dec  8268  games  100  len  92.4  pg -0.019  vf 0.102  ent 1.65  kl +0.0092  clip 0.14  vs-league 0.78  [9s+18s]  
+2026-11-05 12:46:12  it   18  dec  8230  games   96  len  95.4  pg -0.003  vf 0.091  ent 1.64  kl +0.0129  clip 0.14  vs-league 0.85  [8s+17s]  
+2026-11-05 12:47:30  it   19  dec  8217  games   98  len  93.1  pg -0.017  vf 0.092  ent 1.63  kl +0.0129  clip 0.15  vs-league 0.65  [8s+19s]  random=99%  greedy=31%
+2026-11-05 12:48:00  it   20  dec  8195  games   98  len  93.7  pg -0.004  vf 0.092  ent 1.65  kl +0.0060  clip 0.13  vs-league 0.90  [9s+20s]  
+2026-11-05 12:48:34  it   21  dec  8355  games   97  len  96.6  pg -0.005  vf 0.090  ent 1.66  kl +0.0122  clip 0.15  vs-league 0.86  [11s+22s]  
+2026-11-05 12:49:10  it   22  dec  8390  games   95  len  98.8  pg -0.009  vf 0.094  ent 1.66  kl +0.0097  clip 0.12  vs-league 0.62  [10s+25s]  
+2026-11-05 12:49:43  it   23  dec  8391  games   97  len  99.7  pg -0.009  vf 0.080  ent 1.65  kl +0.0108  clip 0.15  vs-league 0.68  [9s+22s]  
+2026-11-05 12:50:14  it   24  dec  8248  games   96  len  98.7  pg -0.001  vf 0.096  ent 1.65  kl +0.0053  clip 0.12  vs-league 0.82  [10s+21s]  
+2026-11-05 12:50:47  it   25  dec  8234  games   92  len 100.1  pg -0.006  vf 0.089  ent 1.64  kl +0.0100  clip 0.13  vs-league 0.89  [10s+21s]  
+2026-11-05 12:51:20  it   26  dec  8264  games   92  len  99.5  pg -0.012  vf 0.085  ent 1.63  kl +0.0073  clip 0.14  vs-league 0.94  [10s+23s]  
+2026-11-05 12:51:56  it   27  dec  8212  games   89  len 103.3  pg -0.038  vf 0.091  ent 1.62  kl +0.0068  clip 0.15  vs-league 0.78  [10s+25s]  
+2026-11-05 12:52:31  it   28  dec  8238  games   88  len 107.8  pg -0.017  vf 0.087  ent 1.55  kl +0.0132  clip 0.19  vs-league 0.90  [10s+24s]  
+2026-11-05 12:53:58  it   29  dec  8252  games   84  len 109.5  pg -0.023  vf 0.072  ent 1.57  kl +0.0120  clip 0.18  vs-league 0.88  [9s+27s]  random=100%  greedy=36%
+2026-11-05 12:54:30  it   30  dec  8225  games   86  len 105.9  pg -0.017  vf 0.074  ent 1.57  kl +0.0219  clip 0.21  vs-league 0.80  [8s+23s]  
+2026-11-05 12:55:08  it   31  dec  8205  games   85  len 106.0  pg -0.039  vf 0.083  ent 1.55  kl +0.0186  clip 0.19  vs-league 0.86  [12s+26s]  
+2026-11-05 12:55:39  it   32  dec  8206  games   79  len 113.2  pg -0.034  vf 0.075  ent 1.53  kl +0.0153  clip 0.19  vs-league 0.75  [9s+21s]  
+2026-11-05 12:56:11  it   33  dec  8265  games   84  len 109.3  pg -0.003  vf 0.079  ent 1.56  kl +0.0105  clip 0.19  vs-league 0.67  [10s+22s]  
+2026-11-05 12:56:48  it   34  dec  8214  games   82  len 107.7  pg -0.000  vf 0.075  ent 1.52  kl +0.0182  clip 0.20  vs-league 0.83  [11s+25s]  
+2026-11-05 12:57:19  it   35  dec  8282  games   81  len 111.5  pg -0.005  vf 0.074  ent 1.46  kl +0.0155  clip 0.19  vs-league 0.80  [10s+21s]  
+2026-11-05 12:57:48  it   36  dec  8391  games   82  len 111.6  pg -0.019  vf 0.076  ent 1.46  kl +0.0148  clip 0.19  vs-league 0.83  [10s+18s]  
+2026-11-05 12:58:13  it   37  dec  8387  games   80  len 116.3  pg -0.004  vf 0.075  ent 1.44  kl +0.0111  clip 0.17  vs-league 0.93  [8s+17s]  
+2026-11-05 12:58:41  it   38  dec  8369  games   87  len 111.8  pg -0.013  vf 0.085  ent 1.40  kl +0.0192  clip 0.19  vs-league 0.90  [10s+17s]  
+2026-11-05 12:59:54  it   39  dec  8264  games   82  len 111.4  pg -0.000  vf 0.077  ent 1.38  kl +0.0206  clip 0.19  vs-league 0.86  [8s+18s]  random=100%  greedy=35%
+2026-11-05 13:00:21  it   40  dec  8294  games   82  len 112.3  pg -0.007  vf 0.072  ent 1.38  kl +0.0139  clip 0.19  vs-league 0.95  [9s+18s]  
+2026-11-05 13:00:50  it   41  dec  8493  games   81  len 116.5  pg -0.009  vf 0.077  ent 1.40  kl +0.0138  clip 0.17  vs-league 0.85  [10s+18s]  
+2026-11-05 13:01:17  it   42  dec  8212  games   83  len 110.9  pg -0.006  vf 0.068  ent 1.40  kl +0.0168  clip 0.19  vs-league 0.71  [8s+18s]  
+2026-11-05 13:01:46  it   43  dec  8412  games   83  len 111.2  pg -0.008  vf 0.078  ent 1.40  kl +0.0153  clip 0.19  vs-league 0.87  [9s+18s]  
+2026-11-05 13:02:14  it   44  dec  8405  games   85  len 113.6  pg -0.005  vf 0.069  ent 1.38  kl +0.0150  clip 0.17  vs-league 0.76  [10s+18s]  
+2026-11-05 13:02:41  it   45  dec  8288  games   88  len 110.8  pg -0.021  vf 0.080  ent 1.33  kl +0.0134  clip 0.17  vs-league 0.82  [9s+17s]  
+2026-11-05 13:03:09  it   46  dec  8233  games   84  len 113.2  pg -0.012  vf 0.074  ent 1.29  kl +0.0178  clip 0.18  vs-league 0.87  [10s+18s]  
+2026-11-05 13:03:35  it   47  dec  8285  games   81  len 112.1  pg -0.015  vf 0.072  ent 1.31  kl +0.0178  clip 0.18  vs-league 0.92  [8s+17s]  
+2026-11-05 13:04:00  it   48  dec  8231  games   80  len 113.8  pg -0.005  vf 0.075  ent 1.29  kl +0.0203  clip 0.18  vs-league 0.81  [8s+17s]  
+2026-11-05 13:05:17  it   49  dec  8299  games   84  len 111.5  pg -0.009  vf 0.080  ent 1.32  kl +0.0137  clip 0.19  vs-league 0.88  [10s+18s]  random=99%  greedy=41%
+2026-11-05 13:05:43  it   50  dec  8335  games   79  len 116.2  pg -0.011  vf 0.086  ent 1.30  kl +0.0128  clip 0.16  vs-league 0.85  [8s+17s]  
+2026-11-05 13:06:09  it   51  dec  8276  games   84  len 113.6  pg -0.007  vf 0.097  ent 1.32  kl +0.0134  clip 0.17  vs-league 0.88  [9s+17s]  
+2026-11-05 13:06:36  it   52  dec  8376  games   77  len 118.7  pg -0.019  vf 0.067  ent 1.29  kl +0.0176  clip 0.18  vs-league 0.85  [9s+17s]  
+2026-11-05 13:07:02  it   53  dec  8395  games   82  len 115.0  pg +0.001  vf 0.078  ent 1.30  kl +0.0173  clip 0.19  vs-league 0.94  [8s+17s]  
+2026-11-05 13:07:30  it   54  dec  8229  games   79  len 118.8  pg -0.007  vf 0.058  ent 1.27  kl +0.0202  clip 0.17  vs-league 0.82  [10s+17s]  
+2026-11-05 13:07:56  it   55  dec  8346  games   76  len 123.3  pg +0.000  vf 0.061  ent 1.25  kl +0.0200  clip 0.20  vs-league 0.88  [9s+17s]  
+2026-11-05 13:08:24  it   56  dec  8223  games   76  len 121.1  pg -0.013  vf 0.080  ent 1.24  kl +0.0164  clip 0.19  vs-league 0.73  [10s+17s]  
+2026-11-05 13:08:49  it   57  dec  8231  games   75  len 123.9  pg -0.012  vf 0.075  ent 1.24  kl +0.0158  clip 0.20  vs-league 0.82  [8s+17s]  
+2026-11-05 13:09:16  it   58  dec  8304  games   82  len 118.3  pg -0.009  vf 0.064  ent 1.24  kl +0.0171  clip 0.19  vs-league 0.92  [9s+17s]  
+2026-11-05 13:10:31  it   59  dec  8265  games   82  len 116.8  pg +0.003  vf 0.078  ent 1.22  kl +0.0219  clip 0.18  vs-league 0.76  [9s+17s]  random=100%  greedy=48%
+2026-11-05 13:11:01  it   60  dec  8245  games   79  len 119.1  pg -0.021  vf 0.084  ent 1.25  kl +0.0151  clip 0.16  vs-league 0.88  [10s+19s]  
+2026-11-05 13:11:27  it   61  dec  8298  games   75  len 120.7  pg -0.002  vf 0.089  ent 1.26  kl +0.0184  clip 0.18  vs-league 0.77  [9s+17s]  
+2026-11-05 13:11:53  it   62  dec  8256  games   74  len 122.8  pg -0.016  vf 0.079  ent 1.23  kl +0.0196  clip 0.19  vs-league 0.93  [9s+17s]  
+2026-11-05 13:12:22  it   63  dec  8246  games   78  len 119.4  pg -0.013  vf 0.077  ent 1.23  kl +0.0189  clip 0.20  vs-league 0.72  [9s+19s]  
+2026-11-05 13:12:53  it   64  dec  8287  games   79  len 118.9  pg -0.007  vf 0.081  ent 1.21  kl +0.0201  clip 0.19  vs-league 0.76  [10s+20s]  
+2026-11-05 13:13:27  it   65  dec  8336  games   75  len 124.1  pg -0.005  vf 0.064  ent 1.17  kl +0.0205  clip 0.21  vs-league 1.00  [11s+23s]  
+2026-11-05 13:14:01  it   66  dec  8229  games   78  len 121.2  pg -0.003  vf 0.076  ent 1.19  kl +0.0177  clip 0.18  vs-league 0.71  [11s+21s]  
+2026-11-05 13:14:15  start: iterations 67..999, args {"run": "runs/ppo1", "resume": true, "iters": 1000, "num_games": 128, "steps": 8192, "epochs": 3, "minibatch": 1024, "lr": 0.0003, "clip": 0.2, "vf_coef": 0.5, "ent_coef": 0.01, "gamma": 1.0, "lam": 0.95, "max_grad": 0.5, "league_prob": 0.2, "league_size": 10, "snapshot_every": 10, "eval_every": 10, "eval_games": 100, "eval_opponents": ["random", "greedy"], "hidden": 512, "threads": 3, "seed": 1}
+2026-11-05 13:14:55  it   67  dec  8231  games   87  len 106.3  pg -0.005  vf 0.088  ent 1.20  kl +0.0097  clip 0.12  vs-league 0.77  [19s+20s]    ends hol11 imp8 glo1 ren3 pat64
+2026-11-05 13:15:28  it   68  dec  8296  games   79  len 125.7  pg -0.005  vf 0.071  ent 1.20  kl +0.0126  clip 0.16  vs-league 0.91  [13s+19s]    ends hol6 imp4 glo1 ren3 pat65
+2026-11-05 13:16:51  it   69  dec  8463  games   79  len 122.6  pg -0.011  vf 0.066  ent 1.18  kl +0.0198  clip 0.19  vs-league 0.89  [9s+20s]  random=100%  greedy=40%  ends hol2 imp5 ren1 pat71
+2026-11-05 13:17:21  it   70  dec  8427  games   74  len 126.2  pg -0.003  vf 0.088  ent 1.19  kl +0.0151  clip 0.18  vs-league 0.83  [11s+19s]    ends hol7 imp3 ren4 pat60
+2026-11-05 13:17:48  it   71  dec  8233  games   75  len 122.7  pg +0.003  vf 0.095  ent 1.16  kl +0.0191  clip 0.20  vs-league 0.91  [9s+17s]    ends hol7 glo3 ren1 pat64
+2026-11-05 13:18:14  it   72  dec  8283  games   76  len 118.9  pg -0.001  vf 0.069  ent 1.19  kl +0.0214  clip 0.18  vs-league 0.92  [9s+17s]    ends hol6 imp5 ren2 pat63
+2026-11-05 13:18:42  it   73  dec  8365  games   76  len 122.4  pg -0.005  vf 0.078  ent 1.19  kl +0.0185  clip 0.18  vs-league 0.60  [10s+17s]    ends hol3 imp4 ren1 pat68
+2026-11-05 13:19:08  it   74  dec  8253  games   73  len 125.5  pg -0.017  vf 0.080  ent 1.22  kl +0.0173  clip 0.16  vs-league 0.82  [9s+17s]    ends hol3 imp6 glo1 pat63
+2026-11-05 13:19:34  it   75  dec  8476  games   73  len 127.1  pg -0.005  vf 0.074  ent 1.22  kl +0.0192  clip 0.18  vs-league 0.80  [8s+17s]    ends hol5 imp3 glo1 ren1 pat63
+2026-11-05 13:20:01  it   76  dec  8270  games   77  len 123.4  pg -0.009  vf 0.094  ent 1.19  kl +0.0151  clip 0.17  vs-league 0.75  [9s+17s]    ends hol4 imp4 glo2 ren2 pat65
+2026-11-05 13:20:28  it   77  dec  8427  games   75  len 124.8  pg -0.010  vf 0.059  ent 1.17  kl +0.0170  clip 0.17  vs-league 0.71  [10s+17s]    ends hol4 imp4 glo2 ren1 pat64
+2026-11-05 13:20:53  it   78  dec  8208  games   74  len 125.0  pg -0.021  vf 0.078  ent 1.19  kl +0.0189  clip 0.20  vs-league 0.69  [8s+17s]    ends hol5 imp1 glo2 ren3 pat63
+2026-11-05 13:22:09  it   79  dec  8264  games   79  len 117.8  pg -0.002  vf 0.077  ent 1.18  kl +0.0203  clip 0.20  vs-league 0.89  [10s+17s]  random=100%  greedy=32%  ends hol8 imp3 glo2 ren3 pat63
+2026-11-05 13:22:36  it   80  dec  8316  games   76  len 120.1  pg +0.005  vf 0.094  ent 1.17  kl +0.0215  clip 0.20  vs-league 0.92  [9s+17s]    ends hol6 imp1 glo1 ren2 pat66
+2026-11-05 13:23:02  it   81  dec  8296  games   73  len 123.8  pg +0.004  vf 0.076  ent 1.20  kl +0.0151  clip 0.18  vs-league 0.83  [8s+17s]    ends hol6 imp2 ren2 pat63
+2026-11-05 13:23:33  it   82  dec  8565  games   76  len 122.9  pg -0.005  vf 0.067  ent 1.22  kl +0.0194  clip 0.18  vs-league 0.69  [11s+20s]    ends hol3 imp1 glo2 ren5 pat65
+2026-11-05 13:24:00  it   83  dec  8586  games   80  len 125.1  pg -0.009  vf 0.066  ent 1.21  kl +0.0137  clip 0.16  vs-league 0.83  [8s+17s]    ends hol3 imp1 glo3 ren3 pat70
+2026-11-05 13:24:28  it   84  dec  8300  games   83  len 118.5  pg -0.010  vf 0.089  ent 1.22  kl +0.0172  clip 0.16  vs-league 0.89  [11s+17s]    ends hol7 imp4 ren2 pat70
+2026-11-05 13:24:56  it   85  dec  8220  games   69  len 127.3  pg +0.004  vf 0.074  ent 1.20  kl +0.0176  clip 0.19  vs-league 0.94  [9s+19s]    ends hol7 imp6 glo2 pat54
+2026-11-05 13:25:32  it   86  dec  8306  games   81  len 117.1  pg -0.017  vf 0.102  ent 1.25  kl +0.0170  clip 0.20  vs-league 0.71  [12s+23s]    ends hol3 imp4 glo1 ren5 pat68
+2026-11-05 13:26:06  it   87  dec  8281  games   73  len 120.1  pg -0.009  vf 0.081  ent 1.23  kl +0.0180  clip 0.17  vs-league 0.71  [10s+23s]    ends hol3 imp1 glo4 ren2 pat63
+2026-11-05 13:26:36  it   88  dec  8259  games   81  len 116.1  pg -0.008  vf 0.083  ent 1.24  kl +0.0197  clip 0.17  vs-league 0.90  [12s+17s]    ends hol5 imp6 glo1 ren1 pat68
+2026-11-05 13:27:53  it   89  dec  8204  games   76  len 117.2  pg -0.033  vf 0.083  ent 1.19  kl +0.0229  clip 0.20  vs-league 0.82  [9s+17s]  random=100%  greedy=38%  ends hol6 imp2 glo4 ren1 pat63
+2026-11-05 13:28:19  it   90  dec  8258  games   78  len 121.0  pg -0.021  vf 0.089  ent 1.16  kl +0.0148  clip 0.19  vs-league 0.94  [9s+17s]    ends hol3 imp5 glo1 pat69
+2026-11-05 13:28:49  it   91  dec  8518  games   82  len 119.9  pg -0.007  vf 0.072  ent 1.19  kl +0.0193  clip 0.18  vs-league 0.68  [11s+18s]    ends hol4 imp2 glo3 ren4 pat69
+2026-11-05 13:29:15  it   92  dec  8257  games   78  len 122.2  pg -0.026  vf 0.063  ent 1.19  kl +0.0186  clip 0.18  vs-league 1.00  [8s+17s]    ends hol4 ren1 pat73
+2026-11-05 13:29:47  it   93  dec  8478  games   80  len 118.6  pg -0.005  vf 0.099  ent 1.23  kl +0.0179  clip 0.18  vs-league 0.70  [10s+20s]    ends hol5 imp3 glo1 ren3 pat68
+2026-11-05 13:30:18  it   94  dec  8265  games   81  len 114.7  pg -0.002  vf 0.094  ent 1.20  kl +0.0211  clip 0.19  vs-league 0.85  [10s+21s]    ends hol8 imp4 glo6 pat63
+2026-11-05 13:30:51  it   95  dec  8266  games   86  len 113.3  pg +0.004  vf 0.102  ent 1.19  kl +0.0178  clip 0.18  vs-league 0.72  [11s+21s]    ends hol6 imp8 glo2 ren2 pat68
+2026-11-05 13:31:24  it   96  dec  8227  games   77  len 118.5  pg -0.005  vf 0.094  ent 1.19  kl +0.0149  clip 0.17  vs-league 0.75  [10s+23s]    ends hol2 imp1 glo2 pat72
+2026-11-05 13:32:04  it   97  dec  8303  games   78  len 118.0  pg -0.009  vf 0.093  ent 1.19  kl +0.0198  clip 0.19  vs-league 0.79  [13s+27s]    ends hol3 imp4 glo3 ren1 pat67
+2026-11-05 13:32:41  it   98  dec  8200  games   78  len 117.5  pg -0.012  vf 0.101  ent 1.22  kl +0.0142  clip 0.18  vs-league 0.82  [12s+24s]    ends hol6 imp1 glo1 ren2 pat68
+2026-11-05 13:34:12  it   99  dec  8252  games   82  len 116.6  pg -0.018  vf 0.088  ent 1.16  kl +0.0195  clip 0.21  vs-league 0.92  [12s+22s]  random=100%  greedy=40%  ends hol2 imp5 ren6 pat69
+2026-11-05 13:34:43  it  100  dec  8364  games   84  len 113.8  pg -0.014  vf 0.102  ent 1.18  kl +0.0197  clip 0.18  vs-league 0.85  [10s+20s]    ends hol7 imp8 glo2 ren2 pat65

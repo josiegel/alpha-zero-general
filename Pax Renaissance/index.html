@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pax Renaissance</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="setup" class="setup">
+    <div class="setup-box">
+      <h1>Pax Renaissance <small>2nd Edition</small></h1>
+      <div class="row">
+        <label><input type="radio" name="mode" value="bot" checked> 1 player vs bot</label>
+        <label><input type="radio" name="mode" value="hotseat"> 2 players (hot-seat)</label>
+      </div>
+      <div class="row"><label>Player 1 name <input id="name1" value="Player 1"></label></div>
+      <div class="row" id="name2row"><label>Player 2 name <input id="name2" value="Bot"></label></div>
+      <div class="row" id="botrow">
+        <label>Bot
+          <select id="botType">
+            <option value="search">Neural network + lookahead search (slower)</option>
+            <option value="neural">Neural network (instant)</option>
+            <option value="greedy">Greedy (looks one action ahead)</option>
+            <option value="random">Random moves</option>
+          </select>
+        </label>
+        <span class="note" id="botNote"></span>
+      </div>
+      <div class="row">
+        <label>Player 1 bank
+          <select id="bank1"><option value="">Random</option><option>Fugger</option><option>Medici</option><option>Coeur</option><option>Marchionni</option></select>
+        </label>
+        <label>Player 2 bank
+          <select id="bank2"><option value="">Random</option><option>Fugger</option><option>Medici</option><option>Coeur</option><option>Marchionni</option></select>
+        </label>
+      </div>
+      <div class="row"><label>Seed (optional) <input id="seed" placeholder="random"></label></div>
+      <div class="row buttons">
+        <button id="start" class="primary">New game</button>
+        <button id="resume" hidden>Resume saved game</button>
+        <label class="filebtn">Load game file<input type="file" id="loadfile" accept=".json" hidden></label>
+      </div>
+      <p class="note">The Fugger bank always goes first. Card and board images load from Steam's CDN; the first load can take a while.</p>
+    </div>
+  </div>
+
+  <div id="app" class="app" hidden>
+    <header class="topbar">
+      <span class="title">Pax Renaissance</span>
+      <span id="status"></span>
+      <span class="spacer"></span>
+      <button id="btnUndo">Undo</button>
+      <button id="btnSave">Save</button>
+      <button id="btnNew">New game</button>
+      <button id="btnAid">Player aid</button>
+    </header>
+    <main class="main">
+      <section class="boardwrap"><div id="board" class="board"></div><section id="tableaux" class="tableaux"></section></section>
+      <aside class="side">
+        <div id="decision" class="decision"></div>
+        <div id="players" class="players"></div>
+        <div id="log" class="log"></div>
+      </aside>
+    </main>
+  </div>
+  <div id="preview" class="preview" hidden></div>
+  <div id="modal" class="modal" hidden></div>
+  <script type="module" src="src/ui/app.js"></script>
+</body>
+</html>

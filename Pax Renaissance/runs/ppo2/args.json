@@ -1,0 +1,31 @@
+{
+ "run": "runs/ppo2",
+ "resume": false,
+ "iters": 1000,
+ "num_games": 128,
+ "steps": 8192,
+ "epochs": 3,
+ "minibatch": 1024,
+ "lr": 0.0001,
+ "clip": 0.2,
+ "vf_coef": 0.5,
+ "ent_coef": 0.01,
+ "gamma": 1.0,
+ "lam": 0.95,
+ "max_grad": 0.5,
+ "init": "runs/ppo1/ckpt_00060.pt",
+ "greedy_games": 64,
+ "rollback_after": 2,
+ "league_prob": 0.2,
+ "league_size": 10,
+ "snapshot_every": 10,
+ "eval_every": 10,
+ "eval_games": 200,
+ "eval_opponents": [
+  "random",
+  "greedy"
+ ],
+ "hidden": 512,
+ "threads": 3,
+ "seed": 2
+}
