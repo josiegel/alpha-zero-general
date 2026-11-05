@@ -123,6 +123,10 @@ class MCTS():
         next_s = self.game.getCanonicalForm(next_s, next_player)
 
         v = self.search(next_s)
+        if next_player == 1:
+            # The same player moves again (games where turns don't strictly alternate, e.g. Pax
+            # Renaissance): search() returned the value negated for the opponent, so undo that.
+            v = -v
 
         if (s, a) in self.Qsa:
             self.Qsa[(s, a)] = (self.Nsa[(s, a)] * self.Qsa[(s, a)] + v) / (self.Nsa[(s, a)] + 1)
